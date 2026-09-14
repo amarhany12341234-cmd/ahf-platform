@@ -1,130 +1,140 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AHF | Athletes • Honor • Force</title>
+<title>AHF | منصة التحديات</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #0b0b0b;
-            color: white;
-            min-height: 100vh;
-        }
+body{
+    font-family:Arial,sans-serif;
+    background:#090909;
+    color:white;
+}
 
-        header {
-            padding: 25px;
-            text-align: center;
-            border-bottom: 1px solid #292929;
-        }
+header{
+    padding:25px 20px;
+    border-bottom:1px solid #252525;
+    text-align:center;
+}
 
-        .logo {
-            font-size: 55px;
-            font-weight: 900;
-            letter-spacing: 8px;
-        }
+.logo{
+    font-size:52px;
+    font-weight:900;
+    letter-spacing:8px;
+}
 
-        .subtitle {
-            color: #aaa;
-            margin-top: 8px;
-            font-size: 15px;
-        }
+.subtitle{
+    color:#888;
+    margin-top:7px;
+}
 
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            padding: 25px;
-        }
+.container{
+    max-width:1000px;
+    margin:auto;
+    padding:25px;
+}
 
-        .hero {
-            text-align: center;
-            padding: 45px 20px;
-        }
+.hero{
+    text-align:center;
+    padding:35px 10px;
+}
 
-        .hero h1 {
-            font-size: 38px;
-            margin-bottom: 15px;
-        }
+.hero h1{
+    font-size:34px;
+    margin-bottom:12px;
+}
 
-        .hero p {
-            color: #aaa;
-            font-size: 17px;
-            line-height: 1.8;
-        }
+.hero p{
+    color:#999;
+    line-height:1.8;
+}
 
-        .challenge {
-            background: #151515;
-            border: 1px solid #303030;
-            border-radius: 18px;
-            padding: 25px;
-            margin-top: 20px;
-        }
+.challenge{
+    background:#151515;
+    border:1px solid #303030;
+    border-radius:20px;
+    padding:25px;
+    margin-bottom:20px;
+}
 
-        .challenge-title {
-            font-size: 25px;
-            font-weight: bold;
-            margin-bottom: 12px;
-        }
+.challenge-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+}
 
-        .points {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 18px;
-            border-radius: 20px;
-            background: white;
-            color: black;
-            font-weight: bold;
-        }
+.challenge h2{
+    font-size:24px;
+}
 
-        .button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 13px 22px;
-            border-radius: 10px;
-            background: white;
-            color: black;
-            text-decoration: none;
-            font-weight: bold;
-        }
+.points{
+    background:white;
+    color:black;
+    padding:8px 14px;
+    border-radius:20px;
+    font-weight:bold;
+}
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 15px;
-            margin-top: 25px;
-        }
+.challenge p{
+    color:#aaa;
+    line-height:1.8;
+    margin-top:15px;
+}
 
-        .card {
-            background: #151515;
-            border: 1px solid #292929;
-            border-radius: 15px;
-            padding: 22px;
-        }
+.button{
+    display:block;
+    text-align:center;
+    margin-top:20px;
+    padding:14px;
+    background:white;
+    color:black;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:bold;
+}
 
-        .card h3 {
-            margin-bottom: 10px;
-        }
+.section-title{
+    margin:35px 0 15px;
+    font-size:24px;
+}
 
-        .card p {
-            color: #aaa;
-            line-height: 1.7;
-        }
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+}
 
-        footer {
-            text-align: center;
-            color: #777;
-            padding: 35px 20px;
-            margin-top: 30px;
-        }
-    </style>
+.card{
+    background:#151515;
+    border:1px solid #292929;
+    border-radius:16px;
+    padding:22px;
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#999;
+    line-height:1.7;
+}
+
+footer{
+    text-align:center;
+    color:#666;
+    padding:40px 20px;
+}
+</style>
 </head>
 
 <body>
@@ -136,68 +146,101 @@
 
 <main class="container">
 
-    <section class="hero">
-        <h1>مرحبًا بك في منصة AHF</h1>
-        <p>
-            منصة للتحديات الرياضية، التطور، والانضباط.
-            <br>
-            اختبر نفسك، اجمع النقاط، وطوّر مستواك.
-        </p>
-    </section>
+<section class="hero">
+    <h1>منصة AHF للتحديات 🏆</h1>
 
-    <section class="challenge">
+    <p>
+        اختبر نفسك، اجمع النقاط، وطوّر مستواك.
+        <br>
+        كل تحدٍ خطوة جديدة.
+    </p>
+</section>
 
-        <div class="challenge-title">
-            🏆 تحدي اليوم
-        </div>
 
-        <p>
-            أكمل تحدي اليوم وسجّل إنجازك لتحصل على نقاط AHF.
-        </p>
+<h2 class="section-title">🔥 التحديات الحالية</h2>
+
+
+<section class="challenge">
+
+    <div class="challenge-header">
+
+        <h2>AHF Challenge 001</h2>
 
         <div class="points">
             +50 نقطة
         </div>
 
-        <br>
+    </div>
 
-        <a href="#" class="button">
-            عرض التحدي
-        </a>
+    <p>
+        أكمل تحدي اليوم وسجّل إنجازك.
+        حافظ على الأداء الصحيح ولا تحاول تنفيذ التحدي بطريقة تعرضك للإصابة.
+    </p>
 
-    </section>
+    <a href="#" class="button">
+        شارك في التحدي
+    </a>
 
-    <section class="cards">
+</section>
 
-        <div class="card">
-            <h3>🏆 التحديات</h3>
-            <p>
-                تحديات مختلفة تساعدك على تطوير مستواك باستمرار.
-            </p>
+
+<section class="challenge">
+
+    <div class="challenge-header">
+
+        <h2>AHF Challenge 002</h2>
+
+        <div class="points">
+            +25 نقطة
         </div>
 
-        <div class="card">
-            <h3>⭐ النقاط</h3>
-            <p>
-                اجمع النقاط من خلال المشاركة والإنجاز.
-            </p>
-        </div>
+    </div>
 
-        <div class="card">
-            <h3>🥇 المتصدرون</h3>
-            <p>
-                تابع ترتيبك وقارن تقدمك بنفسك وبالمنافسة الرياضية.
-            </p>
-        </div>
+    <p>
+        تحدٍ إضافي لأعضاء AHF الذين يريدون تطوير التزامهم ونشاطهم.
+    </p>
 
-        <div class="card">
-            <h3>🎖️ الرتب</h3>
-            <p>
-                تطور داخل نظام AHF من خلال الإنجاز والمسؤولية.
-            </p>
-        </div>
+    <a href="#" class="button">
+        عرض التحدي
+    </a>
 
-    </section>
+</section>
+
+
+<h2 class="section-title">⭐ نظام AHF</h2>
+
+
+<section class="cards">
+
+    <div class="card">
+        <h3>🏆 التحديات</h3>
+        <p>
+            تحديات رياضية ومهام تساعدك على الاستمرار والتطور.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>⭐ النقاط</h3>
+        <p>
+            اجمع النقاط من خلال إنجاز التحديات والمشاركة.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>🥇 المتصدرون</h3>
+        <p>
+            تابع ترتيبك بين أعضاء AHF.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>🎖️ الرتب</h3>
+        <p>
+            تطور داخل نظام الرتب من خلال الإنجاز والمسؤولية.
+        </p>
+    </div>
+
+</section>
 
 </main>
 
