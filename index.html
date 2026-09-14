@@ -13,60 +13,142 @@
     padding:0;
 }
 
-body{
-    font-family:Arial,sans-serif;
-    background:#090909;
-    color:white;
+html{
+    scroll-behavior:smooth;
 }
 
+body{
+    font-family:Arial,Tahoma,sans-serif;
+    background:#090909;
+    color:#fff;
+    min-height:100vh;
+}
+
+/* ===== HEADER ===== */
+
 header{
-    padding:25px 20px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:rgba(9,9,9,.96);
+    backdrop-filter:blur(10px);
     border-bottom:1px solid #252525;
-    text-align:center;
+}
+
+.header-inner{
+    max-width:1200px;
+    margin:auto;
+    padding:15px 20px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:14px;
 }
 
 .logo{
-    font-size:52px;
+    font-size:34px;
     font-weight:900;
-    letter-spacing:8px;
+    letter-spacing:6px;
 }
 
-.subtitle{
+.brand-text{
     color:#888;
-    margin-top:7px;
+    font-size:13px;
 }
+
+.menu{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.menu button{
+    background:transparent;
+    color:#aaa;
+    border:1px solid transparent;
+    padding:9px 13px;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.2s;
+}
+
+.menu button:hover,
+.menu button.active{
+    background:#fff;
+    color:#000;
+}
+
+/* ===== MAIN ===== */
 
 .container{
-    max-width:1000px;
+    max-width:1200px;
     margin:auto;
-    padding:25px;
+    padding:25px 20px 60px;
 }
 
+.page{
+    display:none;
+}
+
+.page.active{
+    display:block;
+}
+
+/* ===== HERO ===== */
+
 .hero{
+    padding:55px 10px 35px;
     text-align:center;
-    padding:45px 10px;
 }
 
 .hero h1{
-    font-size:36px;
-    margin-bottom:12px;
+    font-size:42px;
+    margin-bottom:15px;
 }
 
 .hero p{
     color:#999;
-    line-height:1.8;
+    line-height:1.9;
     font-size:17px;
 }
 
-.section-title{
-    margin:35px 0 15px;
-    font-size:24px;
+.main-button{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 25px;
+    border-radius:12px;
+    border:none;
+    background:#fff;
+    color:#000;
+    font-weight:bold;
+    cursor:pointer;
 }
 
-.cards{
+/* ===== TITLES ===== */
+
+.section-title{
+    margin:35px 0 18px;
+    font-size:25px;
+}
+
+.section-subtitle{
+    color:#888;
+    margin-top:-10px;
+    margin-bottom:20px;
+}
+
+/* ===== CARDS ===== */
+
+.grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:15px;
+    gap:16px;
 }
 
 .card{
@@ -78,147 +160,965 @@ header{
 
 .card h3{
     margin-bottom:10px;
+    font-size:20px;
 }
 
 .card p{
     color:#999;
-    line-height:1.7;
+    line-height:1.75;
 }
 
-.button{
-    display:block;
-    text-align:center;
-    margin-top:15px;
-    padding:13px;
-    background:white;
-    color:black;
-    border-radius:12px;
-    text-decoration:none;
+.icon{
+    font-size:30px;
+    margin-bottom:12px;
+}
+
+/* ===== DASHBOARD ===== */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:14px;
+}
+
+.stat{
+    background:#151515;
+    border:1px solid #292929;
+    border-radius:16px;
+    padding:20px;
+}
+
+.stat-title{
+    color:#888;
+    font-size:14px;
+    margin-bottom:8px;
+}
+
+.stat-value{
+    font-size:30px;
     font-weight:bold;
 }
 
-footer{
+/* ===== CHALLENGES ===== */
+
+.challenge{
+    background:#151515;
+    border:1px solid #292929;
+    border-radius:18px;
+    padding:22px;
+    margin-bottom:15px;
+}
+
+.challenge-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:15px;
+}
+
+.points{
+    background:#fff;
+    color:#000;
+    font-weight:bold;
+    padding:8px 13px;
+    border-radius:20px;
+    white-space:nowrap;
+}
+
+.challenge p{
+    margin-top:14px;
+    color:#999;
+    line-height:1.8;
+}
+
+.challenge button{
+    width:100%;
+    margin-top:18px;
+    padding:13px;
+    border:none;
+    border-radius:11px;
+    background:#fff;
+    color:#000;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* ===== TABLE ===== */
+
+.table-wrap{
+    overflow-x:auto;
+    background:#151515;
+    border:1px solid #292929;
+    border-radius:18px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:600px;
+}
+
+th,td{
+    padding:16px;
     text-align:center;
-    color:#666;
-    padding:40px 20px;
+    border-bottom:1px solid #292929;
+}
+
+th{
+    color:#aaa;
+    font-size:14px;
+}
+
+td{
+    color:#eee;
+}
+
+tr:last-child td{
+    border-bottom:none;
+}
+
+/* ===== PROFILE ===== */
+
+.profile{
+    max-width:700px;
+    margin:auto;
+}
+
+.profile-top{
+    text-align:center;
+    padding:30px 15px;
+}
+
+.avatar{
+    width:100px;
+    height:100px;
+    border-radius:50%;
+    background:#fff;
+    color:#000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:auto auto 15px;
+    font-size:38px;
+    font-weight:bold;
+}
+
+.rank{
+    display:inline-block;
+    margin-top:10px;
+    padding:7px 14px;
+    border-radius:20px;
+    background:#242424;
+    color:#fff;
+}
+
+/* ===== TRAINING ===== */
+
+.exercise{
+    background:#151515;
+    border:1px solid #292929;
+    border-radius:16px;
+    padding:20px;
+}
+
+.exercise-number{
+    color:#777;
+    font-size:13px;
+    margin-bottom:8px;
+}
+
+.exercise h3{
+    margin-bottom:10px;
+}
+
+.exercise p{
+    color:#999;
+    line-height:1.7;
+}
+
+/* ===== NOTIFICATION ===== */
+
+.notice{
+    background:#151515;
+    border:1px solid #292929;
+    border-radius:16px;
+    padding:18px;
+    margin-bottom:12px;
+}
+
+.notice strong{
+    display:block;
+    margin-bottom:7px;
+}
+
+.notice span{
+    color:#888;
+    font-size:13px;
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:800px){
+
+    .header-inner{
+        flex-direction:column;
+    }
+
+    .menu{
+        justify-content:center;
+    }
+
+    .hero h1{
+        font-size:32px;
+    }
+
+    .brand-text{
+        display:none;
+    }
+}
+
+@media(max-width:500px){
+
+    .container{
+        padding-left:14px;
+        padding-right:14px;
+    }
+
+    .menu button{
+        font-size:12px;
+        padding:8px 9px;
+    }
+
+    .challenge-top{
+        flex-direction:column;
+        align-items:flex-start;
+    }
 }
 </style>
 </head>
 
 <body>
 
+<!-- ===== HEADER ===== -->
+
 <header>
-    <div class="logo">AHF</div>
-    <div class="subtitle">Athletes • Honor • Force</div>
+
+    <div class="header-inner">
+
+        <div class="brand">
+
+            <div>
+                <div class="logo">AHF</div>
+            </div>
+
+            <div class="brand-text">
+                Athletes • Honor • Force
+            </div>
+
+        </div>
+
+        <nav class="menu">
+
+            <button class="active" onclick="showPage('home',this)">
+                الرئيسية
+            </button>
+
+            <button onclick="showPage('training',this)">
+                التدريب
+            </button>
+
+            <button onclick="showPage('challenges',this)">
+                التحديات
+            </button>
+
+            <button onclick="showPage('points',this)">
+                النقاط
+            </button>
+
+            <button onclick="showPage('leaderboard',this)">
+                المتصدرون
+            </button>
+
+            <button onclick="showPage('ranks',this)">
+                الرتب
+            </button>
+
+            <button onclick="showPage('profile',this)">
+                ملفي
+            </button>
+
+        </nav>
+
+    </div>
+
 </header>
+
 
 <main class="container">
 
-<section class="hero">
-    <h1>منصة AHF الرياضية 🏆</h1>
 
-    <p>
-        منصة AHF للتدريب والتطور الرياضي.
-        <br>
-        تدرب، تطور، نافس، وارتقِ.
+<!-- ================================================= -->
+<!-- HOME -->
+<!-- ================================================= -->
+
+<section id="home" class="page active">
+
+    <div class="hero">
+
+        <h1>منصة AHF الرياضية 🏆</h1>
+
+        <p>
+            مرحبًا بك في منصة AHF
+            <br>
+            منصة التدريب والتطور والتحديات والنقاط والرتب.
+        </p>
+
+        <button class="main-button"
+                onclick="showPage('training',document.querySelectorAll('.menu button')[1])">
+            ابدأ التدريب
+        </button>
+
+    </div>
+
+
+    <h2 class="section-title">
+        📊 لوحة AHF
+    </h2>
+
+    <div class="stats">
+
+        <div class="stat">
+            <div class="stat-title">نقاطي</div>
+            <div class="stat-value">0</div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-title">رتبتي</div>
+            <div class="stat-value">عضو</div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-title">التحديات المكتملة</div>
+            <div class="stat-value">0</div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-title">المركز</div>
+            <div class="stat-value">—</div>
+        </div>
+
+    </div>
+
+
+    <h2 class="section-title">
+        🔥 أقسام المنصة
+    </h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <div class="icon">🏋️</div>
+            <h3>التدريب</h3>
+            <p>
+                تمارين وتطوير المستوى الرياضي.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🏆</div>
+            <h3>التحديات</h3>
+            <p>
+                تحديات AHF واختبارات النشاط والالتزام.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">⭐</div>
+            <h3>النقاط</h3>
+            <p>
+                نظام نقاط يعتمد على الإنجاز والنشاط.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🥇</div>
+            <h3>المتصدرون</h3>
+            <p>
+                ترتيب أعضاء AHF حسب النقاط.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎖️</div>
+            <h3>الرتب</h3>
+            <p>
+                نظام التطور والترقية داخل AHF.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">👤</div>
+            <h3>ملف العضو</h3>
+            <p>
+                معلوماتك ونقاطك ورتبتك وإنجازاتك.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- TRAINING -->
+<!-- ================================================= -->
+
+<section id="training" class="page">
+
+    <h2 class="section-title">
+        🏋️ التدريب
+    </h2>
+
+    <p class="section-subtitle">
+        اختر التمرين المناسب لك وابدأ التطور.
     </p>
-</section>
 
-<h2 class="section-title">🔥 أقسام المنصة</h2>
+    <div class="grid">
 
-<section class="cards">
+        <div class="exercise">
+            <div class="exercise-number">TRAINING 001</div>
+            <h3>تمارين الجزء العلوي</h3>
+            <p>
+                تمارين متنوعة لتطوير القوة والتحكم.
+            </p>
+        </div>
 
-    <div class="card">
-        <h3>🏋️ التدريب</h3>
-        <p>
-            تمارين وبرامج تساعد أعضاء AHF على تطوير مستواهم الرياضي.
-        </p>
-        <a href="#" class="button">دخول التدريب</a>
-    </div>
+        <div class="exercise">
+            <div class="exercise-number">TRAINING 002</div>
+            <h3>تمارين الجزء السفلي</h3>
+            <p>
+                تدريبات تساعد على تطوير القوة والحركة.
+            </p>
+        </div>
 
-    <div class="card">
-        <h3>🏆 التحديات</h3>
-        <p>
-            تحديات رياضية لاختبار الالتزام والقدرة والتطور.
-        </p>
-        <a href="#" class="button">عرض التحديات</a>
-    </div>
+        <div class="exercise">
+            <div class="exercise-number">TRAINING 003</div>
+            <h3>تمارين اللياقة</h3>
+            <p>
+                تدريبات لرفع مستوى اللياقة والتحمل.
+            </p>
+        </div>
 
-    <div class="card">
-        <h3>⭐ النقاط</h3>
-        <p>
-            اجمع النقاط من خلال الإنجاز والمشاركة والنشاط داخل AHF.
-        </p>
-        <a href="#" class="button">النقاط</a>
-    </div>
+        <div class="exercise">
+            <div class="exercise-number">TRAINING 004</div>
+            <h3>تدريب قتالي</h3>
+            <p>
+                مساحة مستقبلية لتدريبات الملاكمة
+                والفنون القتالية والمهارات الرياضية.
+            </p>
+        </div>
 
-    <div class="card">
-        <h3>🥇 المتصدرون</h3>
-        <p>
-            تابع ترتيب أعضاء AHF وشاهد أصحاب أعلى النقاط.
-        </p>
-        <a href="#" class="button">المتصدرون</a>
-    </div>
-
-    <div class="card">
-        <h3>🎖️ الرتب</h3>
-        <p>
-            تطور داخل نظام AHF من العضو إلى الرتب الأعلى بالإنجاز والمسؤولية.
-        </p>
-        <a href="#" class="button">عرض الرتب</a>
-    </div>
-
-    <div class="card">
-        <h3>👤 ملف العضو</h3>
-        <p>
-            ملف خاص لكل عضو لمتابعة نقاطه ورتبته وتطوره الرياضي.
-        </p>
-        <a href="#" class="button">ملفي</a>
     </div>
 
 </section>
 
-<h2 class="section-title">💪 نظام AHF</h2>
 
-<section class="cards">
+<!-- ================================================= -->
+<!-- CHALLENGES -->
+<!-- ================================================= -->
 
-    <div class="card">
-        <h3>الالتزام</h3>
+<section id="challenges" class="page">
+
+    <h2 class="section-title">
+        🏆 التحديات
+    </h2>
+
+    <p class="section-subtitle">
+        أكمل التحديات واجمع نقاط AHF.
+    </p>
+
+
+    <div class="challenge">
+
+        <div class="challenge-top">
+
+            <h3>AHF Challenge 001</h3>
+
+            <div class="points">
+                +50 نقطة
+            </div>
+
+        </div>
+
         <p>
-            الانضباط والاستمرار جزء أساسي من تطور لاعب AHF.
+            أكمل التحدي المطلوب مع الحفاظ على الأداء الصحيح
+            وعدم تنفيذ الحركة بطريقة تعرضك للإصابة.
         </p>
+
+        <button onclick="completeChallenge(50,'AHF Challenge 001')">
+            إكمال التحدي
+        </button>
+
     </div>
 
-    <div class="card">
-        <h3>التطور الرياضي</h3>
+
+    <div class="challenge">
+
+        <div class="challenge-top">
+
+            <h3>AHF Challenge 002</h3>
+
+            <div class="points">
+                +25 نقطة
+            </div>
+
+        </div>
+
         <p>
-            الهدف هو أن تصبح أفضل رياضيًا مع مرور الوقت.
+            تحدٍ إضافي لأعضاء AHF لزيادة النشاط والالتزام.
         </p>
+
+        <button onclick="completeChallenge(25,'AHF Challenge 002')">
+            إكمال التحدي
+        </button>
+
     </div>
 
-    <div class="card">
-        <h3>الاحترام والروح الرياضية</h3>
-        <p>
-            القوة الحقيقية تكون مع الاحترام والانضباط.
-        </p>
-    </div>
 
-    <div class="card">
-        <h3>المسؤولية والقيادة</h3>
+    <div class="challenge">
+
+        <div class="challenge-top">
+
+            <h3>AHF Challenge 003</h3>
+
+            <div class="points">
+                +10 نقاط
+            </div>
+
+        </div>
+
         <p>
-            أعضاء AHF يتطورون في الرياضة والشخصية والقيادة.
+            مهمة بسيطة للحفاظ على الاستمرارية والنشاط.
         </p>
+
+        <button onclick="completeChallenge(10,'AHF Challenge 003')">
+            إكمال التحدي
+        </button>
+
     </div>
 
 </section>
+
+
+<!-- ================================================= -->
+<!-- POINTS -->
+<!-- ================================================= -->
+
+<section id="points" class="page">
+
+    <h2 class="section-title">
+        ⭐ النقاط
+    </h2>
+
+    <p class="section-subtitle">
+        تابع تقدمك داخل نظام AHF.
+    </p>
+
+    <div class="stats">
+
+        <div class="stat">
+            <div class="stat-title">إجمالي النقاط</div>
+            <div id="pointsNumber" class="stat-value">0</div>
+        </div>
+
+        <div class="stat">
+            <div class="stat-title">التحديات المكتملة</div>
+            <div id="challengesNumber" class="stat-value">0</div>
+        </div>
+
+    </div>
+
+    <h2 class="section-title">
+        📜 سجل النقاط
+    </h2>
+
+    <div id="pointsHistory">
+
+        <div class="notice">
+
+            <strong>لا توجد نقاط حتى الآن</strong>
+
+            <span>
+                أكمل أول تحدٍ لبدء سجل نقاطك.
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- LEADERBOARD -->
+<!-- ================================================= -->
+
+<section id="leaderboard" class="page">
+
+    <h2 class="section-title">
+        🥇 المتصدرون
+    </h2>
+
+    <p class="section-subtitle">
+        ترتيب أعضاء AHF حسب النقاط.
+    </p>
+
+    <div class="table-wrap">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>المركز</th>
+                    <th>العضو</th>
+                    <th>النقاط</th>
+                    <th>الرتبة</th>
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td>1</td>
+                    <td>عضو AHF</td>
+                    <td>0</td>
+                    <td>عضو</td>
+                </tr>
+
+                <tr>
+                    <td>2</td>
+                    <td>عضو AHF</td>
+                    <td>0</td>
+                    <td>عضو</td>
+                </tr>
+
+                <tr>
+                    <td>3</td>
+                    <td>عضو AHF</td>
+                    <td>0</td>
+                    <td>عضو</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- RANKS -->
+<!-- ================================================= -->
+
+<section id="ranks" class="page">
+
+    <h2 class="section-title">
+        🎖️ رتب AHF
+    </h2>
+
+    <p class="section-subtitle">
+        الترقية تعتمد على الإنجاز والنقاط والمسؤولية.
+    </p>
+
+
+    <div class="grid">
+
+        <div class="card">
+            <div class="icon">👤</div>
+            <h3>العضو</h3>
+            <p>
+                بداية رحلة عضو AHF.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🎖️</div>
+            <h3>الجنرال</h3>
+            <p>
+                رتبة أعلى يحصل عليها العضو من خلال الإنجاز.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">⭐</div>
+            <h3>المساعد</h3>
+            <p>
+                دور أكبر في المساعدة والمسؤولية.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">🏅</div>
+            <h3>نائب القائد</h3>
+            <p>
+                مسؤولية قيادية أعلى داخل AHF.
+            </p>
+        </div>
+
+        <div class="card">
+            <div class="icon">👑</div>
+            <h3>القائد</h3>
+            <p>
+                قيادة وتنظيم وتطوير منظومة AHF.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================================= -->
+<!-- PROFILE -->
+<!-- ================================================= -->
+
+<section id="profile" class="page">
+
+    <div class="profile">
+
+        <h2 class="section-title">
+            👤 ملفي
+        </h2>
+
+
+        <div class="card profile-top">
+
+            <div class="avatar">
+                A
+            </div>
+
+            <h2>عضو AHF</h2>
+
+            <div class="rank">
+                العضو
+            </div>
+
+        </div>
+
+
+        <br>
+
+
+        <div class="stats">
+
+            <div class="stat">
+                <div class="stat-title">النقاط</div>
+                <div id="profilePoints" class="stat-value">0</div>
+            </div>
+
+            <div class="stat">
+                <div class="stat-title">التحديات</div>
+                <div id="profileChallenges" class="stat-value">0</div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
 
 </main>
 
-<footer>
+
+<footer style="
+text-align:center;
+padding:30px 20px;
+color:#666;
+border-top:1px solid #222;
+">
+
     AHF — Athletes • Honor • Force
     <br><br>
     منصة AHF الرياضية
+
 </footer>
+
+
+<script>
+
+/* ==========================================
+   بيانات تجريبية مؤقتة
+   ========================================== */
+
+let points = Number(localStorage.getItem("ahf_points") || 0);
+
+let completedChallenges =
+    Number(localStorage.getItem("ahf_challenges") || 0);
+
+
+/* ==========================================
+   فتح الأقسام
+   ========================================== */
+
+function showPage(pageId, button){
+
+    document.querySelectorAll(".page").forEach(function(page){
+
+        page.classList.remove("active");
+
+    });
+
+
+    const page = document.getElementById(pageId);
+
+    if(page){
+
+        page.classList.add("active");
+
+    }
+
+
+    document.querySelectorAll(".menu button").forEach(function(btn){
+
+        btn.classList.remove("active");
+
+    });
+
+
+    if(button){
+
+        button.classList.add("active");
+
+    }
+
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+
+/* ==========================================
+   إكمال التحدي
+   ========================================== */
+
+function completeChallenge(amount, challengeName){
+
+    const alreadyDone =
+        localStorage.getItem("ahf_done_" + challengeName);
+
+
+    if(alreadyDone){
+
+        alert("لقد أكملت هذا التحدي بالفعل.");
+
+        return;
+
+    }
+
+
+    points += amount;
+
+    completedChallenges++;
+
+
+    localStorage.setItem("ahf_points", points);
+
+    localStorage.setItem(
+        "ahf_challenges",
+        completedChallenges
+    );
+
+    localStorage.setItem(
+        "ahf_done_" + challengeName,
+        "true"
+    );
+
+
+    const history =
+        document.getElementById("pointsHistory");
+
+
+    const notice =
+        document.createElement("div");
+
+
+    notice.className = "notice";
+
+
+    notice.innerHTML = `
+        <strong>+${amount} نقطة — ${challengeName}</strong>
+        <span>تم تسجيل الإنجاز على هذا الجهاز.</span>
+    `;
+
+
+    history.prepend(notice);
+
+
+    updateDashboard();
+
+
+    alert(
+        "تم تسجيل التحدي وإضافة +" +
+        amount +
+        " نقطة 🎉"
+    );
+
+}
+
+
+/* ==========================================
+   تحديث البيانات
+   ========================================== */
+
+function updateDashboard(){
+
+    document.getElementById("pointsNumber").textContent =
+        points;
+
+
+    document.getElementById("challengesNumber").textContent =
+        completedChallenges;
+
+
+    document.getElementById("profilePoints").textContent =
+        points;
+
+
+    document.getElementById("profileChallenges").textContent =
+        completedChallenges;
+
+
+    const stats =
+        document.querySelectorAll(".stat-value");
+
+
+    if(stats.length >= 4){
+
+        stats[0].textContent = points;
+
+        stats[2].textContent =
+            completedChallenges;
+
+    }
+
+}
+
+
+/* ==========================================
+   تشغيل أولي
+   ========================================== */
+
+updateDashboard();
+
+</script>
 
 </body>
 </html>
