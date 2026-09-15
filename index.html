@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <title>AHF | منصة AHF الرياضية</title>
 
+
 <style>
+
 *{
     box-sizing:border-box;
     margin:0;
@@ -18,9 +24,15 @@ html{
 }
 
 body{
-    font-family:Arial,Tahoma,sans-serif;
+
+    font-family:
+        Arial,
+        Tahoma,
+        sans-serif;
+
     background:#080808;
     color:#fff;
+
     min-height:100vh;
 }
 
@@ -39,68 +51,108 @@ button{
     display:none !important;
 }
 
+
 header{
+
     position:sticky;
     top:0;
     z-index:1000;
+
     background:rgba(8,8,8,.96);
-    border-bottom:1px solid #252525;
+
+    border-bottom:
+        1px solid #252525;
+
     backdrop-filter:blur(12px);
 }
 
+
 .header-inner{
+
     max-width:1250px;
     margin:auto;
+
     padding:14px 18px;
+
     display:flex;
+
     align-items:center;
+
     justify-content:space-between;
+
     gap:18px;
 }
+
 
 .brand{
     min-width:180px;
 }
 
 .logo{
+
     font-size:38px;
+
     font-weight:900;
+
     letter-spacing:7px;
 }
 
 .tagline{
+
     color:#777;
+
     font-size:12px;
+
     margin-top:3px;
 }
 
+
 .nav{
+
     display:flex;
+
     flex-wrap:wrap;
+
     gap:6px;
+
     justify-content:center;
 }
 
 .nav button{
+
     background:transparent;
+
     color:#aaa;
-    border:1px solid transparent;
+
+    border:
+        1px solid transparent;
+
     padding:9px 11px;
+
     border-radius:10px;
+
     transition:.2s;
 }
 
 .nav button:hover,
 .nav button.active{
+
     background:#fff;
+
     color:#000;
 }
 
+
 .container{
+
     max-width:1250px;
+
     margin:auto;
-    padding:25px 18px 70px;
+
+    padding:
+        25px 18px 70px;
 }
+
 
 .page{
     display:none;
@@ -110,152 +162,280 @@ header{
     display:block;
 }
 
+
 .hero{
+
     text-align:center;
-    padding:60px 10px 40px;
+
+    padding:
+        60px 10px 40px;
 }
 
 .hero h1{
+
     font-size:44px;
+
     margin-bottom:15px;
 }
 
 .hero p{
+
     color:#999;
+
     line-height:1.9;
+
     font-size:17px;
 }
 
+
 .primary{
+
     margin-top:22px;
+
     background:#fff;
+
     color:#000;
+
     border:none;
+
     border-radius:12px;
+
     padding:13px 22px;
+
     font-weight:bold;
 }
+
 
 .secondary{
+
     margin-top:10px;
+
     background:#222;
+
     color:#fff;
-    border:1px solid #333;
+
+    border:
+        1px solid #333;
+
     border-radius:12px;
+
     padding:13px 22px;
+
     font-weight:bold;
 }
 
+
+.danger{
+
+    background:#222;
+
+    color:#fff;
+
+    border:
+        1px solid #444;
+
+    border-radius:10px;
+
+    padding:10px 14px;
+
+    font-weight:bold;
+}
+
+
 .section-title{
-    margin:35px 0 18px;
+
+    margin:
+        35px 0 18px;
+
     font-size:25px;
 }
 
+
 .muted{
+
     color:#888;
+
     line-height:1.8;
 }
 
+
 .grid{
+
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px,1fr)
+        );
+
     gap:15px;
 }
 
+
 .card{
+
     background:#151515;
-    border:1px solid #292929;
+
+    border:
+        1px solid #292929;
+
     border-radius:18px;
+
     padding:21px;
 }
+
 
 .card h3{
     margin-bottom:9px;
 }
 
+
 .card p{
+
     color:#999;
+
     line-height:1.75;
 }
 
+
 .icon{
+
     font-size:30px;
+
     margin-bottom:10px;
 }
 
+
 .stats{
+
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(180px,1fr)
+        );
+
     gap:14px;
 }
 
+
 .stat{
+
     background:#151515;
-    border:1px solid #292929;
+
+    border:
+        1px solid #292929;
+
     border-radius:16px;
+
     padding:20px;
 }
 
+
 .stat-title{
+
     color:#888;
+
     font-size:14px;
+
     margin-bottom:8px;
 }
 
+
 .stat-value{
+
     font-size:29px;
+
     font-weight:bold;
 }
 
+
 .form-box{
+
     max-width:650px;
+
     margin:30px auto;
+
     background:#151515;
-    border:1px solid #292929;
+
+    border:
+        1px solid #292929;
+
     border-radius:20px;
+
     padding:25px;
 }
+
 
 .field{
     margin-top:15px;
 }
 
+
 .field label{
+
     display:block;
+
     margin-bottom:7px;
+
     color:#aaa;
 }
+
 
 .field input,
 .field textarea,
 .field select{
+
     width:100%;
+
     padding:13px;
+
     background:#0d0d0d;
+
     color:#fff;
-    border:1px solid #333;
+
+    border:
+        1px solid #333;
+
     border-radius:11px;
+
     outline:none;
 }
 
+
 .field textarea{
+
     min-height:120px;
+
     resize:vertical;
 }
+
 
 .full{
     width:100%;
 }
 
+
 .alert{
+
     background:#141414;
-    border:1px solid #303030;
+
+    border:
+        1px solid #303030;
+
     border-radius:12px;
+
     padding:12px 14px;
+
     margin-top:14px;
+
     color:#bbb;
+
     line-height:1.7;
 }
+
 
 .alert.success{
     border-color:#3b3b3b;
@@ -265,149 +445,319 @@ header{
     border-color:#5a5a5a;
 }
 
+
 .challenge{
+
     background:#151515;
-    border:1px solid #292929;
+
+    border:
+        1px solid #292929;
+
     border-radius:18px;
+
     padding:20px;
+
     margin-bottom:14px;
 }
 
+
 .challenge-top{
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
+
     gap:15px;
 }
 
+
 .points{
+
     background:#fff;
+
     color:#000;
+
     border-radius:20px;
+
     padding:7px 12px;
+
     font-weight:bold;
+
     white-space:nowrap;
 }
 
+
 .challenge p{
+
     color:#999;
+
     line-height:1.8;
+
     margin-top:12px;
 }
 
+
 .challenge button{
+
     margin-top:15px;
+
     width:100%;
+
     padding:12px;
+
     border:none;
+
     border-radius:10px;
+
     background:#fff;
+
     color:#000;
+
     font-weight:bold;
 }
 
+
 .profile{
+
     max-width:750px;
+
     margin:auto;
 }
+
 
 .profile-head{
     text-align:center;
 }
 
+
 .avatar{
+
     width:100px;
+
     height:100px;
+
     border-radius:50%;
+
     background:#fff;
+
     color:#000;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
-    margin:0 auto 15px;
+
+    margin:
+        0 auto 15px;
+
     font-size:38px;
+
     font-weight:bold;
 }
 
+
 .rank-badge{
+
     display:inline-block;
+
     margin-top:10px;
+
     padding:7px 13px;
+
     border-radius:20px;
+
     background:#242424;
+
     color:#fff;
 }
 
+
 .table-wrap{
+
     overflow-x:auto;
+
     margin-top:20px;
+
     background:#151515;
-    border:1px solid #292929;
+
+    border:
+        1px solid #292929;
+
     border-radius:18px;
 }
 
+
 table{
+
     width:100%;
+
     border-collapse:collapse;
+
     min-width:620px;
 }
 
+
 th,
 td{
+
     padding:15px;
-    border-bottom:1px solid #292929;
+
+    border-bottom:
+        1px solid #292929;
+
     text-align:center;
 }
+
 
 th{
     color:#888;
 }
 
+
 tr:last-child td{
     border-bottom:none;
 }
 
+
 .admin-card{
+
     background:#151515;
-    border:1px solid #292929;
+
+    border:
+        1px solid #292929;
+
     border-radius:18px;
+
     padding:20px;
+
     margin-bottom:15px;
 }
 
+
 .admin-actions{
+
     display:flex;
+
     flex-wrap:wrap;
+
     gap:8px;
+
     margin-top:15px;
 }
 
+
 .admin-actions button{
+
     border:none;
+
     border-radius:10px;
+
     padding:10px 14px;
+
     font-weight:bold;
 }
 
+
 .approve{
+
     background:#fff;
+
     color:#000;
 }
 
+
 .reject{
+
     background:#222;
+
     color:#fff;
-    border:1px solid #333 !important;
+
+    border:
+        1px solid #333 !important;
 }
+
+
+.point-positive{
+    color:#fff;
+    font-weight:bold;
+}
+
+
+.point-negative{
+    color:#aaa;
+    font-weight:bold;
+}
+
+
+.member-select{
+
+    margin-top:15px;
+
+    padding:13px;
+
+    width:100%;
+
+    background:#0d0d0d;
+
+    color:#fff;
+
+    border:
+        1px solid #333;
+
+    border-radius:11px;
+}
+
+
+.points-preview{
+
+    margin-top:15px;
+
+    padding:15px;
+
+    background:#0d0d0d;
+
+    border:
+        1px solid #292929;
+
+    border-radius:12px;
+
+    line-height:1.8;
+}
+
+
+.admin-member-card{
+
+    background:#101010;
+
+    border:
+        1px solid #292929;
+
+    border-radius:14px;
+
+    padding:15px;
+
+    margin-top:10px;
+}
+
 
 footer{
+
     text-align:center;
+
     color:#666;
+
     padding:35px 18px;
-    border-top:1px solid #202020;
+
+    border-top:
+        1px solid #202020;
 }
 
+
 @media(max-width:900px){
+
     .header-inner{
         flex-direction:column;
     }
@@ -421,91 +771,131 @@ footer{
     }
 }
 
+
 @media(max-width:500px){
+
     .container{
+
         padding-left:12px;
+
         padding-right:12px;
     }
 
     .nav button{
+
         font-size:12px;
-        padding:8px 9px;
+
+        padding:
+            8px 9px;
     }
 
     .challenge-top{
+
         flex-direction:column;
+
         align-items:flex-start;
     }
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
+
 <header>
+
 <div class="header-inner">
 
-    <div class="brand">
-        <div class="logo">AHF</div>
-        <div class="tagline">Athletes • Honor • Force</div>
-    </div>
 
-    <nav class="nav">
+<div class="brand">
 
-        <button class="active" onclick="showPage('home',this)">
-            الرئيسية
-        </button>
+<div class="logo">
+AHF
+</div>
 
-        <button onclick="showPage('training',this)">
-            التدريب
-        </button>
-
-        <button onclick="showPage('challenges',this)">
-            التحديات
-        </button>
-
-        <button onclick="showPage('points',this)">
-            النقاط
-        </button>
-
-        <button onclick="showPage('leaderboard',this)">
-            المتصدرون
-        </button>
-
-        <button onclick="showPage('ranks',this)">
-            الرتب
-        </button>
-
-        <button onclick="showPage('profile',this)">
-            ملفي
-        </button>
-
-        <button id="joinNav"
-                onclick="showPage('join',this)">
-            طلب الانضمام
-        </button>
-
-        <button id="adminNav"
-                class="hidden"
-                onclick="showPage('admin',this)">
-            الإدارة
-        </button>
-
-        <button id="authNav"
-                onclick="showPage('auth',this)">
-            تسجيل الدخول
-        </button>
-
-        <button id="logoutNav"
-                class="hidden"
-                onclick="logout()">
-            تسجيل الخروج
-        </button>
-
-    </nav>
+<div class="tagline">
+Athletes • Honor • Force
+</div>
 
 </div>
+
+
+<nav class="nav">
+
+
+<button class="active"
+        onclick="showPage('home',this)">
+الرئيسية
+</button>
+
+
+<button onclick="showPage('training',this)">
+التدريب
+</button>
+
+
+<button onclick="showPage('challenges',this)">
+التحديات
+</button>
+
+
+<button onclick="showPage('points',this)">
+النقاط
+</button>
+
+
+<button onclick="showPage('leaderboard',this)">
+المتصدرون
+</button>
+
+
+<button onclick="showPage('ranks',this)">
+الرتب
+</button>
+
+
+<button onclick="showPage('profile',this)">
+ملفي
+</button>
+
+
+<button id="joinNav"
+        onclick="showPage('join',this)">
+طلب الانضمام
+</button>
+
+
+<button id="adminNav"
+        class="hidden"
+        onclick="showPage('admin',this)">
+الإدارة
+</button>
+
+
+<button id="authNav"
+        onclick="showPage('auth',this)">
+تسجيل الدخول
+</button>
+
+
+<button id="logoutNav"
+        class="hidden"
+        onclick="logout()">
+تسجيل الخروج
+</button>
+
+
+</nav>
+
+
+</div>
+
 </header>
+
 
 
 <main class="container">
@@ -513,565 +903,1218 @@ footer{
 
 <!-- HOME -->
 
-<section id="home" class="page active">
+<section id="home"
+         class="page active">
 
-    <div class="hero">
 
-        <h1>منصة AHF الرياضية 🏆</h1>
+<div class="hero">
 
-        <p>
-            التدريب والتطور والتحديات والنقاط والرتب.
-            <br>
-            تدرب، تطور، نافس، وارتقِ.
-        </p>
+<h1>
+منصة AHF الرياضية 🏆
+</h1>
 
-        <button class="primary"
-                onclick="showPage('training')">
-            ابدأ التدريب
-        </button>
 
-    </div>
+<p>
 
-    <div class="stats">
+التدريب والتطور والتحديات والنقاط والرتب.
 
-        <div class="stat">
-            <div class="stat-title">نقاطي</div>
-            <div id="homePoints" class="stat-value">0</div>
-        </div>
+<br>
 
-        <div class="stat">
-            <div class="stat-title">رتبتي</div>
-            <div id="homeRank" class="stat-value">عضو</div>
-        </div>
+تدرب، تطور، نافس، وارتقِ.
 
-        <div class="stat">
-            <div class="stat-title">الحالة</div>
-            <div id="homeStatus" class="stat-value">غير مسجل</div>
-        </div>
+</p>
 
-        <div class="stat">
-            <div class="stat-title">الإنجازات</div>
-            <div id="homeCompleted" class="stat-value">0</div>
-        </div>
 
-    </div>
+<button class="primary"
+        onclick="showPage('training')">
 
-    <h2 class="section-title">🔥 أقسام AHF</h2>
+ابدأ التدريب
 
-    <div class="grid">
+</button>
 
-        <div class="card">
-            <div class="icon">🏋️</div>
-            <h3>التدريب</h3>
-            <p>برامج ومجالات تدريب مختلفة داخل المنصة.</p>
-        </div>
+</div>
 
-        <div class="card">
-            <div class="icon">🏆</div>
-            <h3>التحديات</h3>
-            <p>تحديات يتم إرسال إنجازها إلى الإدارة للمراجعة.</p>
-        </div>
 
-        <div class="card">
-            <div class="icon">⭐</div>
-            <h3>النقاط</h3>
-            <p>تتابع نقاطك والإنجازات التي تم اعتمادها.</p>
-        </div>
 
-        <div class="card">
-            <div class="icon">🥇</div>
-            <h3>المتصدرون</h3>
-            <p>ترتيب أعضاء AHF حسب النقاط.</p>
-        </div>
+<div class="stats">
 
-        <div class="card">
-            <div class="icon">🎖️</div>
-            <h3>الرتب</h3>
-            <p>تطورك داخل نظام الرتب في AHF.</p>
-        </div>
 
-        <div class="card">
-            <div class="icon">📢</div>
-            <h3>التحديثات</h3>
-            <p>تابع أحدث أخبار وإعلانات AHF.</p>
-        </div>
+<div class="stat">
 
-    </div>
+<div class="stat-title">
+نقاطي
+</div>
 
-    <h2 class="section-title">📢 آخر التحديثات</h2>
+<div id="homePoints"
+     class="stat-value">
+0
+</div>
 
-    <div id="updatesBox">
-        <div class="alert">
-            جارٍ تحميل التحديثات...
-        </div>
-    </div>
+</div>
+
+
+<div class="stat">
+
+<div class="stat-title">
+رتبتي
+</div>
+
+<div id="homeRank"
+     class="stat-value">
+عضو
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-title">
+الحالة
+</div>
+
+<div id="homeStatus"
+     class="stat-value">
+غير مسجل
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-title">
+الإنجازات
+</div>
+
+<div id="homeCompleted"
+     class="stat-value">
+0
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<h2 class="section-title">
+🔥 أقسام AHF
+</h2>
+
+
+<div class="grid">
+
+
+<div class="card">
+
+<div class="icon">
+🏋️
+</div>
+
+<h3>
+التدريب
+</h3>
+
+<p>
+برامج ومجالات تدريب مختلفة داخل المنصة.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+🏆
+</div>
+
+<h3>
+التحديات
+</h3>
+
+<p>
+تحديات يتم إرسال إنجازها إلى الإدارة للمراجعة.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+⭐
+</div>
+
+<h3>
+النقاط
+</h3>
+
+<p>
+تتابع نقاطك والإنجازات التي تم اعتمادها.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+🥇
+</div>
+
+<h3>
+المتصدرون
+</h3>
+
+<p>
+ترتيب أعضاء AHF حسب النقاط.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+🎖️
+</div>
+
+<h3>
+الرتب
+</h3>
+
+<p>
+تطورك داخل نظام الرتب في AHF.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+📢
+</div>
+
+<h3>
+التحديثات
+</h3>
+
+<p>
+تابع أحدث أخبار وإعلانات AHF.
+</p>
+
+</div>
+
+
+</div>
+
+
+
+<h2 class="section-title">
+📢 آخر التحديثات
+</h2>
+
+
+<div id="updatesBox">
+
+<div class="alert">
+جارٍ تحميل التحديثات...
+</div>
+
+</div>
+
 
 </section>
+
 
 
 <!-- TRAINING -->
 
-<section id="training" class="page">
+<section id="training"
+         class="page">
 
-    <h2 class="section-title">🏋️ التدريب</h2>
 
-    <p class="muted">
-        اختر المجال الذي تريد تطوير نفسك فيه.
-    </p>
+<h2 class="section-title">
+🏋️ التدريب
+</h2>
 
-    <div class="grid" style="margin-top:20px">
 
-        <div class="card">
-            <div class="icon">💪</div>
-            <h3>القوة واللياقة</h3>
-            <p>تدريبات لتطوير القوة واللياقة بشكل منظم.</p>
-        </div>
+<p class="muted">
+اختر المجال الذي تريد تطوير نفسك فيه.
+</p>
 
-        <div class="card">
-            <div class="icon">🏃</div>
-            <h3>الجري والتحمل</h3>
-            <p>مساحة لتدريبات الجري والتحمل والحركة.</p>
-        </div>
 
-        <div class="card">
-            <div class="icon">🥊</div>
-            <h3>الملاكمة</h3>
-            <p>تطوير المهارات الأساسية واللياقة المرتبطة بالملاكمة.</p>
-        </div>
+<div class="grid"
+     style="margin-top:20px">
 
-        <div class="card">
-            <div class="icon">🥋</div>
-            <h3>الفنون القتالية</h3>
-            <p>تدريب منظم للمهارات القتالية واللياقة.</p>
-        </div>
 
-    </div>
+<div class="card">
+
+<div class="icon">
+💪
+</div>
+
+<h3>
+القوة واللياقة
+</h3>
+
+<p>
+تدريبات لتطوير القوة واللياقة بشكل منظم.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+🏃
+</div>
+
+<h3>
+الجري والتحمل
+</h3>
+
+<p>
+مساحة لتدريبات الجري والتحمل والحركة.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+🥊
+</div>
+
+<h3>
+الملاكمة
+</h3>
+
+<p>
+تطوير المهارات الأساسية واللياقة المرتبطة بالملاكمة.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+🥋
+</div>
+
+<h3>
+الفنون القتالية
+</h3>
+
+<p>
+تدريب منظم للمهارات القتالية واللياقة.
+</p>
+
+</div>
+
+
+</div>
 
 </section>
+
 
 
 <!-- CHALLENGES -->
 
-<section id="challenges" class="page">
+<section id="challenges"
+         class="page">
 
-    <h2 class="section-title">🏆 التحديات</h2>
 
-    <p class="muted">
-        أكمل التحدي ثم أرسل إنجازك للمراجعة.
-    </p>
+<h2 class="section-title">
+🏆 التحديات
+</h2>
 
-    <div id="challengeBox" style="margin-top:20px">
-        <div class="alert">جارٍ تحميل التحديات...</div>
-    </div>
+
+<p class="muted">
+أكمل التحدي ثم أرسل إنجازك للمراجعة.
+</p>
+
+
+<div id="challengeBox"
+     style="margin-top:20px">
+
+<div class="alert">
+جارٍ تحميل التحديات...
+</div>
+
+</div>
+
 
 </section>
+
 
 
 <!-- POINTS -->
 
-<section id="points" class="page">
+<section id="points"
+         class="page">
 
-    <h2 class="section-title">⭐ نقاطي</h2>
 
-    <div class="stats">
+<h2 class="section-title">
+⭐ نقاطي
+</h2>
 
-        <div class="stat">
-            <div class="stat-title">إجمالي النقاط</div>
-            <div id="pointsTotal" class="stat-value">0</div>
-        </div>
 
-        <div class="stat">
-            <div class="stat-title">الرتبة</div>
-            <div id="pointsRank" class="stat-value">عضو</div>
-        </div>
+<div class="stats">
 
-    </div>
 
-    <h2 class="section-title">📜 سجل النقاط</h2>
+<div class="stat">
 
-    <div id="pointsBox">
-        <div class="alert">
-            سجّل الدخول لرؤية نقاطك.
-        </div>
-    </div>
+<div class="stat-title">
+إجمالي النقاط
+</div>
+
+<div id="pointsTotal"
+     class="stat-value">
+0
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-title">
+الرتبة
+</div>
+
+<div id="pointsRank"
+     class="stat-value">
+عضو
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<h2 class="section-title">
+📜 سجل النقاط
+</h2>
+
+
+<div id="pointsBox">
+
+<div class="alert">
+سجّل الدخول لرؤية نقاطك.
+</div>
+
+</div>
+
 
 </section>
+
 
 
 <!-- LEADERBOARD -->
 
-<section id="leaderboard" class="page">
+<section id="leaderboard"
+         class="page">
 
-    <h2 class="section-title">🥇 المتصدرون</h2>
 
-    <p class="muted">
-        ترتيب أعضاء AHF حسب النقاط.
-    </p>
+<h2 class="section-title">
+🥇 المتصدرون
+</h2>
 
-    <div id="leaderboardBox">
-        <div class="alert">
-            جارٍ تحميل الترتيب...
-        </div>
-    </div>
+
+<p class="muted">
+ترتيب أعضاء AHF حسب النقاط.
+</p>
+
+
+<div id="leaderboardBox">
+
+<div class="alert">
+جارٍ تحميل الترتيب...
+</div>
+
+</div>
+
 
 </section>
+
 
 
 <!-- RANKS -->
 
-<section id="ranks" class="page">
+<section id="ranks"
+         class="page">
 
-    <h2 class="section-title">🎖️ رتب AHF</h2>
 
-    <div class="grid">
+<h2 class="section-title">
+🎖️ رتب AHF
+</h2>
 
-        <div class="card">
-            <div class="icon">👤</div>
-            <h3>العضو</h3>
-            <p>بداية رحلة عضو AHF.</p>
-        </div>
 
-        <div class="card">
-            <div class="icon">🎖️</div>
-            <h3>الجنرال</h3>
-            <p>رتبة أعلى مبنية على الإنجاز والنشاط.</p>
-        </div>
+<div class="grid">
 
-        <div class="card">
-            <div class="icon">⭐</div>
-            <h3>المساعد</h3>
-            <p>مسؤولية ومشاركة أكبر داخل المجموعة.</p>
-        </div>
 
-        <div class="card">
-            <div class="icon">🏅</div>
-            <h3>نائب القائد</h3>
-            <p>مسؤولية قيادية أعلى.</p>
-        </div>
+<div class="card">
 
-        <div class="card">
-            <div class="icon">👑</div>
-            <h3>القائد</h3>
-            <p>قيادة وتنظيم وتطوير AHF.</p>
-        </div>
+<div class="icon">
+👤
+</div>
 
-    </div>
+<h3>
+العضو
+</h3>
+
+<p>
+بداية رحلة عضو AHF.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+🎖️
+</div>
+
+<h3>
+الجنرال
+</h3>
+
+<p>
+رتبة أعلى مبنية على الإنجاز والنشاط.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+⭐
+</div>
+
+<h3>
+المساعد
+</h3>
+
+<p>
+مسؤولية ومشاركة أكبر داخل المجموعة.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+🏅
+</div>
+
+<h3>
+نائب القائد
+</h3>
+
+<p>
+مسؤولية قيادية أعلى.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">
+👑
+</div>
+
+<h3>
+القائد
+</h3>
+
+<p>
+قيادة وتنظيم وتطوير AHF.
+</p>
+
+</div>
+
+
+</div>
 
 </section>
+
 
 
 <!-- PROFILE -->
 
-<section id="profile" class="page">
+<section id="profile"
+         class="page">
 
-    <div class="profile">
 
-        <h2 class="section-title">👤 ملفي</h2>
+<div class="profile">
 
-        <div class="card profile-head">
 
-            <div id="avatar" class="avatar">
-                A
-            </div>
+<h2 class="section-title">
+👤 ملفي
+</h2>
 
-            <h2 id="profileName">غير مسجل</h2>
 
-            <p id="profileEmail" class="muted">
-                —
-            </p>
+<div class="card profile-head">
 
-            <div id="profileRankBadge"
-                 class="rank-badge">
-                العضو
-            </div>
 
-        </div>
+<div id="avatar"
+     class="avatar">
+A
+</div>
 
-        <br>
 
-        <div class="stats">
+<h2 id="profileName">
+غير مسجل
+</h2>
 
-            <div class="stat">
-                <div class="stat-title">النقاط</div>
-                <div id="profilePoints" class="stat-value">0</div>
-            </div>
 
-            <div class="stat">
-                <div class="stat-title">الحالة</div>
-                <div id="profileStatus" class="stat-value">—</div>
-            </div>
+<p id="profileEmail"
+   class="muted">
+—
+</p>
 
-        </div>
 
-    </div>
+<div id="profileRankBadge"
+     class="rank-badge">
+العضو
+</div>
+
+
+</div>
+
+
+<br>
+
+
+<div class="stats">
+
+
+<div class="stat">
+
+<div class="stat-title">
+النقاط
+</div>
+
+<div id="profilePoints"
+     class="stat-value">
+0
+</div>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-title">
+الحالة
+</div>
+
+<div id="profileStatus"
+     class="stat-value">
+—
+</div>
+
+</div>
+
+
+</div>
+
+
+</div>
 
 </section>
+
 
 
 <!-- JOIN -->
 
-<section id="join" class="page">
+<section id="join"
+         class="page">
 
-    <div class="form-box">
 
-        <h2>📨 طلب الانضمام إلى AHF</h2>
+<div class="form-box">
 
-        <p class="muted">
-            أرسل بياناتك، وسيتم إرسال الطلب للإدارة للمراجعة.
-        </p>
 
-        <div id="joinMessage"></div>
+<h2>
+📨 طلب الانضمام إلى AHF
+</h2>
 
-        <div class="field">
 
-            <label>الاسم الكامل</label>
+<p class="muted">
+أرسل بياناتك، وسيتم إرسال الطلب للإدارة للمراجعة.
+</p>
 
-            <input
-                id="joinName"
-                type="text"
-                placeholder="اكتب اسمك"
-            >
 
-        </div>
+<div id="joinMessage">
+</div>
 
-        <div class="field">
 
-            <label>الرياضة / النشاط</label>
+<div class="field">
 
-            <input
-                id="joinSport"
-                type="text"
-                placeholder="مثال: جري، ملاكمة، لياقة..."
-            >
+<label>
+الاسم الكامل
+</label>
 
-        </div>
+<input
+id="joinName"
+type="text"
+placeholder="اكتب اسمك"
+>
 
-        <div class="field">
+</div>
 
-            <label>رسالة للإدارة</label>
 
-            <textarea
-                id="joinMessageText"
-                placeholder="اكتب أي معلومات تريد إضافتها..."
-            ></textarea>
+<div class="field">
 
-        </div>
+<label>
+الرياضة / النشاط
+</label>
 
-        <button class="primary full"
-                onclick="sendJoinRequest()">
-            إرسال الطلب
-        </button>
+<input
+id="joinSport"
+type="text"
+placeholder="مثال: جري، ملاكمة، لياقة..."
+>
 
-    </div>
+</div>
+
+
+<div class="field">
+
+<label>
+رسالة للإدارة
+</label>
+
+<textarea
+id="joinMessageText"
+placeholder="اكتب أي معلومات تريد إضافتها..."
+></textarea>
+
+</div>
+
+
+<button class="primary full"
+        onclick="sendJoinRequest()">
+
+إرسال الطلب
+
+</button>
+
+
+</div>
 
 </section>
+
 
 
 <!-- AUTH -->
 
-<section id="auth" class="page">
+<section id="auth"
+         class="page">
 
-    <div class="form-box">
 
-        <h2>🔐 حساب AHF</h2>
+<div class="form-box">
 
-        <p class="muted">
-            أنشئ حسابًا أو سجّل دخولك.
-        </p>
 
-        <div id="authMessage"></div>
+<h2>
+🔐 حساب AHF
+</h2>
 
-        <div class="field">
 
-            <label>الاسم</label>
+<p class="muted">
+أنشئ حسابًا أو سجّل دخولك.
+</p>
 
-            <input
-                id="authName"
-                type="text"
-                placeholder="اسمك"
-            >
 
-        </div>
+<div id="authMessage">
+</div>
 
-        <div class="field">
 
-            <label>البريد الإلكتروني</label>
+<div class="field">
 
-            <input
-                id="authEmail"
-                type="email"
-                placeholder="example@email.com"
-            >
+<label>
+الاسم
+</label>
 
-        </div>
+<input
+id="authName"
+type="text"
+placeholder="اسمك"
+>
 
-        <div class="field">
+</div>
 
-            <label>كلمة المرور</label>
 
-            <input
-                id="authPassword"
-                type="password"
-                placeholder="6 أحرف على الأقل"
-            >
+<div class="field">
 
-        </div>
+<label>
+البريد الإلكتروني
+</label>
 
-        <button
-    id="registerBtn"
-    class="primary full"
-    type="button"
-    onclick="registerUser()">
-    إنشاء حساب
+<input
+id="authEmail"
+type="email"
+placeholder="example@email.com"
+>
+
+</div>
+
+
+<div class="field">
+
+<label>
+كلمة المرور
+</label>
+
+<input
+id="authPassword"
+type="password"
+placeholder="6 أحرف على الأقل"
+>
+
+</div>
+
+
+<button
+id="registerBtn"
+class="primary full"
+type="button"
+onclick="registerUser()">
+
+إنشاء حساب
+
 </button>
-        <button class="secondary full"
-                onclick="loginUser()">
-            تسجيل الدخول
-        </button>
 
-    </div>
+
+<button
+id="loginBtn"
+class="secondary full"
+type="button"
+onclick="loginUser()">
+
+تسجيل الدخول
+
+</button>
+
+
+</div>
 
 </section>
+
 
 
 <!-- ADMIN -->
 
-<section id="admin" class="page">
+<section id="admin"
+         class="page">
 
-    <h2 class="section-title">🛡️ لوحة الإدارة</h2>
 
-    <div id="adminMessage"></div>
+<h2 class="section-title">
+🛡️ لوحة الإدارة
+</h2>
 
-    <div class="stats">
 
-        <div class="stat">
-            <div class="stat-title">الأعضاء</div>
-            <div id="adminMembers" class="stat-value">0</div>
-        </div>
+<div id="adminMessage">
+</div>
 
-        <div class="stat">
-            <div class="stat-title">طلبات الانضمام</div>
-            <div id="adminRequestsCount" class="stat-value">0</div>
-        </div>
 
-        <div class="stat">
-            <div class="stat-title">التحديات</div>
-            <div id="adminChallenges" class="stat-value">0</div>
-        </div>
+<div class="stats">
 
-    </div>
 
-    <h2 class="section-title">📨 طلبات الانضمام</h2>
+<div class="stat">
 
-    <div id="adminRequests"></div>
+<div class="stat-title">
+الأعضاء
+</div>
 
-    <h2 class="section-title">🏆 إنجازات التحديات</h2>
+<div id="adminMembers"
+     class="stat-value">
+0
+</div>
 
-    <div id="adminSubmissions"></div>
+</div>
 
-    <h2 class="section-title">📢 إضافة تحديث</h2>
 
-    <div class="admin-card">
+<div class="stat">
 
-        <div class="field">
-            <label>العنوان</label>
-            <input id="updateTitle" type="text">
-        </div>
+<div class="stat-title">
+طلبات الانضمام
+</div>
 
-        <div class="field">
-            <label>المحتوى</label>
-            <textarea id="updateContent"></textarea>
-        </div>
+<div id="adminRequestsCount"
+     class="stat-value">
+0
+</div>
 
-        <button class="primary"
-                onclick="createUpdate()">
-            نشر التحديث
-        </button>
+</div>
 
-    </div>
 
-    <h2 class="section-title">🏆 إنشاء تحدي</h2>
+<div class="stat">
 
-    <div class="admin-card">
+<div class="stat-title">
+التحديات
+</div>
 
-        <div class="field">
-            <label>اسم التحدي</label>
-            <input id="newChallengeTitle" type="text">
-        </div>
+<div id="adminChallenges"
+     class="stat-value">
+0
+</div>
 
-        <div class="field">
-            <label>الوصف</label>
-            <textarea id="newChallengeDescription"></textarea>
-        </div>
+</div>
 
-        <div class="field">
-            <label>عدد النقاط</label>
-            <input id="newChallengePoints"
-                   type="number"
-                   min="1"
-                   value="10">
-        </div>
 
-        <button class="primary"
-                onclick="createChallenge()">
-            إنشاء التحدي
-        </button>
+<div class="stat">
 
-    </div>
+<div class="stat-title">
+إنجازات معلقة
+</div>
+
+<div id="adminSubmissionsCount"
+     class="stat-value">
+0
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<!-- إدارة النقاط -->
+
+<h2 class="section-title">
+🎯 إدارة نقاط الأعضاء
+</h2>
+
+
+<div class="admin-card">
+
+
+<p class="muted">
+اختر عضوًا، ثم اختر إضافة أو خصم النقاط، واكتب سبب العملية.
+</p>
+
+
+<div class="field">
+
+<label>
+العضو
+</label>
+
+
+<select
+id="pointsMemberSelect"
+class="member-select"
+onchange="updateSelectedMemberPreview()">
+
+<option value="">
+-- اختر عضوًا --
+</option>
+
+</select>
+
+</div>
+
+
+<div id="selectedMemberPreview"
+     class="points-preview">
+
+اختر عضوًا لعرض نقاطه الحالية.
+
+</div>
+
+
+<div class="field">
+
+<label>
+نوع العملية
+</label>
+
+
+<select
+id="pointsOperation"
+class="member-select">
+
+<option value="add">
+➕ إضافة نقاط
+</option>
+
+<option value="subtract">
+➖ خصم نقاط
+</option>
+
+</select>
+
+</div>
+
+
+<div class="field">
+
+<label>
+عدد النقاط
+</label>
+
+
+<input
+id="manualPointsAmount"
+type="number"
+min="1"
+step="1"
+placeholder="مثال: 10"
+>
+
+</div>
+
+
+<div class="field">
+
+<label>
+سبب العملية
+</label>
+
+
+<input
+id="manualPointsReason"
+type="text"
+placeholder="مثال: مكافأة على النشاط">
+
+</div>
+
+
+<button
+id="adjustPointsBtn"
+class="primary"
+onclick="adjustMemberPoints()">
+
+تنفيذ العملية
+
+</button>
+
+
+</div>
+
+
+
+<h2 class="section-title">
+👥 قائمة أعضاء AHF
+</h2>
+
+
+<div id="adminMembersList">
+
+<div class="alert">
+جارٍ تحميل الأعضاء...
+</div>
+
+</div>
+
+
+
+<h2 class="section-title">
+📨 طلبات الانضمام
+</h2>
+
+
+<div id="adminRequests">
+</div>
+
+
+
+<h2 class="section-title">
+🏆 إنجازات التحديات
+</h2>
+
+
+<div id="adminSubmissions">
+</div>
+
+
+
+<h2 class="section-title">
+📢 إضافة تحديث
+</h2>
+
+
+<div class="admin-card">
+
+
+<div class="field">
+
+<label>
+العنوان
+</label>
+
+<input
+id="updateTitle"
+type="text">
+
+</div>
+
+
+<div class="field">
+
+<label>
+المحتوى
+</label>
+
+<textarea
+id="updateContent"></textarea>
+
+</div>
+
+
+<button class="primary"
+        onclick="createUpdate()">
+
+نشر التحديث
+
+</button>
+
+
+</div>
+
+
+
+<h2 class="section-title">
+🏆 إنشاء تحدي
+</h2>
+
+
+<div class="admin-card">
+
+
+<div class="field">
+
+<label>
+اسم التحدي
+</label>
+
+<input
+id="newChallengeTitle"
+type="text">
+
+</div>
+
+
+<div class="field">
+
+<label>
+الوصف
+</label>
+
+<textarea
+id="newChallengeDescription"></textarea>
+
+</div>
+
+
+<div class="field">
+
+<label>
+عدد النقاط
+</label>
+
+<input
+id="newChallengePoints"
+type="number"
+min="1"
+value="10">
+
+</div>
+
+
+<button class="primary"
+        onclick="createChallenge()">
+
+إنشاء التحدي
+
+</button>
+
+
+</div>
+
 
 </section>
+
 
 </main>
 
 
+
 <footer>
-    AHF — Athletes • Honor • Force
-    <br><br>
-    منصة AHF الرياضية
+
+AHF — Athletes • Honor • Force
+
+<br><br>
+
+منصة AHF الرياضية
+
 </footer>
+
 
 
 <script type="module">
 
+
+/* =========================================================
+   SUPABASE
+   ========================================================= */
+
+
 import {
     createClient
-} from "https://esm.sh/@supabase/supabase-js@2";
+}
+from
+"https://esm.sh/@supabase/supabase-js@2";
 
-
-/* =====================================================
-   SUPABASE
-   ===================================================== */
 
 const SUPABASE_URL =
-    "https://bdhnjhvarhpyzdlcyvjg.supabase.co";
+"https://bdhnjhvarhpyzdlcyvjg.supabase.co";
 
-/*
-   ده مفتاح anon العام لمشروعك.
-   لا تستخدم هنا service_role أو secret.
-*/
+
 const SUPABASE_ANON_KEY =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJkaG5qaHZhcmhweXpkbGN5dmpnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODkzNzkwMTEsImV4cCI6MjEwNDk1NTAxMX0.bv1fAIPnZSvYW6jusKEkdjKL_QZ3SBYn-8ko5j3keQw";
+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJkaG5qaHZhcmhweXpkbGN5dmpnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODkzNzkwMTEsImV4cCI6MjEwNDk1NTAxMX0.bv1fAIPnZSvYW6jusKEkdjKL_QZ3SBYn-8ko5j3keQw";
 
 
 const db =
-    createClient(
-        SUPABASE_URL,
-        SUPABASE_ANON_KEY
-    );
+createClient(
+    SUPABASE_URL,
+    SUPABASE_ANON_KEY
+);
 
 
-/* =====================================================
+/* =========================================================
    STATE
-   ===================================================== */
+   ========================================================= */
+
 
 let currentUser = null;
+
 let currentMember = null;
+
 let isAdmin = false;
 
+let adminMembersCache = [];
 
-/* =====================================================
+
+/* =========================================================
    HELPERS
-   ===================================================== */
+   ========================================================= */
+
 
 function escapeHtml(value){
 
@@ -1081,10 +2124,15 @@ function escapeHtml(value){
         .replaceAll(">","&gt;")
         .replaceAll('"',"&quot;")
         .replaceAll("'","&#039;");
+
 }
 
 
-function setBox(id,message,type=""){
+function setBox(
+    id,
+    message,
+    type=""
+){
 
     const box =
         document.getElementById(id);
@@ -1092,26 +2140,71 @@ function setBox(id,message,type=""){
     if(!box) return;
 
     box.innerHTML =
-        `<div class="alert ${type}">
-            ${escapeHtml(message)}
-        </div>`;
+    `
+    <div class="alert ${type}">
+        ${escapeHtml(message)}
+    </div>
+    `;
+
 }
 
 
-/* =====================================================
+function setButtonLoading(
+    id,
+    loading,
+    loadingText
+){
+
+    const button =
+        document.getElementById(id);
+
+    if(!button) return;
+
+    if(loading){
+
+        button.dataset.originalText =
+            button.textContent;
+
+        button.disabled = true;
+
+        button.textContent =
+            loadingText;
+
+    }else{
+
+        button.disabled = false;
+
+        button.textContent =
+            button.dataset.originalText ||
+            "تنفيذ";
+
+    }
+
+}
+
+
+/* =========================================================
    NAVIGATION
-   ===================================================== */
+   ========================================================= */
+
 
 window.showPage =
-function(pageId,button=null){
+function(
+    pageId,
+    button=null
+){
 
-    document.querySelectorAll(".page")
-        .forEach(page =>
-            page.classList.remove("active")
+    document
+        .querySelectorAll(".page")
+        .forEach(
+            page =>
+                page.classList.remove("active")
         );
+
 
     const page =
         document.getElementById(pageId);
+
 
     if(page){
 
@@ -1120,9 +2213,11 @@ function(pageId,button=null){
     }
 
 
-    document.querySelectorAll(".nav button")
-        .forEach(btn =>
-            btn.classList.remove("active")
+    document
+        .querySelectorAll(".nav button")
+        .forEach(
+            btn =>
+                btn.classList.remove("active")
         );
 
 
@@ -1137,17 +2232,21 @@ function(pageId,button=null){
         loadChallenges();
     }
 
+
     if(pageId === "points"){
         loadPoints();
     }
+
 
     if(pageId === "leaderboard"){
         loadLeaderboard();
     }
 
+
     if(pageId === "admin"){
         loadAdmin();
     }
+
 
     if(pageId === "home"){
         loadUpdates();
@@ -1162,9 +2261,10 @@ function(pageId,button=null){
 };
 
 
-/* =====================================================
+/* =========================================================
    AUTH UI
-   ===================================================== */
+   ========================================================= */
+
 
 function updateAuthUI(){
 
@@ -1193,7 +2293,7 @@ function updateAuthUI(){
     }
 
 
-    if(isAdmin){
+    if(isAdmin && currentUser){
 
         adminNav.classList.remove("hidden");
 
@@ -1206,32 +2306,40 @@ function updateAuthUI(){
 }
 
 
-/* =====================================================
+/* =========================================================
    REGISTER
-   ===================================================== */
+   ========================================================= */
+
 
 window.registerUser =
 async function(){
-const registerBtn = document.getElementById("registerBtn");
 
-if(registerBtn.disabled){
-    return;
-}
+    const button =
+        document.getElementById("registerBtn");
 
-registerBtn.disabled = true;
-registerBtn.textContent = "جاري إنشاء الحساب...";
+
+    if(button.disabled){
+        return;
+    }
+
+
     const name =
-        document.getElementById("authName")
+        document
+            .getElementById("authName")
             .value
             .trim();
+
 
     const email =
-        document.getElementById("authEmail")
+        document
+            .getElementById("authEmail")
             .value
             .trim();
 
+
     const password =
-        document.getElementById("authPassword")
+        document
+            .getElementById("authPassword")
             .value;
 
 
@@ -1244,6 +2352,7 @@ registerBtn.textContent = "جاري إنشاء الحساب...";
         );
 
         return;
+
     }
 
 
@@ -1256,58 +2365,91 @@ registerBtn.textContent = "جاري إنشاء الحساب...";
         );
 
         return;
+
     }
 
 
-    const {
-        data,
-        error
-    } =
-    await db.auth.signUp({
+    setButtonLoading(
+        "registerBtn",
+        true,
+        "جاري إنشاء الحساب..."
+    );
 
-        email,
-        password,
 
-        options:{
-            data:{
-                name:name || "عضو AHF"
+    try{
+
+        const {
+            data,
+            error
+        } =
+        await db.auth.signUp({
+
+            email,
+            password,
+
+            options:{
+                data:{
+                    name:
+                        name ||
+                        "عضو AHF"
+                }
             }
+
+        });
+
+
+        if(error){
+
+            setBox(
+                "authMessage",
+                error.message,
+                "error"
+            );
+
+            return;
+
         }
 
-    });
+
+        if(data.session){
+
+            currentUser =
+                data.user;
+
+            await loadCurrentUser();
 
 
-    if(error){
+            setBox(
+                "authMessage",
+                "تم إنشاء الحساب وتسجيل الدخول بنجاح ✅",
+                "success"
+            );
+
+        }else{
+
+            setBox(
+                "authMessage",
+                "تم إنشاء الحساب. إذا كان تأكيد البريد الإلكتروني مفعّلًا، يجب تأكيد البريد قبل تسجيل الدخول.",
+                "success"
+            );
+
+        }
+
+    }catch(error){
+
+        console.error(error);
 
         setBox(
             "authMessage",
-            error.message,
+            "حدث خطأ أثناء إنشاء الحساب.",
             "error"
         );
 
-        return;
-    }
+    }finally{
 
-
-    if(data.session){
-
-        setBox(
-            "authMessage",
-            "تم إنشاء الحساب وتسجيل الدخول.",
-            "success"
-        );
-
-        currentUser =
-            data.user;
-
-        await loadCurrentUser();
-
-    }else{
-
-        setBox(
-            "authMessage",
-            "تم إنشاء الحساب. إذا كان تأكيد البريد الإلكتروني مفعّلًا، افتح بريدك وأكّد الحساب.",
-            "success"
+        setButtonLoading(
+            "registerBtn",
+            false
         );
 
     }
@@ -1315,20 +2457,24 @@ registerBtn.textContent = "جاري إنشاء الحساب...";
 };
 
 
-/* =====================================================
+/* =========================================================
    LOGIN
-   ===================================================== */
+   ========================================================= */
+
 
 window.loginUser =
 async function(){
 
     const email =
-        document.getElementById("authEmail")
+        document
+            .getElementById("authEmail")
             .value
             .trim();
 
+
     const password =
-        document.getElementById("authPassword")
+        document
+            .getElementById("authPassword")
             .value;
 
 
@@ -1341,72 +2487,114 @@ async function(){
         );
 
         return;
+
     }
 
 
-    const {
-        data,
-        error
-    } =
-    await db.auth.signInWithPassword({
-
-        email,
-        password
-
-    });
+    setButtonLoading(
+        "loginBtn",
+        true,
+        "جاري تسجيل الدخول..."
+    );
 
 
-    if(error){
+    try{
+
+        const {
+            data,
+            error
+        } =
+        await db.auth.signInWithPassword({
+
+            email,
+            password
+
+        });
+
+
+        if(error){
+
+            setBox(
+                "authMessage",
+                error.message,
+                "error"
+            );
+
+            return;
+
+        }
+
+
+        currentUser =
+            data.user;
+
+
+        await loadCurrentUser();
+
 
         setBox(
             "authMessage",
-            error.message,
+            "تم تسجيل الدخول بنجاح ✅",
+            "success"
+        );
+
+
+    }catch(error){
+
+        console.error(error);
+
+        setBox(
+            "authMessage",
+            "حدث خطأ أثناء تسجيل الدخول.",
             "error"
         );
 
-        return;
+    }finally{
+
+        setButtonLoading(
+            "loginBtn",
+            false
+        );
+
     }
-
-
-    currentUser =
-        data.user;
-
-    await loadCurrentUser();
-
-
-    setBox(
-        "authMessage",
-        "تم تسجيل الدخول بنجاح.",
-        "success"
-    );
 
 };
 
 
-/* =====================================================
+/* =========================================================
    LOGOUT
-   ===================================================== */
+   ========================================================= */
+
 
 window.logout =
 async function(){
 
     await db.auth.signOut();
 
+
     currentUser = null;
+
     currentMember = null;
+
     isAdmin = false;
 
+    adminMembersCache = [];
+
+
     updateAuthUI();
+
     updateProfileUI();
+
 
     window.showPage("home");
 
 };
 
 
-/* =====================================================
+/* =========================================================
    LOAD CURRENT USER
-   ===================================================== */
+   ========================================================= */
+
 
 async function loadCurrentUser(){
 
@@ -1423,9 +2611,11 @@ async function loadCurrentUser(){
     if(!currentUser){
 
         currentMember = null;
+
         isAdmin = false;
 
         updateAuthUI();
+
         updateProfileUI();
 
         return;
@@ -1434,22 +2624,33 @@ async function loadCurrentUser(){
 
 
     await loadMember();
+
     await checkAdmin();
+
     await updateCompletedCount();
 
+
     updateAuthUI();
+
     updateProfileUI();
 
 }
 
 
-/* =====================================================
+/* =========================================================
    LOAD MEMBER
-   ===================================================== */
+   ========================================================= */
+
 
 async function loadMember(){
 
-    if(!currentUser) return;
+    if(!currentUser){
+
+        currentMember = null;
+
+        return;
+
+    }
 
 
     const {
@@ -1478,9 +2679,10 @@ async function loadMember(){
 }
 
 
-/* =====================================================
+/* =========================================================
    CHECK ADMIN
-   ===================================================== */
+   ========================================================= */
+
 
 async function checkAdmin(){
 
@@ -1493,18 +2695,35 @@ async function checkAdmin(){
     }
 
 
-    const {
-        data,
-        error
-    } =
-    await db
-        .from("user_roles")
-        .select("role")
-        .eq("user_id",currentUser.id)
-        .maybeSingle();
+    try{
+
+        const {
+            data,
+            error
+        } =
+        await db.rpc(
+            "is_current_user_admin"
+        );
 
 
-    if(error){
+        if(error){
+
+            console.error(error);
+
+            isAdmin = false;
+
+            return false;
+
+        }
+
+
+        isAdmin =
+            data === true;
+
+
+        return isAdmin;
+
+    }catch(error){
 
         console.error(error);
 
@@ -1514,27 +2733,23 @@ async function checkAdmin(){
 
     }
 
-
-    isAdmin =
-        data?.role === "admin";
-
-
-    return isAdmin;
-
 }
 
 
-/* =====================================================
-   PROFILE UI
-   ===================================================== */
+/* =========================================================
+   PROFILE
+   ========================================================= */
+
 
 function updateProfileUI(){
 
     const points =
         currentMember?.points ?? 0;
 
+
     const rank =
         currentMember?.rank ?? "عضو";
+
 
     const status =
         currentMember?.status ?? "غير مسجل";
@@ -1559,15 +2774,16 @@ function updateProfileUI(){
 
     document.getElementById("profileName")
         .textContent =
-        currentMember?.name
-        || currentUser?.email
-        || "غير مسجل";
+        currentMember?.name ||
+        currentUser?.user_metadata?.name ||
+        currentUser?.email ||
+        "غير مسجل";
 
 
     document.getElementById("profileEmail")
         .textContent =
-        currentUser?.email
-        || "—";
+        currentUser?.email ||
+        "—";
 
 
     document.getElementById("profilePoints")
@@ -1587,8 +2803,8 @@ function updateProfileUI(){
 
     const letter =
         (
-            currentMember?.name
-            || "A"
+            currentMember?.name ||
+            "A"
         )
         .charAt(0)
         .toUpperCase();
@@ -1611,16 +2827,19 @@ function updateProfileUI(){
 }
 
 
-/* =====================================================
+/* =========================================================
    COMPLETED
-   ===================================================== */
+   ========================================================= */
+
 
 async function updateCompletedCount(){
 
     if(!currentUser){
 
-        document.getElementById("homeCompleted")
-            .textContent = "0";
+        document
+            .getElementById("homeCompleted")
+            .textContent =
+            "0";
 
         return;
 
@@ -1636,27 +2855,37 @@ async function updateCompletedCount(){
             count:"exact",
             head:true
         })
-        .eq("user_id",currentUser.id)
-        .eq("status","approved");
+        .eq(
+            "user_id",
+            currentUser.id
+        )
+        .eq(
+            "status",
+            "approved"
+        );
 
 
-    document.getElementById("homeCompleted")
+    document
+        .getElementById("homeCompleted")
         .textContent =
         count || 0;
 
 }
 
 
-/* =====================================================
+/* =========================================================
    JOIN REQUEST
-   ===================================================== */
+   ========================================================= */
+
 
 window.sendJoinRequest =
 async function(){
 
     if(!currentUser){
 
-        alert("سجّل الدخول أولًا.");
+        alert(
+            "سجّل الدخول أولًا."
+        );
 
         window.showPage("auth");
 
@@ -1666,17 +2895,22 @@ async function(){
 
 
     const name =
-        document.getElementById("joinName")
+        document
+            .getElementById("joinName")
             .value
             .trim();
+
 
     const sport =
-        document.getElementById("joinSport")
+        document
+            .getElementById("joinSport")
             .value
             .trim();
 
+
     const message =
-        document.getElementById("joinMessageText")
+        document
+            .getElementById("joinMessageText")
             .value
             .trim();
 
@@ -1694,56 +2928,94 @@ async function(){
     }
 
 
-    const {
-        error
-    } =
-    await db
-        .from("join_requests")
-        .insert({
+    try{
 
-            user_id:currentUser.id,
+        const {
+            error
+        } =
+        await db
+            .from("join_requests")
+            .insert({
 
-            full_name:name,
+                user_id:
+                    currentUser.id,
 
-            sport:sport,
+                full_name:
+                    name,
 
-            message:message,
+                sport:
+                    sport,
 
-            status:"pending"
+                message:
+                    message,
 
-        });
+                status:
+                    "pending"
+
+            });
 
 
-    if(error){
+        if(error){
+
+            setBox(
+                "joinMessage",
+                error.message,
+                "error"
+            );
+
+            return;
+
+        }
+
 
         setBox(
             "joinMessage",
-            error.message,
+            "تم إرسال طلب الانضمام إلى الإدارة للمراجعة ✅",
+            "success"
+        );
+
+
+        document
+            .getElementById("joinName")
+            .value = "";
+
+
+        document
+            .getElementById("joinSport")
+            .value = "";
+
+
+        document
+            .getElementById("joinMessageText")
+            .value = "";
+
+
+    }catch(error){
+
+        console.error(error);
+
+        setBox(
+            "joinMessage",
+            "حدث خطأ أثناء إرسال الطلب.",
             "error"
         );
 
-        return;
-
     }
-
-
-    setBox(
-        "joinMessage",
-        "تم إرسال طلب الانضمام إلى الإدارة للمراجعة.",
-        "success"
-    );
 
 };
 
 
-/* =====================================================
+/* =========================================================
    CHALLENGES
-   ===================================================== */
+   ========================================================= */
+
 
 async function loadChallenges(){
 
     const box =
-        document.getElementById("challengeBox");
+        document.getElementById(
+            "challengeBox"
+        );
 
 
     const {
@@ -1753,10 +3025,16 @@ async function loadChallenges(){
     await db
         .from("challenges")
         .select("*")
-        .eq("status","active")
-        .order("created_at",{
-            ascending:false
-        });
+        .eq(
+            "status",
+            "active"
+        )
+        .order(
+            "created_at",
+            {
+                ascending:false
+            }
+        );
 
 
     if(error){
@@ -1789,60 +3067,94 @@ async function loadChallenges(){
     box.innerHTML = "";
 
 
-    data.forEach(challenge => {
+    data.forEach(
+        challenge => {
 
-        const div =
-            document.createElement("div");
+            const div =
+                document.createElement(
+                    "div"
+                );
 
-        div.className =
-            "challenge";
+
+            div.className =
+                "challenge";
 
 
-        div.innerHTML = `
+            div.innerHTML = `
 
-            <div class="challenge-top">
+                <div class="challenge-top">
 
-                <h3>
-                    ${escapeHtml(challenge.title)}
-                </h3>
+                    <h3>
+                        ${escapeHtml(
+                            challenge.title
+                        )}
+                    </h3>
 
-                <div class="points">
-                    +${Number(challenge.points || 0)} نقطة
+                    <div class="points">
+                        +${Number(
+                            challenge.points || 0
+                        )} نقطة
+                    </div>
+
                 </div>
 
-            </div>
 
-            <p>
-                ${escapeHtml(challenge.description || "")}
-            </p>
-
-            <button
-                onclick="window.submitChallenge('${challenge.id}')">
-                إرسال الإنجاز للمراجعة
-            </button>
-
-        `;
+                <p>
+                    ${escapeHtml(
+                        challenge.description || ""
+                    )}
+                </p>
 
 
-        box.appendChild(div);
+                <button
+                    onclick="window.submitChallenge('${challenge.id}')">
 
-    });
+                    إرسال الإنجاز للمراجعة
+
+                </button>
+
+            `;
+
+
+            box.appendChild(div);
+
+        }
+    );
 
 }
 
 
-/* =====================================================
+/* =========================================================
    SUBMIT CHALLENGE
-   ===================================================== */
+   ========================================================= */
+
 
 window.submitChallenge =
-async function(challengeId){
+async function(
+    challengeId
+){
 
     if(!currentUser){
 
-        alert("سجّل الدخول أولًا.");
+        alert(
+            "سجّل الدخول أولًا."
+        );
 
         window.showPage("auth");
+
+        return;
+
+    }
+
+
+    if(
+        currentMember &&
+        currentMember.status !== "approved"
+    ){
+
+        alert(
+            "يجب أن تتم الموافقة على عضويتك أولًا."
+        );
 
         return;
 
@@ -1855,7 +3167,26 @@ async function(challengeId){
         );
 
 
-    if(proof === null) return;
+    if(proof === null){
+
+        return;
+
+    }
+
+
+    const cleanProof =
+        proof.trim();
+
+
+    if(!cleanProof){
+
+        alert(
+            "اكتب وصف الإنجاز."
+        );
+
+        return;
+
+    }
 
 
     const {
@@ -1865,13 +3196,17 @@ async function(challengeId){
         .from("challenge_submissions")
         .insert({
 
-            challenge_id:challengeId,
+            challenge_id:
+                challengeId,
 
-            user_id:currentUser.id,
+            user_id:
+                currentUser.id,
 
-            proof:proof,
+            proof:
+                cleanProof,
 
-            status:"pending"
+            status:
+                "pending"
 
         });
 
@@ -1895,16 +3230,19 @@ async function(challengeId){
 };
 
 
-/* =====================================================
+/* =========================================================
    POINTS
-   ===================================================== */
+   ========================================================= */
+
 
 async function loadPoints(){
 
     if(!currentUser){
 
-        document.getElementById("pointsBox")
+        document
+            .getElementById("pointsBox")
             .innerHTML =
+
             `
             <div class="alert">
                 سجّل الدخول لرؤية نقاطك.
@@ -1928,11 +3266,20 @@ async function loadPoints(){
     await db
         .from("points_history")
         .select("*")
-        .eq("user_id",currentUser.id)
-        .eq("approved",true)
-        .order("created_at",{
-            ascending:false
-        });
+        .eq(
+            "user_id",
+            currentUser.id
+        )
+        .eq(
+            "approved",
+            true
+        )
+        .order(
+            "created_at",
+            {
+                ascending:false
+            }
+        );
 
 
     if(error){
@@ -1949,7 +3296,9 @@ async function loadPoints(){
 
 
     const box =
-        document.getElementById("pointsBox");
+        document.getElementById(
+            "pointsBox"
+        );
 
 
     if(!data || data.length === 0){
@@ -1967,41 +3316,78 @@ async function loadPoints(){
     box.innerHTML = "";
 
 
-    data.forEach(item => {
+    data.forEach(
+        item => {
 
-        const div =
-            document.createElement("div");
-
-        div.className =
-            "alert";
+            const amount =
+                Number(item.amount || 0);
 
 
-        div.innerHTML = `
-            <strong>
-                +${Number(item.amount || 0)} نقطة
-            </strong>
-            <br>
-            <span class="muted">
-                ${escapeHtml(item.reason || "إنجاز")}
-            </span>
-        `;
+            const positive =
+                amount >= 0;
 
 
-        box.appendChild(div);
+            const div =
+                document.createElement(
+                    "div"
+                );
 
-    });
+
+            div.className =
+                "alert";
+
+
+            div.innerHTML = `
+
+                <strong class="${
+                    positive
+                    ? "point-positive"
+                    : "point-negative"
+                }">
+
+                    ${
+                        positive
+                        ? "+"
+                        : ""
+                    }${amount} نقطة
+
+                </strong>
+
+
+                <br>
+
+
+                <span class="muted">
+
+                    ${escapeHtml(
+                        item.reason ||
+                        "عملية نقاط"
+                    )}
+
+                </span>
+
+            `;
+
+
+            box.appendChild(div);
+
+        }
+    );
 
 }
 
 
-/* =====================================================
+/* =========================================================
    LEADERBOARD
-   ===================================================== */
+   ========================================================= */
+
 
 async function loadLeaderboard(){
 
     const box =
-        document.getElementById("leaderboardBox");
+        document.getElementById(
+            "leaderboardBox"
+        );
 
 
     const {
@@ -2010,17 +3396,26 @@ async function loadLeaderboard(){
     } =
     await db
         .from("members")
-        .select("name,points,rank,status")
-        .order("points",{
-            ascending:false
-        });
+        .select(
+            "name,points,rank,status"
+        )
+        .eq(
+            "status",
+            "approved"
+        )
+        .order(
+            "points",
+            {
+                ascending:false
+            }
+        );
 
 
     if(error){
 
         setBox(
             "leaderboardBox",
-            "لا يمكن عرض المتصدرين حاليًا بسبب صلاحيات قاعدة البيانات.",
+            "لا يمكن عرض المتصدرين حاليًا.",
             "error"
         );
 
@@ -2035,7 +3430,7 @@ async function loadLeaderboard(){
 
         setBox(
             "leaderboardBox",
-            "لا يوجد أعضاء حتى الآن."
+            "لا يوجد أعضاء معتمدون حتى الآن."
         );
 
         return;
@@ -2052,15 +3447,31 @@ async function loadLeaderboard(){
                 <thead>
 
                     <tr>
-                        <th>المركز</th>
-                        <th>العضو</th>
-                        <th>النقاط</th>
-                        <th>الرتبة</th>
+
+                        <th>
+                            المركز
+                        </th>
+
+                        <th>
+                            العضو
+                        </th>
+
+                        <th>
+                            النقاط
+                        </th>
+
+                        <th>
+                            الرتبة
+                        </th>
+
                     </tr>
 
                 </thead>
 
-                <tbody id="leaderboardRows"></tbody>
+
+                <tbody
+                    id="leaderboardRows">
+                </tbody>
 
             </table>
 
@@ -2070,38 +3481,68 @@ async function loadLeaderboard(){
 
 
     const rows =
-        document.getElementById("leaderboardRows");
+        document.getElementById(
+            "leaderboardRows"
+        );
 
 
-    data.forEach((member,index) => {
+    data.forEach(
+        (member,index) => {
 
-        const tr =
-            document.createElement("tr");
-
-
-        tr.innerHTML = `
-            <td>${index + 1}</td>
-            <td>${escapeHtml(member.name || "عضو")}</td>
-            <td>${Number(member.points || 0)}</td>
-            <td>${escapeHtml(member.rank || "عضو")}</td>
-        `;
+            const tr =
+                document.createElement(
+                    "tr"
+                );
 
 
-        rows.appendChild(tr);
+            tr.innerHTML = `
 
-    });
+                <td>
+                    ${index + 1}
+                </td>
+
+                <td>
+                    ${escapeHtml(
+                        member.name ||
+                        "عضو"
+                    )}
+                </td>
+
+                <td>
+                    ${Number(
+                        member.points || 0
+                    )}
+                </td>
+
+                <td>
+                    ${escapeHtml(
+                        member.rank ||
+                        "عضو"
+                    )}
+                </td>
+
+            `;
+
+
+            rows.appendChild(tr);
+
+        }
+    );
 
 }
 
 
-/* =====================================================
+/* =========================================================
    UPDATES
-   ===================================================== */
+   ========================================================= */
+
 
 async function loadUpdates(){
 
     const box =
-        document.getElementById("updatesBox");
+        document.getElementById(
+            "updatesBox"
+        );
 
 
     const {
@@ -2111,9 +3552,12 @@ async function loadUpdates(){
     await db
         .from("updates")
         .select("*")
-        .order("created_at",{
-            ascending:false
-        })
+        .order(
+            "created_at",
+            {
+                ascending:false
+            }
+        )
         .limit(5);
 
 
@@ -2144,39 +3588,55 @@ async function loadUpdates(){
     box.innerHTML = "";
 
 
-    data.forEach(update => {
+    data.forEach(
+        update => {
 
-        const div =
-            document.createElement("div");
-
-        div.className =
-            "admin-card";
-
-
-        div.innerHTML = `
-            <h3>
-                ${escapeHtml(update.title || "تحديث")}
-            </h3>
-
-            <p class="muted"
-               style="margin-top:10px">
-
-                ${escapeHtml(update.content || "")}
-
-            </p>
-        `;
+            const div =
+                document.createElement(
+                    "div"
+                );
 
 
-        box.appendChild(div);
+            div.className =
+                "admin-card";
 
-    });
+
+            div.innerHTML = `
+
+                <h3>
+                    ${escapeHtml(
+                        update.title ||
+                        "تحديث"
+                    )}
+                </h3>
+
+
+                <p
+                    class="muted"
+                    style="margin-top:10px">
+
+                    ${escapeHtml(
+                        update.content ||
+                        ""
+                    )}
+
+                </p>
+
+            `;
+
+
+            box.appendChild(div);
+
+        }
+    );
 
 }
 
 
-/* =====================================================
+/* =========================================================
    ADMIN
-   ===================================================== */
+   ========================================================= */
+
 
 async function loadAdmin(){
 
@@ -2197,20 +3657,28 @@ async function loadAdmin(){
     }
 
 
-    document.getElementById("adminMessage")
+    document
+        .getElementById(
+            "adminMessage"
+        )
         .innerHTML = "";
 
 
     await loadAdminStats();
+
+    await loadAdminMembers();
+
     await loadAdminRequests();
+
     await loadAdminSubmissions();
 
 }
 
 
-/* =====================================================
+/* =========================================================
    ADMIN STATS
-   ===================================================== */
+   ========================================================= */
+
 
 async function loadAdminStats(){
 
@@ -2230,7 +3698,10 @@ async function loadAdminStats(){
                 count:"exact",
                 head:true
             })
-            .eq("status","pending");
+            .eq(
+                "status",
+                "pending"
+            );
 
 
     const challenges =
@@ -2242,31 +3713,539 @@ async function loadAdminStats(){
             });
 
 
-    document.getElementById("adminMembers")
+    const submissions =
+        await db
+            .from("challenge_submissions")
+            .select("*",{
+                count:"exact",
+                head:true
+            })
+            .eq(
+                "status",
+                "pending"
+            );
+
+
+    document
+        .getElementById(
+            "adminMembers"
+        )
         .textContent =
         members.count || 0;
 
 
-    document.getElementById("adminRequestsCount")
+    document
+        .getElementById(
+            "adminRequestsCount"
+        )
         .textContent =
         requests.count || 0;
 
 
-    document.getElementById("adminChallenges")
+    document
+        .getElementById(
+            "adminChallenges"
+        )
         .textContent =
         challenges.count || 0;
+
+
+    document
+        .getElementById(
+            "adminSubmissionsCount"
+        )
+        .textContent =
+        submissions.count || 0;
 
 }
 
 
-/* =====================================================
+/* =========================================================
+   ADMIN MEMBERS
+   ========================================================= */
+
+
+async function loadAdminMembers(){
+
+    if(!(await checkAdmin())){
+
+        return;
+
+    }
+
+
+    const box =
+        document.getElementById(
+            "adminMembersList"
+        );
+
+
+    const {
+        data,
+        error
+    } =
+    await db.rpc(
+        "admin_get_members"
+    );
+
+
+    if(error){
+
+        console.error(error);
+
+        setBox(
+            "adminMembersList",
+            "تعذر تحميل قائمة الأعضاء.",
+            "error"
+        );
+
+        return;
+
+    }
+
+
+    adminMembersCache =
+        data || [];
+
+
+    const select =
+        document.getElementById(
+            "pointsMemberSelect"
+        );
+
+
+    select.innerHTML = `
+
+        <option value="">
+            -- اختر عضوًا --
+        </option>
+
+    `;
+
+
+    adminMembersCache.forEach(
+        member => {
+
+            const option =
+                document.createElement(
+                    "option"
+                );
+
+
+            option.value =
+                member.id;
+
+
+            option.textContent =
+                `${member.name || "عضو"} — ${
+                    Number(member.points || 0)
+                } نقطة`;
+
+
+            select.appendChild(option);
+
+        }
+    );
+
+
+    if(
+        !adminMembersCache.length
+    ){
+
+        setBox(
+            "adminMembersList",
+            "لا يوجد أعضاء."
+        );
+
+        return;
+
+    }
+
+
+    box.innerHTML = "";
+
+
+    adminMembersCache.forEach(
+        member => {
+
+            const div =
+                document.createElement(
+                    "div"
+                );
+
+
+            div.className =
+                "admin-member-card";
+
+
+            div.innerHTML = `
+
+                <strong>
+                    ${escapeHtml(
+                        member.name ||
+                        "عضو"
+                    )}
+                </strong>
+
+
+                <p class="muted">
+
+                    النقاط:
+                    ${Number(
+                        member.points || 0
+                    )}
+
+                    <br>
+
+                    الرتبة:
+                    ${escapeHtml(
+                        member.rank ||
+                        "عضو"
+                    )}
+
+                    <br>
+
+                    الحالة:
+                    ${escapeHtml(
+                        member.status ||
+                        "—"
+                    )}
+
+                </p>
+
+            `;
+
+
+            box.appendChild(div);
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   SELECTED MEMBER PREVIEW
+   ========================================================= */
+
+
+window.updateSelectedMemberPreview =
+function(){
+
+    const id =
+        document.getElementById(
+            "pointsMemberSelect"
+        ).value;
+
+
+    const box =
+        document.getElementById(
+            "selectedMemberPreview"
+        );
+
+
+    const member =
+        adminMembersCache.find(
+            item =>
+                item.id === id
+        );
+
+
+    if(!member){
+
+        box.innerHTML =
+            "اختر عضوًا لعرض نقاطه الحالية.";
+
+        return;
+
+    }
+
+
+    box.innerHTML = `
+
+        <strong>
+            ${escapeHtml(
+                member.name ||
+                "عضو"
+            )}
+        </strong>
+
+        <br>
+
+        النقاط الحالية:
+        <strong>
+            ${Number(
+                member.points || 0
+            )}
+        </strong>
+
+        نقطة
+
+        <br>
+
+        الرتبة:
+        ${escapeHtml(
+            member.rank ||
+            "عضو"
+        )}
+
+    `;
+
+};
+
+
+/* =========================================================
+   MANUAL POINTS
+   ========================================================= */
+
+
+window.adjustMemberPoints =
+async function(){
+
+    if(!(await checkAdmin())){
+
+        alert(
+            "غير مسموح."
+        );
+
+        return;
+
+    }
+
+
+    const memberId =
+        document.getElementById(
+            "pointsMemberSelect"
+        ).value;
+
+
+    const operation =
+        document.getElementById(
+            "pointsOperation"
+        ).value;
+
+
+    const amount =
+        Number(
+            document.getElementById(
+                "manualPointsAmount"
+            ).value
+        );
+
+
+    const reason =
+        document.getElementById(
+            "manualPointsReason"
+        ).value
+        .trim();
+
+
+    if(!memberId){
+
+        alert(
+            "اختر عضوًا أولًا."
+        );
+
+        return;
+
+    }
+
+
+    if(
+        !Number.isInteger(amount) ||
+        amount <= 0
+    ){
+
+        alert(
+            "اكتب عدد نقاط صحيحًا أكبر من صفر."
+        );
+
+        return;
+
+    }
+
+
+    if(!reason){
+
+        alert(
+            "اكتب سبب العملية."
+        );
+
+        return;
+
+    }
+
+
+    const change =
+        operation === "subtract"
+        ? -amount
+        : amount;
+
+
+    const member =
+        adminMembersCache.find(
+            item =>
+                item.id === memberId
+        );
+
+
+    if(!member){
+
+        alert(
+            "تعذر العثور على العضو."
+        );
+
+        return;
+
+    }
+
+
+    if(
+        change < 0 &&
+        Number(member.points || 0) < amount
+    ){
+
+        alert(
+            "لا يمكن خصم نقاط أكثر من رصيد العضو."
+        );
+
+        return;
+
+    }
+
+
+    const confirmation =
+        confirm(
+            `${
+                change > 0
+                ? "إضافة"
+                : "خصم"
+            } ${amount} نقطة ${
+                change > 0
+                ? "للعضو"
+                : "من العضو"
+            } ${member.name}؟`
+        );
+
+
+    if(!confirmation){
+
+        return;
+
+    }
+
+
+    setButtonLoading(
+        "adjustPointsBtn",
+        true,
+        "جاري التنفيذ..."
+    );
+
+
+    try{
+
+        const {
+            data,
+            error
+        } =
+        await db.rpc(
+            "admin_adjust_points",
+            {
+                target_member_id:
+                    memberId,
+
+                points_change:
+                    change,
+
+                operation_reason:
+                    reason
+            }
+        );
+
+
+        if(error){
+
+            console.error(error);
+
+            alert(
+                error.message ||
+                "تعذر تنفيذ العملية."
+            );
+
+            return;
+
+        }
+
+
+        alert(
+            `تمت العملية بنجاح ✅
+
+العضو: ${data.member_name}
+
+التغيير:
+${
+    data.points_change > 0
+    ? "+"
+    : ""
+}${data.points_change} نقطة
+
+الرصيد الجديد:
+${data.new_points} نقطة`
+        );
+
+
+        document
+            .getElementById(
+                "manualPointsAmount"
+            )
+            .value = "";
+
+
+        document
+            .getElementById(
+                "manualPointsReason"
+            )
+            .value = "";
+
+
+        await loadAdminMembers();
+
+        await loadAdminStats();
+
+        updateSelectedMemberPreview();
+
+
+    }catch(error){
+
+        console.error(error);
+
+        alert(
+            "حدث خطأ أثناء تنفيذ العملية."
+        );
+
+    }finally{
+
+        setButtonLoading(
+            "adjustPointsBtn",
+            false
+        );
+
+    }
+
+};
+
+
+/* =========================================================
    ADMIN REQUESTS
-   ===================================================== */
+   ========================================================= */
+
 
 async function loadAdminRequests(){
 
     const box =
-        document.getElementById("adminRequests");
+        document.getElementById(
+            "adminRequests"
+        );
 
 
     const {
@@ -2276,10 +4255,16 @@ async function loadAdminRequests(){
     await db
         .from("join_requests")
         .select("*")
-        .eq("status","pending")
-        .order("created_at",{
-            ascending:false
-        });
+        .eq(
+            "status",
+            "pending"
+        )
+        .order(
+            "created_at",
+            {
+                ascending:false
+            }
+        );
 
 
     if(error){
@@ -2310,86 +4295,105 @@ async function loadAdminRequests(){
     box.innerHTML = "";
 
 
-    data.forEach(request => {
+    data.forEach(
+        request => {
 
-        const div =
-            document.createElement("div");
-
-        div.className =
-            "admin-card";
-
-
-        div.innerHTML = `
-
-            <h3>
-                ${escapeHtml(request.full_name || "عضو")}
-            </h3>
-
-            <p class="muted">
-                الرياضة:
-                ${escapeHtml(request.sport || "—")}
-            </p>
-
-            <p class="muted">
-                ${escapeHtml(request.message || "")}
-            </p>
-
-            <div class="admin-actions">
-
-                <button class="approve"
-                        onclick="window.approveJoin('${request.id}','${request.user_id}')">
-                    قبول
-                </button>
-
-                <button class="reject"
-                        onclick="window.rejectJoin('${request.id}','${request.user_id}')">
-                    رفض
-                </button>
-
-            </div>
-
-        `;
+            const div =
+                document.createElement(
+                    "div"
+                );
 
 
-        box.appendChild(div);
+            div.className =
+                "admin-card";
 
-    });
+
+            div.innerHTML = `
+
+                <h3>
+                    ${escapeHtml(
+                        request.full_name ||
+                        "عضو"
+                    )}
+                </h3>
+
+
+                <p class="muted">
+
+                    الرياضة:
+                    ${escapeHtml(
+                        request.sport ||
+                        "—"
+                    )}
+
+                </p>
+
+
+                <p class="muted">
+
+                    ${escapeHtml(
+                        request.message ||
+                        ""
+                    )}
+
+                </p>
+
+
+                <div class="admin-actions">
+
+
+                    <button
+                        class="approve"
+                        onclick="window.approveJoin(
+                            '${request.id}',
+                            '${request.user_id}'
+                        )">
+
+                        قبول
+
+                    </button>
+
+
+                    <button
+                        class="reject"
+                        onclick="window.rejectJoin(
+                            '${request.id}',
+                            '${request.user_id}'
+                        )">
+
+                        رفض
+
+                    </button>
+
+
+                </div>
+
+            `;
+
+
+            box.appendChild(div);
+
+        }
+    );
 
 }
 
 
-/* =====================================================
+/* =========================================================
    APPROVE JOIN
-   ===================================================== */
+   ========================================================= */
+
 
 window.approveJoin =
-async function(requestId,userId){
+async function(
+    requestId,
+    userId
+){
 
     if(!(await checkAdmin())){
 
-        alert("غير مسموح.");
-
-        return;
-
-    }
-
-
-    const {
-        error:requestError
-    } =
-    await db
-        .from("join_requests")
-        .update({
-            status:"approved"
-        })
-        .eq("id",requestId);
-
-
-    if(requestError){
-
         alert(
-            "تعذر قبول الطلب: " +
-            requestError.message
+            "غير مسموح."
         );
 
         return;
@@ -2398,20 +4402,56 @@ async function(requestId,userId){
 
 
     const {
-        error:memberError
+        error
+    } =
+    await db
+        .from("join_requests")
+        .update({
+
+            status:
+                "approved"
+
+        })
+        .eq(
+            "id",
+            requestId
+        );
+
+
+    if(error){
+
+        alert(
+            "تعذر قبول الطلب: " +
+            error.message
+        );
+
+        return;
+
+    }
+
+
+    const {
+        error:
+            memberError
     } =
     await db
         .from("members")
         .update({
-            status:"approved"
+
+            status:
+                "approved"
+
         })
-        .eq("id",userId);
+        .eq(
+            "id",
+            userId
+        );
 
 
     if(memberError){
 
         alert(
-            "تم قبول الطلب لكن تعذر تحديث العضو."
+            "تم قبول الطلب لكن تعذر تحديث حالة العضو."
         );
 
         return;
@@ -2419,23 +4459,32 @@ async function(requestId,userId){
     }
 
 
-    alert("تم قبول الطلب ✅");
+    alert(
+        "تم قبول الطلب ✅"
+    );
 
-    loadAdmin();
+
+    await loadAdmin();
 
 };
 
 
-/* =====================================================
+/* =========================================================
    REJECT JOIN
-   ===================================================== */
+   ========================================================= */
+
 
 window.rejectJoin =
-async function(requestId,userId){
+async function(
+    requestId,
+    userId
+){
 
     if(!(await checkAdmin())){
 
-        alert("غير مسموح.");
+        alert(
+            "غير مسموح."
+        );
 
         return;
 
@@ -2449,21 +4498,30 @@ async function(requestId,userId){
 
 
     const {
-        error:requestError
+        error
     } =
     await db
         .from("join_requests")
         .update({
-            status:"rejected",
-            admin_note:note || ""
+
+            status:
+                "rejected",
+
+            admin_note:
+                note || ""
+
         })
-        .eq("id",requestId);
+        .eq(
+            "id",
+            requestId
+        );
 
 
-    if(requestError){
+    if(error){
 
         alert(
-            "تعذر رفض الطلب."
+            "تعذر رفض الطلب: " +
+            error.message
         );
 
         return;
@@ -2471,29 +4529,54 @@ async function(requestId,userId){
     }
 
 
+    const {
+        error:
+            memberError
+    } =
     await db
         .from("members")
         .update({
-            status:"rejected"
+
+            status:
+                "rejected"
+
         })
-        .eq("id",userId);
+        .eq(
+            "id",
+            userId
+        );
 
 
-    alert("تم رفض الطلب.");
+    if(memberError){
 
-    loadAdmin();
+        console.error(
+            memberError
+        );
+
+    }
+
+
+    alert(
+        "تم رفض الطلب."
+    );
+
+
+    await loadAdmin();
 
 };
 
 
-/* =====================================================
+/* =========================================================
    ADMIN SUBMISSIONS
-   ===================================================== */
+   ========================================================= */
+
 
 async function loadAdminSubmissions(){
 
     const box =
-        document.getElementById("adminSubmissions");
+        document.getElementById(
+            "adminSubmissions"
+        );
 
 
     const {
@@ -2503,10 +4586,16 @@ async function loadAdminSubmissions(){
     await db
         .from("challenge_submissions")
         .select("*")
-        .eq("status","pending")
-        .order("created_at",{
-            ascending:false
-        });
+        .eq(
+            "status",
+            "pending"
+        )
+        .order(
+            "created_at",
+            {
+                ascending:false
+            }
+        );
 
 
     if(error){
@@ -2537,63 +4626,100 @@ async function loadAdminSubmissions(){
     box.innerHTML = "";
 
 
-    data.forEach(item => {
+    data.forEach(
+        item => {
 
-        const div =
-            document.createElement("div");
-
-        div.className =
-            "admin-card";
-
-
-        div.innerHTML = `
-
-            <h3>طلب إنجاز</h3>
-
-            <p class="muted">
-                العضو:
-                ${escapeHtml(item.user_id)}
-            </p>
-
-            <p class="muted">
-                الإثبات:
-                ${escapeHtml(item.proof || "—")}
-            </p>
-
-            <div class="admin-actions">
-
-                <button class="approve"
-                        onclick="window.approveSubmission('${item.id}','${item.user_id}','${item.challenge_id}')">
-                    اعتماد
-                </button>
-
-                <button class="reject"
-                        onclick="window.rejectSubmission('${item.id}')">
-                    رفض
-                </button>
-
-            </div>
-
-        `;
+            const div =
+                document.createElement(
+                    "div"
+                );
 
 
-        box.appendChild(div);
+            div.className =
+                "admin-card";
 
-    });
+
+            div.innerHTML = `
+
+                <h3>
+                    طلب إنجاز
+                </h3>
+
+
+                <p class="muted">
+
+                    العضو:
+                    ${escapeHtml(
+                        item.user_id
+                    )}
+
+                </p>
+
+
+                <p class="muted">
+
+                    الإثبات:
+                    ${escapeHtml(
+                        item.proof ||
+                        "—"
+                    )}
+
+                </p>
+
+
+                <div class="admin-actions">
+
+
+                    <button
+                        class="approve"
+                        onclick="window.approveSubmission(
+                            '${item.id}'
+                        )">
+
+                        اعتماد
+
+                    </button>
+
+
+                    <button
+                        class="reject"
+                        onclick="window.rejectSubmission(
+                            '${item.id}'
+                        )">
+
+                        رفض
+
+                    </button>
+
+
+                </div>
+
+            `;
+
+
+            box.appendChild(div);
+
+        }
+    );
 
 }
 
 
-/* =====================================================
+/* =========================================================
    APPROVE SUBMISSION
-   ===================================================== */
+   ========================================================= */
+
 
 window.approveSubmission =
-async function(submissionId,userId,challengeId){
+async function(
+    submissionId
+){
 
     if(!(await checkAdmin())){
 
-        alert("غير مسموح.");
+        alert(
+            "غير مسموح."
+        );
 
         return;
 
@@ -2601,106 +4727,25 @@ async function(submissionId,userId,challengeId){
 
 
     const {
-        data:challenge,
-        error:challengeError
+        data,
+        error
     } =
-    await db
-        .from("challenges")
-        .select("title,points")
-        .eq("id",challengeId)
-        .single();
+    await db.rpc(
+        "admin_approve_submission",
+        {
+            target_submission_id:
+                submissionId
+        }
+    );
 
 
-    if(challengeError){
+    if(error){
 
-        alert("تعذر العثور على التحدي.");
-
-        return;
-
-    }
-
-
-    const amount =
-        Number(challenge.points || 0);
-
-
-    const {
-        error:submissionError
-    } =
-    await db
-        .from("challenge_submissions")
-        .update({
-            status:"approved"
-        })
-        .eq("id",submissionId);
-
-
-    if(submissionError){
-
-        alert("تعذر اعتماد الإنجاز.");
-
-        return;
-
-    }
-
-
-    const {
-        error:pointError
-    } =
-    await db
-        .from("points_history")
-        .insert({
-
-            user_id:userId,
-
-            amount:amount,
-
-            reason:challenge.title,
-
-            approved:true
-
-        });
-
-
-    if(pointError){
-
-        alert("تم اعتماد الإنجاز لكن تعذر تسجيل النقاط.");
-
-        return;
-
-    }
-
-
-    const {
-        data:member
-    } =
-    await db
-        .from("members")
-        .select("points")
-        .eq("id",userId)
-        .single();
-
-
-    const newPoints =
-        Number(member?.points || 0) +
-        amount;
-
-
-    const {
-        error:updateError
-    } =
-    await db
-        .from("members")
-        .update({
-            points:newPoints
-        })
-        .eq("id",userId);
-
-
-    if(updateError){
+        console.error(error);
 
         alert(
-            "تعذر تحديث نقاط العضو."
+            error.message ||
+            "تعذر اعتماد الإنجاز."
         );
 
         return;
@@ -2709,25 +4754,30 @@ async function(submissionId,userId,challengeId){
 
 
     alert(
-        `تم اعتماد الإنجاز وإضافة ${amount} نقطة ✅`
+        `تم اعتماد الإنجاز وإضافة ${data.points} نقطة ✅`
     );
 
 
-    loadAdmin();
+    await loadAdmin();
 
 };
 
 
-/* =====================================================
+/* =========================================================
    REJECT SUBMISSION
-   ===================================================== */
+   ========================================================= */
+
 
 window.rejectSubmission =
-async function(submissionId){
+async function(
+    submissionId
+){
 
     if(!(await checkAdmin())){
 
-        alert("غير مسموح.");
+        alert(
+            "غير مسموح."
+        );
 
         return;
 
@@ -2747,40 +4797,57 @@ async function(submissionId){
         .from("challenge_submissions")
         .update({
 
-            status:"rejected",
+            status:
+                "rejected",
 
-            admin_note:note || ""
+            admin_note:
+                note || ""
 
         })
-        .eq("id",submissionId);
+        .eq(
+            "id",
+            submissionId
+        )
+        .eq(
+            "status",
+            "pending"
+        );
 
 
     if(error){
 
-        alert("تعذر رفض الإنجاز.");
+        alert(
+            "تعذر رفض الإنجاز."
+        );
 
         return;
 
     }
 
 
-    alert("تم رفض الإنجاز.");
+    alert(
+        "تم رفض الإنجاز."
+    );
 
-    loadAdmin();
+
+    await loadAdmin();
 
 };
 
 
-/* =====================================================
+/* =========================================================
    CREATE UPDATE
-   ===================================================== */
+   ========================================================= */
+
 
 window.createUpdate =
 async function(){
 
     if(!(await checkAdmin())){
 
-        alert("غير مسموح.");
+        alert(
+            "غير مسموح."
+        );
 
         return;
 
@@ -2788,19 +4855,28 @@ async function(){
 
 
     const title =
-        document.getElementById("updateTitle")
+        document
+            .getElementById(
+                "updateTitle"
+            )
             .value
             .trim();
 
+
     const content =
-        document.getElementById("updateContent")
+        document
+            .getElementById(
+                "updateContent"
+            )
             .value
             .trim();
 
 
     if(!title || !content){
 
-        alert("اكتب العنوان والمحتوى.");
+        alert(
+            "اكتب العنوان والمحتوى."
+        );
 
         return;
 
@@ -2818,46 +4894,64 @@ async function(){
 
             content,
 
-            type:"announcement",
+            type:
+                "announcement",
 
-            created_by:currentUser.id
+            created_by:
+                currentUser.id
 
         });
 
 
     if(error){
 
-        alert("تعذر نشر التحديث.");
+        alert(
+            "تعذر نشر التحديث: " +
+            error.message
+        );
 
         return;
 
     }
 
 
-    document.getElementById("updateTitle")
+    document
+        .getElementById(
+            "updateTitle"
+        )
         .value = "";
 
-    document.getElementById("updateContent")
+
+    document
+        .getElementById(
+            "updateContent"
+        )
         .value = "";
 
 
-    alert("تم نشر التحديث ✅");
+    alert(
+        "تم نشر التحديث ✅"
+    );
 
-    loadUpdates();
+
+    await loadUpdates();
 
 };
 
 
-/* =====================================================
+/* =========================================================
    CREATE CHALLENGE
-   ===================================================== */
+   ========================================================= */
+
 
 window.createChallenge =
 async function(){
 
     if(!(await checkAdmin())){
 
-        alert("غير مسموح.");
+        alert(
+            "غير مسموح."
+        );
 
         return;
 
@@ -2865,25 +4959,43 @@ async function(){
 
 
     const title =
-        document.getElementById("newChallengeTitle")
+        document
+            .getElementById(
+                "newChallengeTitle"
+            )
             .value
             .trim();
 
+
     const description =
-        document.getElementById("newChallengeDescription")
+        document
+            .getElementById(
+                "newChallengeDescription"
+            )
             .value
             .trim();
+
 
     const points =
         Number(
-            document.getElementById("newChallengePoints")
+            document
+                .getElementById(
+                    "newChallengePoints"
+                )
                 .value
         );
 
 
-    if(!title || !description || points < 1){
+    if(
+        !title ||
+        !description ||
+        !Number.isInteger(points) ||
+        points < 1
+    ){
 
-        alert("أكمل بيانات التحدي.");
+        alert(
+            "أكمل بيانات التحدي بشكل صحيح."
+        );
 
         return;
 
@@ -2903,49 +5015,75 @@ async function(){
 
             points,
 
-            status:"active",
+            status:
+                "active",
 
-            created_by:currentUser.id
+            created_by:
+                currentUser.id
 
         });
 
 
     if(error){
 
-        alert("تعذر إنشاء التحدي.");
+        alert(
+            "تعذر إنشاء التحدي: " +
+            error.message
+        );
 
         return;
 
     }
 
 
-    document.getElementById("newChallengeTitle")
+    document
+        .getElementById(
+            "newChallengeTitle"
+        )
         .value = "";
 
-    document.getElementById("newChallengeDescription")
+
+    document
+        .getElementById(
+            "newChallengeDescription"
+        )
         .value = "";
 
-    document.getElementById("newChallengePoints")
+
+    document
+        .getElementById(
+            "newChallengePoints"
+        )
         .value = 10;
 
 
-    alert("تم إنشاء التحدي ✅");
+    alert(
+        "تم إنشاء التحدي ✅"
+    );
 
-    loadChallenges();
-    loadAdmin();
+
+    await loadChallenges();
+
+    await loadAdmin();
 
 };
 
 
-/* =====================================================
+/* =========================================================
    AUTH STATE
-   ===================================================== */
+   ========================================================= */
+
 
 db.auth.onAuthStateChange(
-    async (event,session)=>{
+    async (
+        event,
+        session
+    ) => {
 
         currentUser =
-            session?.user || null;
+            session?.user ||
+            null;
+
 
         await loadCurrentUser();
 
@@ -2953,9 +5091,10 @@ db.auth.onAuthStateChange(
 );
 
 
-/* =====================================================
+/* =========================================================
    START
-   ===================================================== */
+   ========================================================= */
+
 
 await loadCurrentUser();
 
@@ -2965,7 +5104,10 @@ await loadUpdates();
 
 await loadLeaderboard();
 
+
 </script>
 
+
 </body>
+
 </html>
