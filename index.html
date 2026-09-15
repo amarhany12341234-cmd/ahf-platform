@@ -1212,7 +1212,14 @@ function updateAuthUI(){
 
 window.registerUser =
 async function(){
+const registerBtn = document.getElementById("registerBtn");
 
+if(registerBtn.disabled){
+    return;
+}
+
+registerBtn.disabled = true;
+registerBtn.textContent = "جاري إنشاء الحساب...";
     const name =
         document.getElementById("authName")
             .value
