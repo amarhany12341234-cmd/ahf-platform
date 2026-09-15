@@ -6,8 +6,6 @@
 
 <title>AHF | منصة AHF الرياضية</title>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
 <style>
 *{
     box-sizing:border-box;
@@ -15,14 +13,21 @@
     padding:0;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family:Arial,Tahoma,sans-serif;
-    background:#090909;
+    background:#080808;
     color:#fff;
     min-height:100vh;
 }
 
-button,input,textarea,select{
+button,
+input,
+textarea,
+select{
     font-family:inherit;
 }
 
@@ -34,15 +39,13 @@ button{
     display:none !important;
 }
 
-/* HEADER */
-
 header{
     position:sticky;
     top:0;
     z-index:1000;
-    background:rgba(9,9,9,.97);
+    background:rgba(8,8,8,.96);
     border-bottom:1px solid #252525;
-    backdrop-filter:blur(10px);
+    backdrop-filter:blur(12px);
 }
 
 .header-inner{
@@ -52,7 +55,11 @@ header{
     display:flex;
     align-items:center;
     justify-content:space-between;
-    gap:20px;
+    gap:18px;
+}
+
+.brand{
+    min-width:180px;
 }
 
 .logo{
@@ -61,7 +68,7 @@ header{
     letter-spacing:7px;
 }
 
-.subtitle{
+.tagline{
     color:#777;
     font-size:12px;
     margin-top:3px;
@@ -69,17 +76,18 @@ header{
 
 .nav{
     display:flex;
-    gap:7px;
     flex-wrap:wrap;
+    gap:6px;
     justify-content:center;
 }
 
 .nav button{
-    border:1px solid transparent;
     background:transparent;
     color:#aaa;
-    padding:9px 12px;
+    border:1px solid transparent;
+    padding:9px 11px;
     border-radius:10px;
+    transition:.2s;
 }
 
 .nav button:hover,
@@ -91,7 +99,7 @@ header{
 .container{
     max-width:1250px;
     margin:auto;
-    padding:25px 18px 60px;
+    padding:25px 18px 70px;
 }
 
 .page{
@@ -102,16 +110,14 @@ header{
     display:block;
 }
 
-/* HERO */
-
 .hero{
     text-align:center;
-    padding:55px 10px 35px;
+    padding:60px 10px 40px;
 }
 
 .hero h1{
     font-size:44px;
-    margin-bottom:14px;
+    margin-bottom:15px;
 }
 
 .hero p{
@@ -121,42 +127,23 @@ header{
 }
 
 .primary{
+    margin-top:22px;
     background:#fff;
     color:#000;
     border:none;
     border-radius:12px;
     padding:13px 22px;
     font-weight:bold;
-    margin-top:22px;
 }
 
-/* CARDS */
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:15px;
-}
-
-.card{
-    background:#151515;
-    border:1px solid #2b2b2b;
-    border-radius:18px;
-    padding:20px;
-}
-
-.card h3{
-    margin-bottom:9px;
-}
-
-.card p{
-    color:#999;
-    line-height:1.7;
-}
-
-.icon{
-    font-size:30px;
-    margin-bottom:10px;
+.secondary{
+    margin-top:10px;
+    background:#222;
+    color:#fff;
+    border:1px solid #333;
+    border-radius:12px;
+    padding:13px 22px;
+    font-weight:bold;
 }
 
 .section-title{
@@ -166,10 +153,35 @@ header{
 
 .muted{
     color:#888;
-    line-height:1.7;
+    line-height:1.8;
 }
 
-/* STATS */
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+}
+
+.card{
+    background:#151515;
+    border:1px solid #292929;
+    border-radius:18px;
+    padding:21px;
+}
+
+.card h3{
+    margin-bottom:9px;
+}
+
+.card p{
+    color:#999;
+    line-height:1.75;
+}
+
+.icon{
+    font-size:30px;
+    margin-bottom:10px;
+}
 
 .stats{
     display:grid;
@@ -179,7 +191,7 @@ header{
 
 .stat{
     background:#151515;
-    border:1px solid #2b2b2b;
+    border:1px solid #292929;
     border-radius:16px;
     padding:20px;
 }
@@ -195,19 +207,13 @@ header{
     font-weight:bold;
 }
 
-/* FORMS */
-
 .form-box{
-    max-width:600px;
-    margin:35px auto;
+    max-width:650px;
+    margin:30px auto;
     background:#151515;
-    border:1px solid #2b2b2b;
+    border:1px solid #292929;
     border-radius:20px;
     padding:25px;
-}
-
-.form-box h2{
-    margin-bottom:8px;
 }
 
 .field{
@@ -225,10 +231,10 @@ header{
 .field select{
     width:100%;
     padding:13px;
-    border-radius:11px;
-    border:1px solid #333;
     background:#0d0d0d;
     color:#fff;
+    border:1px solid #333;
+    border-radius:11px;
     outline:none;
 }
 
@@ -237,15 +243,31 @@ header{
     resize:vertical;
 }
 
-.form-box .primary{
+.full{
     width:100%;
 }
 
-/* CHALLENGES */
+.alert{
+    background:#141414;
+    border:1px solid #303030;
+    border-radius:12px;
+    padding:12px 14px;
+    margin-top:14px;
+    color:#bbb;
+    line-height:1.7;
+}
+
+.alert.success{
+    border-color:#3b3b3b;
+}
+
+.alert.error{
+    border-color:#5a5a5a;
+}
 
 .challenge{
     background:#151515;
-    border:1px solid #2b2b2b;
+    border:1px solid #292929;
     border-radius:18px;
     padding:20px;
     margin-bottom:14px;
@@ -253,9 +275,9 @@ header{
 
 .challenge-top{
     display:flex;
-    align-items:center;
     justify-content:space-between;
-    gap:14px;
+    align-items:center;
+    gap:15px;
 }
 
 .points{
@@ -273,102 +295,24 @@ header{
     margin-top:12px;
 }
 
-.action{
+.challenge button{
     margin-top:15px;
     width:100%;
     padding:12px;
-    border:1px solid #333;
+    border:none;
     border-radius:10px;
     background:#fff;
     color:#000;
     font-weight:bold;
 }
-
-/* TABLE */
-
-.table-wrap{
-    overflow-x:auto;
-    background:#151515;
-    border:1px solid #2b2b2b;
-    border-radius:18px;
-}
-
-table{
-    width:100%;
-    border-collapse:collapse;
-    min-width:650px;
-}
-
-th,td{
-    padding:14px;
-    border-bottom:1px solid #292929;
-    text-align:center;
-}
-
-th{
-    color:#888;
-    font-size:14px;
-}
-
-tr:last-child td{
-    border-bottom:none;
-}
-
-/* ALERT */
-
-.alert{
-    margin:15px 0;
-    border-radius:12px;
-    padding:12px 14px;
-    background:#151515;
-    border:1px solid #333;
-    color:#bbb;
-}
-
-.alert.success{
-    border-color:#444;
-}
-
-.alert.error{
-    border-color:#555;
-}
-
-/* ADMIN */
-
-.admin-card{
-    background:#151515;
-    border:1px solid #2b2b2b;
-    border-radius:18px;
-    padding:20px;
-    margin-bottom:15px;
-}
-
-.admin-actions{
-    display:flex;
-    gap:8px;
-    flex-wrap:wrap;
-    margin-top:14px;
-}
-
-.admin-actions button{
-    padding:10px 14px;
-    border-radius:10px;
-    border:1px solid #333;
-    background:#fff;
-    color:#000;
-    font-weight:bold;
-}
-
-.admin-actions button.secondary{
-    background:#222;
-    color:#fff;
-}
-
-/* USER */
 
 .profile{
-    max-width:700px;
+    max-width:750px;
     margin:auto;
+}
+
+.profile-head{
+    text-align:center;
 }
 
 .avatar{
@@ -378,54 +322,114 @@ tr:last-child td{
     background:#fff;
     color:#000;
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
     margin:0 auto 15px;
-    font-size:40px;
+    font-size:38px;
     font-weight:bold;
 }
 
-.profile-head{
-    text-align:center;
-    margin-bottom:20px;
+.rank-badge{
+    display:inline-block;
+    margin-top:10px;
+    padding:7px 13px;
+    border-radius:20px;
+    background:#242424;
+    color:#fff;
 }
 
-/* FOOTER */
+.table-wrap{
+    overflow-x:auto;
+    margin-top:20px;
+    background:#151515;
+    border:1px solid #292929;
+    border-radius:18px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:620px;
+}
+
+th,
+td{
+    padding:15px;
+    border-bottom:1px solid #292929;
+    text-align:center;
+}
+
+th{
+    color:#888;
+}
+
+tr:last-child td{
+    border-bottom:none;
+}
+
+.admin-card{
+    background:#151515;
+    border:1px solid #292929;
+    border-radius:18px;
+    padding:20px;
+    margin-bottom:15px;
+}
+
+.admin-actions{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:15px;
+}
+
+.admin-actions button{
+    border:none;
+    border-radius:10px;
+    padding:10px 14px;
+    font-weight:bold;
+}
+
+.approve{
+    background:#fff;
+    color:#000;
+}
+
+.reject{
+    background:#222;
+    color:#fff;
+    border:1px solid #333 !important;
+}
 
 footer{
     text-align:center;
     color:#666;
     padding:35px 18px;
-    border-top:1px solid #222;
+    border-top:1px solid #202020;
 }
 
-/* MOBILE */
-
-@media(max-width:850px){
-
+@media(max-width:900px){
     .header-inner{
         flex-direction:column;
-    }
-
-    .hero h1{
-        font-size:34px;
     }
 
     .nav{
         width:100%;
     }
 
-    .nav button{
-        font-size:12px;
-        padding:8px 9px;
+    .hero h1{
+        font-size:35px;
     }
 }
 
 @media(max-width:500px){
-
     .container{
         padding-left:12px;
         padding-right:12px;
+    }
+
+    .nav button{
+        font-size:12px;
+        padding:8px 9px;
     }
 
     .challenge-top{
@@ -439,15 +443,14 @@ footer{
 <body>
 
 <header>
-
 <div class="header-inner">
 
-    <div>
+    <div class="brand">
         <div class="logo">AHF</div>
-        <div class="subtitle">Athletes • Honor • Force</div>
+        <div class="tagline">Athletes • Honor • Force</div>
     </div>
 
-    <nav class="nav" id="mainNav">
+    <nav class="nav">
 
         <button class="active" onclick="showPage('home',this)">
             الرئيسية
@@ -477,18 +480,23 @@ footer{
             ملفي
         </button>
 
-        <button id="adminNavBtn"
+        <button id="joinNav"
+                onclick="showPage('join',this)">
+            طلب الانضمام
+        </button>
+
+        <button id="adminNav"
                 class="hidden"
                 onclick="showPage('admin',this)">
             الإدارة
         </button>
 
-        <button id="authNavBtn"
+        <button id="authNav"
                 onclick="showPage('auth',this)">
             تسجيل الدخول
         </button>
 
-        <button id="logoutBtn"
+        <button id="logoutNav"
                 class="hidden"
                 onclick="logout()">
             تسجيل الخروج
@@ -497,7 +505,6 @@ footer{
     </nav>
 
 </div>
-
 </header>
 
 
@@ -513,7 +520,7 @@ footer{
         <h1>منصة AHF الرياضية 🏆</h1>
 
         <p>
-            منصة AHF للتدريب والتطور والتحديات والنقاط والرتب.
+            التدريب والتطور والتحديات والنقاط والرتب.
             <br>
             تدرب، تطور، نافس، وارتقِ.
         </p>
@@ -538,37 +545,37 @@ footer{
         </div>
 
         <div class="stat">
-            <div class="stat-title">التحديات المكتملة</div>
-            <div id="homeCompleted" class="stat-value">0</div>
-        </div>
-
-        <div class="stat">
             <div class="stat-title">الحالة</div>
             <div id="homeStatus" class="stat-value">غير مسجل</div>
         </div>
 
+        <div class="stat">
+            <div class="stat-title">الإنجازات</div>
+            <div id="homeCompleted" class="stat-value">0</div>
+        </div>
+
     </div>
 
-    <h2 class="section-title">🔥 أقسام المنصة</h2>
+    <h2 class="section-title">🔥 أقسام AHF</h2>
 
     <div class="grid">
 
         <div class="card">
             <div class="icon">🏋️</div>
             <h3>التدريب</h3>
-            <p>برامج وتمارين لتطوير المستوى الرياضي.</p>
+            <p>برامج ومجالات تدريب مختلفة داخل المنصة.</p>
         </div>
 
         <div class="card">
             <div class="icon">🏆</div>
             <h3>التحديات</h3>
-            <p>تحديات AHF واختبارات النشاط والالتزام.</p>
+            <p>تحديات يتم إرسال إنجازها إلى الإدارة للمراجعة.</p>
         </div>
 
         <div class="card">
             <div class="icon">⭐</div>
             <h3>النقاط</h3>
-            <p>النقاط المسجلة واعتمادات الإدارة.</p>
+            <p>تتابع نقاطك والإنجازات التي تم اعتمادها.</p>
         </div>
 
         <div class="card">
@@ -580,20 +587,24 @@ footer{
         <div class="card">
             <div class="icon">🎖️</div>
             <h3>الرتب</h3>
-            <p>نظام التقدم والترقية داخل AHF.</p>
+            <p>تطورك داخل نظام الرتب في AHF.</p>
         </div>
 
         <div class="card">
-            <div class="icon">👤</div>
-            <h3>ملفي</h3>
-            <p>بيانات حسابك ونقاطك ورتبتك.</p>
+            <div class="icon">📢</div>
+            <h3>التحديثات</h3>
+            <p>تابع أحدث أخبار وإعلانات AHF.</p>
         </div>
 
     </div>
 
     <h2 class="section-title">📢 آخر التحديثات</h2>
 
-    <div id="homeUpdates"></div>
+    <div id="updatesBox">
+        <div class="alert">
+            جارٍ تحميل التحديثات...
+        </div>
+    </div>
 
 </section>
 
@@ -605,7 +616,7 @@ footer{
     <h2 class="section-title">🏋️ التدريب</h2>
 
     <p class="muted">
-        اختر نوع التدريب المناسب وابدأ رحلتك داخل AHF.
+        اختر المجال الذي تريد تطوير نفسك فيه.
     </p>
 
     <div class="grid" style="margin-top:20px">
@@ -613,25 +624,25 @@ footer{
         <div class="card">
             <div class="icon">💪</div>
             <h3>القوة واللياقة</h3>
-            <p>تمارين تساعد على بناء القوة واللياقة بشكل منظم.</p>
+            <p>تدريبات لتطوير القوة واللياقة بشكل منظم.</p>
         </div>
 
         <div class="card">
             <div class="icon">🏃</div>
-            <h3>الجري</h3>
-            <p>تدريبات الجري والتحمل والحركة.</p>
+            <h3>الجري والتحمل</h3>
+            <p>مساحة لتدريبات الجري والتحمل والحركة.</p>
         </div>
 
         <div class="card">
             <div class="icon">🥊</div>
             <h3>الملاكمة</h3>
-            <p>تدريبات المهارات الأساسية واللياقة.</p>
+            <p>تطوير المهارات الأساسية واللياقة المرتبطة بالملاكمة.</p>
         </div>
 
         <div class="card">
             <div class="icon">🥋</div>
             <h3>الفنون القتالية</h3>
-            <p>مساحة لتدريبات الفنون والمهارات القتالية بشكل منظم وآمن.</p>
+            <p>تدريب منظم للمهارات القتالية واللياقة.</p>
         </div>
 
     </div>
@@ -649,12 +660,8 @@ footer{
         أكمل التحدي ثم أرسل إنجازك للمراجعة.
     </p>
 
-    <div id="challengeList" style="margin-top:20px">
-
-        <div class="alert">
-            جارٍ تحميل التحديات...
-        </div>
-
+    <div id="challengeBox" style="margin-top:20px">
+        <div class="alert">جارٍ تحميل التحديات...</div>
     </div>
 
 </section>
@@ -682,7 +689,11 @@ footer{
 
     <h2 class="section-title">📜 سجل النقاط</h2>
 
-    <div id="pointsHistory"></div>
+    <div id="pointsBox">
+        <div class="alert">
+            سجّل الدخول لرؤية نقاطك.
+        </div>
+    </div>
 
 </section>
 
@@ -697,25 +708,10 @@ footer{
         ترتيب أعضاء AHF حسب النقاط.
     </p>
 
-    <div class="table-wrap" style="margin-top:20px">
-
-        <table>
-
-            <thead>
-                <tr>
-                    <th>المركز</th>
-                    <th>العضو</th>
-                    <th>النقاط</th>
-                    <th>الرتبة</th>
-                </tr>
-            </thead>
-
-            <tbody id="leaderboardBody">
-
-            </tbody>
-
-        </table>
-
+    <div id="leaderboardBox">
+        <div class="alert">
+            جارٍ تحميل الترتيب...
+        </div>
     </div>
 
 </section>
@@ -732,25 +728,25 @@ footer{
         <div class="card">
             <div class="icon">👤</div>
             <h3>العضو</h3>
-            <p>البداية داخل نظام AHF.</p>
+            <p>بداية رحلة عضو AHF.</p>
         </div>
 
         <div class="card">
             <div class="icon">🎖️</div>
             <h3>الجنرال</h3>
-            <p>رتبة أعلى مبنية على الإنجاز.</p>
+            <p>رتبة أعلى مبنية على الإنجاز والنشاط.</p>
         </div>
 
         <div class="card">
             <div class="icon">⭐</div>
             <h3>المساعد</h3>
-            <p>مسؤولية أكبر ومشاركة أقوى.</p>
+            <p>مسؤولية ومشاركة أكبر داخل المجموعة.</p>
         </div>
 
         <div class="card">
             <div class="icon">🏅</div>
             <h3>نائب القائد</h3>
-            <p>دور قيادي داخل AHF.</p>
+            <p>مسؤولية قيادية أعلى.</p>
         </div>
 
         <div class="card">
@@ -774,13 +770,24 @@ footer{
 
         <div class="card profile-head">
 
-            <div class="avatar" id="profileAvatar">A</div>
+            <div id="avatar" class="avatar">
+                A
+            </div>
 
             <h2 id="profileName">غير مسجل</h2>
 
-            <p id="profileEmail" class="muted">—</p>
+            <p id="profileEmail" class="muted">
+                —
+            </p>
+
+            <div id="profileRankBadge"
+                 class="rank-badge">
+                العضو
+            </div>
 
         </div>
+
+        <br>
 
         <div class="stats">
 
@@ -790,16 +797,70 @@ footer{
             </div>
 
             <div class="stat">
-                <div class="stat-title">الرتبة</div>
-                <div id="profileRank" class="stat-value">عضو</div>
-            </div>
-
-            <div class="stat">
                 <div class="stat-title">الحالة</div>
                 <div id="profileStatus" class="stat-value">—</div>
             </div>
 
         </div>
+
+    </div>
+
+</section>
+
+
+<!-- JOIN -->
+
+<section id="join" class="page">
+
+    <div class="form-box">
+
+        <h2>📨 طلب الانضمام إلى AHF</h2>
+
+        <p class="muted">
+            أرسل بياناتك، وسيتم إرسال الطلب للإدارة للمراجعة.
+        </p>
+
+        <div id="joinMessage"></div>
+
+        <div class="field">
+
+            <label>الاسم الكامل</label>
+
+            <input
+                id="joinName"
+                type="text"
+                placeholder="اكتب اسمك"
+            >
+
+        </div>
+
+        <div class="field">
+
+            <label>الرياضة / النشاط</label>
+
+            <input
+                id="joinSport"
+                type="text"
+                placeholder="مثال: جري، ملاكمة، لياقة..."
+            >
+
+        </div>
+
+        <div class="field">
+
+            <label>رسالة للإدارة</label>
+
+            <textarea
+                id="joinMessageText"
+                placeholder="اكتب أي معلومات تريد إضافتها..."
+            ></textarea>
+
+        </div>
+
+        <button class="primary full"
+                onclick="sendJoinRequest()">
+            إرسال الطلب
+        </button>
 
     </div>
 
@@ -815,7 +876,7 @@ footer{
         <h2>🔐 حساب AHF</h2>
 
         <p class="muted">
-            أنشئ حسابًا أو سجل دخولك إلى منصة AHF.
+            أنشئ حسابًا أو سجّل دخولك.
         </p>
 
         <div id="authMessage"></div>
@@ -851,23 +912,18 @@ footer{
             <input
                 id="authPassword"
                 type="password"
-                placeholder="كلمة المرور"
+                placeholder="6 أحرف على الأقل"
             >
 
         </div>
 
-        <button
-            class="primary"
-            onclick="registerUser()"
-        >
+        <button class="primary full"
+                onclick="registerUser()">
             إنشاء حساب
         </button>
 
-        <button
-            class="primary"
-            style="background:#222;color:#fff;margin-top:10px"
-            onclick="loginUser()"
-        >
+        <button class="secondary full"
+                onclick="loginUser()">
             تسجيل الدخول
         </button>
 
@@ -884,43 +940,34 @@ footer{
 
     <div id="adminMessage"></div>
 
-    <div class="grid">
+    <div class="stats">
 
-        <div class="card">
-            <h3>👥 الأعضاء</h3>
-            <p id="adminMemberCount">0</p>
+        <div class="stat">
+            <div class="stat-title">الأعضاء</div>
+            <div id="adminMembers" class="stat-value">0</div>
         </div>
 
-        <div class="card">
-            <h3>📨 الطلبات</h3>
-            <p id="adminRequestCount">0</p>
+        <div class="stat">
+            <div class="stat-title">طلبات الانضمام</div>
+            <div id="adminRequestsCount" class="stat-value">0</div>
         </div>
 
-        <div class="card">
-            <h3>🏆 التحديات</h3>
-            <p id="adminChallengeCount">0</p>
+        <div class="stat">
+            <div class="stat-title">التحديات</div>
+            <div id="adminChallenges" class="stat-value">0</div>
         </div>
 
     </div>
 
-
-    <h2 class="section-title">
-        📨 طلبات الانضمام
-    </h2>
+    <h2 class="section-title">📨 طلبات الانضمام</h2>
 
     <div id="adminRequests"></div>
 
-
-    <h2 class="section-title">
-        ✅ إنجازات التحديات
-    </h2>
+    <h2 class="section-title">🏆 إنجازات التحديات</h2>
 
     <div id="adminSubmissions"></div>
 
-
-    <h2 class="section-title">
-        📢 نشر تحديث
-    </h2>
+    <h2 class="section-title">📢 إضافة تحديث</h2>
 
     <div class="admin-card">
 
@@ -941,31 +988,26 @@ footer{
 
     </div>
 
-
-    <h2 class="section-title">
-        🏆 إنشاء تحدي
-    </h2>
+    <h2 class="section-title">🏆 إنشاء تحدي</h2>
 
     <div class="admin-card">
 
         <div class="field">
             <label>اسم التحدي</label>
-            <input id="challengeTitle" type="text">
+            <input id="newChallengeTitle" type="text">
         </div>
 
         <div class="field">
             <label>الوصف</label>
-            <textarea id="challengeDescription"></textarea>
+            <textarea id="newChallengeDescription"></textarea>
         </div>
 
         <div class="field">
-            <label>النقاط</label>
-            <input
-                id="challengePoints"
-                type="number"
-                min="1"
-                value="10"
-            >
+            <label>عدد النقاط</label>
+            <input id="newChallengePoints"
+                   type="number"
+                   min="1"
+                   value="10">
         </div>
 
         <button class="primary"
@@ -977,20 +1019,22 @@ footer{
 
 </section>
 
-
 </main>
 
 
 <footer>
-
     AHF — Athletes • Honor • Force
     <br><br>
     منصة AHF الرياضية
-
 </footer>
 
 
-<script>
+<script type="module">
+
+import {
+    createClient
+} from "https://esm.sh/@supabase/supabase-js@2";
+
 
 /* =====================================================
    SUPABASE
@@ -999,50 +1043,93 @@ footer{
 const SUPABASE_URL =
     "https://bdhnjhvarhpyzdlcyvjg.supabase.co";
 
+/*
+   ده مفتاح anon العام لمشروعك.
+   لا تستخدم هنا service_role أو secret.
+*/
 const SUPABASE_ANON_KEY =
-   eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJkaG5qaHZhcmhweXpkbGN5dmpnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODkzNzkwMTEsImV4cCI6MjEwNDk1NTAxMX0.bv1fAIPnZSvYW6jusKEkdjKL_QZ3SBYn-8ko5j3keQw  ;
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJkaG5qaHZhcmhweXpkbGN5dmpnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODkzNzkwMTEsImV4cCI6MjEwNDk1NTAxMX0.bv1fAIPnZSvYW6jusKEkdjKL_QZ3SBYn-8ko5j3keQw";
 
-const supabaseClient =
-    supabase.createClient(
+
+const db =
+    createClient(
         SUPABASE_URL,
         SUPABASE_ANON_KEY
     );
 
 
 /* =====================================================
-   GLOBAL
+   STATE
    ===================================================== */
 
 let currentUser = null;
 let currentMember = null;
+let isAdmin = false;
+
+
+/* =====================================================
+   HELPERS
+   ===================================================== */
+
+function escapeHtml(value){
+
+    return String(value ?? "")
+        .replaceAll("&","&amp;")
+        .replaceAll("<","&lt;")
+        .replaceAll(">","&gt;")
+        .replaceAll('"',"&quot;")
+        .replaceAll("'","&#039;");
+}
+
+
+function setBox(id,message,type=""){
+
+    const box =
+        document.getElementById(id);
+
+    if(!box) return;
+
+    box.innerHTML =
+        `<div class="alert ${type}">
+            ${escapeHtml(message)}
+        </div>`;
+}
 
 
 /* =====================================================
    NAVIGATION
    ===================================================== */
 
-function showPage(pageId, button = null){
+window.showPage =
+function(pageId,button=null){
 
     document.querySelectorAll(".page")
-        .forEach(page => page.classList.remove("active"));
+        .forEach(page =>
+            page.classList.remove("active")
+        );
 
     const page =
         document.getElementById(pageId);
 
     if(page){
+
         page.classList.add("active");
+
     }
+
 
     document.querySelectorAll(".nav button")
-        .forEach(btn => btn.classList.remove("active"));
+        .forEach(btn =>
+            btn.classList.remove("active")
+        );
+
 
     if(button){
+
         button.classList.add("active");
+
     }
 
-    if(pageId === "leaderboard"){
-        loadLeaderboard();
-    }
 
     if(pageId === "challenges"){
         loadChallenges();
@@ -1052,27 +1139,68 @@ function showPage(pageId, button = null){
         loadPoints();
     }
 
+    if(pageId === "leaderboard"){
+        loadLeaderboard();
+    }
+
     if(pageId === "admin"){
         loadAdmin();
     }
+
+    if(pageId === "home"){
+        loadUpdates();
+    }
+
 
     window.scrollTo({
         top:0,
         behavior:"smooth"
     });
-}
+
+};
 
 
 /* =====================================================
-   AUTH MESSAGE
+   AUTH UI
    ===================================================== */
 
-function setAuthMessage(message, type=""){
-    const box =
-        document.getElementById("authMessage");
+function updateAuthUI(){
 
-    box.innerHTML =
-        `<div class="alert ${type}">${message}</div>`;
+    const authNav =
+        document.getElementById("authNav");
+
+    const logoutNav =
+        document.getElementById("logoutNav");
+
+    const adminNav =
+        document.getElementById("adminNav");
+
+
+    if(currentUser){
+
+        authNav.classList.add("hidden");
+
+        logoutNav.classList.remove("hidden");
+
+    }else{
+
+        authNav.classList.remove("hidden");
+
+        logoutNav.classList.add("hidden");
+
+    }
+
+
+    if(isAdmin){
+
+        adminNav.classList.remove("hidden");
+
+    }else{
+
+        adminNav.classList.add("hidden");
+
+    }
+
 }
 
 
@@ -1080,54 +1208,70 @@ function setAuthMessage(message, type=""){
    REGISTER
    ===================================================== */
 
-async function registerUser(){
+window.registerUser =
+async function(){
 
     const name =
-        document.getElementById("authName").value.trim();
+        document.getElementById("authName")
+            .value
+            .trim();
 
     const email =
-        document.getElementById("authEmail").value.trim();
+        document.getElementById("authEmail")
+            .value
+            .trim();
 
     const password =
-        document.getElementById("authPassword").value;
+        document.getElementById("authPassword")
+            .value;
+
 
     if(!email || !password){
 
-        setAuthMessage(
-            "اكتب البريد الإلكتروني وكلمة المرور."
+        setBox(
+            "authMessage",
+            "اكتب البريد الإلكتروني وكلمة المرور.",
+            "error"
         );
 
         return;
     }
+
 
     if(password.length < 6){
 
-        setAuthMessage(
-            "كلمة المرور يجب أن تكون 6 أحرف على الأقل."
+        setBox(
+            "authMessage",
+            "كلمة المرور يجب أن تكون 6 أحرف على الأقل.",
+            "error"
         );
 
         return;
     }
 
-    const { data, error } =
-        await supabaseClient.auth.signUp({
 
-            email:email,
+    const {
+        data,
+        error
+    } =
+    await db.auth.signUp({
 
-            password:password,
+        email,
+        password,
 
-            options:{
-                data:{
-                    name:name || "عضو AHF"
-                }
+        options:{
+            data:{
+                name:name || "عضو AHF"
             }
+        }
 
-        });
+    });
 
 
     if(error){
 
-        setAuthMessage(
+        setBox(
+            "authMessage",
             error.message,
             "error"
         );
@@ -1138,60 +1282,75 @@ async function registerUser(){
 
     if(data.session){
 
-        setAuthMessage(
-            "تم إنشاء الحساب بنجاح.",
+        setBox(
+            "authMessage",
+            "تم إنشاء الحساب وتسجيل الدخول.",
             "success"
         );
+
+        currentUser =
+            data.user;
 
         await loadCurrentUser();
 
     }else{
 
-        setAuthMessage(
-            "تم إنشاء الحساب. لو ظهر لك طلب تأكيد البريد، افتح بريدك الإلكتروني وأكمل التأكيد.",
+        setBox(
+            "authMessage",
+            "تم إنشاء الحساب. إذا كان تأكيد البريد الإلكتروني مفعّلًا، افتح بريدك وأكّد الحساب.",
             "success"
         );
 
     }
 
-}
+};
 
 
 /* =====================================================
    LOGIN
    ===================================================== */
 
-async function loginUser(){
+window.loginUser =
+async function(){
 
     const email =
-        document.getElementById("authEmail").value.trim();
+        document.getElementById("authEmail")
+            .value
+            .trim();
 
     const password =
-        document.getElementById("authPassword").value;
+        document.getElementById("authPassword")
+            .value;
+
 
     if(!email || !password){
 
-        setAuthMessage(
-            "اكتب البريد الإلكتروني وكلمة المرور."
+        setBox(
+            "authMessage",
+            "اكتب البريد الإلكتروني وكلمة المرور.",
+            "error"
         );
 
         return;
     }
 
 
-    const { data, error } =
-        await supabaseClient.auth.signInWithPassword({
+    const {
+        data,
+        error
+    } =
+    await db.auth.signInWithPassword({
 
-            email:email,
+        email,
+        password
 
-            password:password
-
-        });
+    });
 
 
     if(error){
 
-        setAuthMessage(
+        setBox(
+            "authMessage",
             error.message,
             "error"
         );
@@ -1200,62 +1359,77 @@ async function loginUser(){
     }
 
 
-    setAuthMessage(
+    currentUser =
+        data.user;
+
+    await loadCurrentUser();
+
+
+    setBox(
+        "authMessage",
         "تم تسجيل الدخول بنجاح.",
         "success"
     );
 
-    currentUser = data.user;
-
-    await loadCurrentUser();
-
-}
+};
 
 
 /* =====================================================
    LOGOUT
    ===================================================== */
 
-async function logout(){
+window.logout =
+async function(){
 
-    await supabaseClient.auth.signOut();
+    await db.auth.signOut();
 
     currentUser = null;
-
     currentMember = null;
+    isAdmin = false;
 
     updateAuthUI();
+    updateProfileUI();
 
-    showPage("home");
+    window.showPage("home");
 
-}
+};
 
 
 /* =====================================================
-   CURRENT USER
+   LOAD CURRENT USER
    ===================================================== */
 
 async function loadCurrentUser(){
 
-    const { data } =
-        await supabaseClient.auth.getUser();
+    const {
+        data
+    } =
+    await db.auth.getUser();
 
-    currentUser = data.user || null;
+
+    currentUser =
+        data?.user || null;
 
 
-    if(currentUser){
-
-        await loadMember();
-
-        await checkAdmin();
-
-    }else{
+    if(!currentUser){
 
         currentMember = null;
+        isAdmin = false;
 
         updateAuthUI();
+        updateProfileUI();
+
+        return;
 
     }
+
+
+    await loadMember();
+    await checkAdmin();
+    await updateCompletedCount();
+
+    updateAuthUI();
+    updateProfileUI();
 
 }
 
@@ -1269,15 +1443,14 @@ async function loadMember(){
     if(!currentUser) return;
 
 
-    const { data, error } =
-        await supabaseClient
-
+    const {
+        data,
+        error
+    } =
+    await db
         .from("members")
-
         .select("*")
-
-        .eq("id", currentUser.id)
-
+        .eq("id",currentUser.id)
         .maybeSingle();
 
 
@@ -1286,21 +1459,67 @@ async function loadMember(){
         console.error(error);
 
         return;
+
     }
 
 
-    currentMember = data || null;
-
-    updateMemberUI();
+    currentMember =
+        data || null;
 
 }
 
 
 /* =====================================================
-   MEMBER UI
+   CHECK ADMIN
    ===================================================== */
 
-function updateMemberUI(){
+async function checkAdmin(){
+
+    if(!currentUser){
+
+        isAdmin = false;
+
+        return false;
+
+    }
+
+
+    const {
+        data,
+        error
+    } =
+    await db
+        .from("user_roles")
+        .select("role")
+        .eq("user_id",currentUser.id)
+        .maybeSingle();
+
+
+    if(error){
+
+        console.error(error);
+
+        isAdmin = false;
+
+        return false;
+
+    }
+
+
+    isAdmin =
+        data?.role === "admin";
+
+
+    return isAdmin;
+
+}
+
+
+/* =====================================================
+   PROFILE UI
+   ===================================================== */
+
+function updateProfileUI(){
 
     const points =
         currentMember?.points ?? 0;
@@ -1309,17 +1528,22 @@ function updateMemberUI(){
         currentMember?.rank ?? "عضو";
 
     const status =
-        currentMember?.status ?? "pending";
+        currentMember?.status ?? "غير مسجل";
 
 
     document.getElementById("homePoints")
-        .textContent = points;
+        .textContent =
+        points;
+
 
     document.getElementById("homeRank")
-        .textContent = rank;
+        .textContent =
+        rank;
+
 
     document.getElementById("homeStatus")
-        .textContent = currentMember
+        .textContent =
+        currentUser
         ? status
         : "غير مسجل";
 
@@ -1333,41 +1557,56 @@ function updateMemberUI(){
 
     document.getElementById("profileEmail")
         .textContent =
-        currentUser?.email || "—";
+        currentUser?.email
+        || "—";
 
 
     document.getElementById("profilePoints")
-        .textContent = points;
-
-
-    document.getElementById("profileRank")
-        .textContent = rank;
+        .textContent =
+        points;
 
 
     document.getElementById("profileStatus")
-        .textContent = status;
+        .textContent =
+        status;
 
 
-    const first =
-        (currentMember?.name || "A")
+    document.getElementById("profileRankBadge")
+        .textContent =
+        rank;
+
+
+    const letter =
+        (
+            currentMember?.name
+            || "A"
+        )
         .charAt(0)
         .toUpperCase();
 
 
-    document.getElementById("profileAvatar")
-        .textContent = first;
+    document.getElementById("avatar")
+        .textContent =
+        letter;
 
 
-    updateHomeCompleted();
+    document.getElementById("pointsTotal")
+        .textContent =
+        points;
+
+
+    document.getElementById("pointsRank")
+        .textContent =
+        rank;
 
 }
 
 
 /* =====================================================
-   COMPLETED CHALLENGES COUNT
+   COMPLETED
    ===================================================== */
 
-async function updateHomeCompleted(){
+async function updateCompletedCount(){
 
     if(!currentUser){
 
@@ -1375,121 +1614,117 @@ async function updateHomeCompleted(){
             .textContent = "0";
 
         return;
+
     }
 
 
-    const { count } =
-        await supabaseClient
-
+    const {
+        count
+    } =
+    await db
         .from("challenge_submissions")
-
         .select("*",{
             count:"exact",
             head:true
         })
-
-        .eq("user_id", currentUser.id)
-
+        .eq("user_id",currentUser.id)
         .eq("status","approved");
 
 
     document.getElementById("homeCompleted")
-        .textContent = count || 0;
-}
-
-
-/* =====================================================
-   AUTH UI
-   ===================================================== */
-
-function updateAuthUI(){
-
-    const adminBtn =
-        document.getElementById("adminNavBtn");
-
-    const authBtn =
-        document.getElementById("authNavBtn");
-
-    const logoutBtn =
-        document.getElementById("logoutBtn");
-
-
-    if(currentUser){
-
-        authBtn.classList.add("hidden");
-
-        logoutBtn.classList.remove("hidden");
-
-    }else{
-
-        authBtn.classList.remove("hidden");
-
-        logoutBtn.classList.add("hidden");
-
-    }
-
-
-    if(currentMember?.isAdmin){
-
-        adminBtn.classList.remove("hidden");
-
-    }else{
-
-        adminBtn.classList.add("hidden");
-
-    }
+        .textContent =
+        count || 0;
 
 }
 
 
 /* =====================================================
-   ADMIN CHECK
+   JOIN REQUEST
    ===================================================== */
 
-async function checkAdmin(){
+window.sendJoinRequest =
+async function(){
 
     if(!currentUser){
 
-        updateAuthUI();
+        alert("سجّل الدخول أولًا.");
 
-        return false;
+        window.showPage("auth");
+
+        return;
+
     }
 
 
-    const { data, error } =
-        await supabaseClient
+    const name =
+        document.getElementById("joinName")
+            .value
+            .trim();
 
-        .from("user_roles")
+    const sport =
+        document.getElementById("joinSport")
+            .value
+            .trim();
 
-        .select("role")
+    const message =
+        document.getElementById("joinMessageText")
+            .value
+            .trim();
 
-        .eq("user_id", currentUser.id)
 
-        .maybeSingle();
+    if(!name){
+
+        setBox(
+            "joinMessage",
+            "اكتب اسمك.",
+            "error"
+        );
+
+        return;
+
+    }
+
+
+    const {
+        error
+    } =
+    await db
+        .from("join_requests")
+        .insert({
+
+            user_id:currentUser.id,
+
+            full_name:name,
+
+            sport:sport,
+
+            message:message,
+
+            status:"pending"
+
+        });
 
 
     if(error){
 
-        console.error(error);
+        setBox(
+            "joinMessage",
+            error.message,
+            "error"
+        );
 
-        updateAuthUI();
-
-        return false;
-    }
-
-
-    if(currentMember){
-
-        currentMember.isAdmin =
-            data?.role === "admin";
+        return;
 
     }
 
 
-    updateAuthUI();
+    setBox(
+        "joinMessage",
+        "تم إرسال طلب الانضمام إلى الإدارة للمراجعة.",
+        "success"
+    );
 
-    return data?.role === "admin";
-}
+};
 
 
 /* =====================================================
@@ -1499,18 +1734,17 @@ async function checkAdmin(){
 async function loadChallenges(){
 
     const box =
-        document.getElementById("challengeList");
+        document.getElementById("challengeBox");
 
 
-    const { data, error } =
-        await supabaseClient
-
+    const {
+        data,
+        error
+    } =
+    await db
         .from("challenges")
-
         .select("*")
-
         .eq("status","active")
-
         .order("created_at",{
             ascending:false
         });
@@ -1518,25 +1752,28 @@ async function loadChallenges(){
 
     if(error){
 
-        box.innerHTML =
-            `<div class="alert error">
-                حدث خطأ أثناء تحميل التحديات.
-            </div>`;
+        setBox(
+            "challengeBox",
+            "تعذر تحميل التحديات حاليًا.",
+            "error"
+        );
 
         console.error(error);
 
         return;
+
     }
 
 
     if(!data || data.length === 0){
 
-        box.innerHTML =
-            `<div class="alert">
-                لا توجد تحديات متاحة حاليًا.
-            </div>`;
+        setBox(
+            "challengeBox",
+            "لا توجد تحديات نشطة حاليًا."
+        );
 
         return;
+
     }
 
 
@@ -1548,14 +1785,17 @@ async function loadChallenges(){
         const div =
             document.createElement("div");
 
-        div.className = "challenge";
+        div.className =
+            "challenge";
 
 
         div.innerHTML = `
 
             <div class="challenge-top">
 
-                <h3>${escapeHtml(challenge.title)}</h3>
+                <h3>
+                    ${escapeHtml(challenge.title)}
+                </h3>
 
                 <div class="points">
                     +${Number(challenge.points || 0)} نقطة
@@ -1567,8 +1807,8 @@ async function loadChallenges(){
                 ${escapeHtml(challenge.description || "")}
             </p>
 
-            <button class="action"
-                    onclick="submitChallenge('${challenge.id}')">
+            <button
+                onclick="window.submitChallenge('${challenge.id}')">
                 إرسال الإنجاز للمراجعة
             </button>
 
@@ -1586,32 +1826,34 @@ async function loadChallenges(){
    SUBMIT CHALLENGE
    ===================================================== */
 
-async function submitChallenge(challengeId){
+window.submitChallenge =
+async function(challengeId){
 
     if(!currentUser){
 
         alert("سجّل الدخول أولًا.");
 
-        showPage("auth");
+        window.showPage("auth");
 
         return;
+
     }
 
 
     const proof =
         prompt(
-            "اكتب وصفًا مختصرًا لإنجازك للتحدي:"
+            "اكتب وصفًا مختصرًا لإنجازك:"
         );
 
 
     if(proof === null) return;
 
 
-    const { error } =
-        await supabaseClient
-
+    const {
+        error
+    } =
+    await db
         .from("challenge_submissions")
-
         .insert({
 
             challenge_id:challengeId,
@@ -1628,20 +1870,20 @@ async function submitChallenge(challengeId){
     if(error){
 
         alert(
-            "حدث خطأ أثناء إرسال الإنجاز."
+            "تعذر إرسال الإنجاز: " +
+            error.message
         );
 
-        console.error(error);
-
         return;
+
     }
 
 
     alert(
-        "تم إرسال إنجازك للإدارة للمراجعة ✅"
+        "تم إرسال الإنجاز للإدارة للمراجعة ✅"
     );
 
-}
+};
 
 
 /* =====================================================
@@ -1652,75 +1894,64 @@ async function loadPoints(){
 
     if(!currentUser){
 
-        document.getElementById("pointsTotal")
-            .textContent = "0";
-
-        document.getElementById("pointsRank")
-            .textContent = "عضو";
-
-        document.getElementById("pointsHistory").innerHTML =
-            `<div class="alert">
+        document.getElementById("pointsBox")
+            .innerHTML =
+            `
+            <div class="alert">
                 سجّل الدخول لرؤية نقاطك.
-            </div>`;
+            </div>
+            `;
 
         return;
+
     }
 
 
     await loadMember();
 
-
-    document.getElementById("pointsTotal")
-        .textContent =
-        currentMember?.points || 0;
+    updateProfileUI();
 
 
-    document.getElementById("pointsRank")
-        .textContent =
-        currentMember?.rank || "عضو";
-
-
-    const { data, error } =
-        await supabaseClient
-
+    const {
+        data,
+        error
+    } =
+    await db
         .from("points_history")
-
         .select("*")
-
         .eq("user_id",currentUser.id)
-
         .eq("approved",true)
-
         .order("created_at",{
             ascending:false
         });
 
 
-    const box =
-        document.getElementById("pointsHistory");
-
-
     if(error){
 
-        box.innerHTML =
-            `<div class="alert error">
-                تعذر تحميل سجل النقاط.
-            </div>`;
-
-        console.error(error);
+        setBox(
+            "pointsBox",
+            "تعذر تحميل سجل النقاط.",
+            "error"
+        );
 
         return;
+
     }
+
+
+    const box =
+        document.getElementById("pointsBox");
 
 
     if(!data || data.length === 0){
 
-        box.innerHTML =
-            `<div class="alert">
-                لا توجد نقاط مسجلة حتى الآن.
-            </div>`;
+        setBox(
+            "pointsBox",
+            "لا توجد نقاط مسجلة حتى الآن."
+        );
 
         return;
+
     }
 
 
@@ -1732,11 +1963,14 @@ async function loadPoints(){
         const div =
             document.createElement("div");
 
-        div.className = "alert";
+        div.className =
+            "alert";
 
 
         div.innerHTML = `
-            <strong>+${Number(item.amount || 0)} نقطة</strong>
+            <strong>
+                +${Number(item.amount || 0)} نقطة
+            </strong>
             <br>
             <span class="muted">
                 ${escapeHtml(item.reason || "إنجاز")}
@@ -1757,41 +1991,80 @@ async function loadPoints(){
 
 async function loadLeaderboard(){
 
-    const body =
-        document.getElementById("leaderboardBody");
+    const box =
+        document.getElementById("leaderboardBox");
 
 
-    const { data, error } =
-        await supabaseClient
-
+    const {
+        data,
+        error
+    } =
+    await db
         .from("members")
-
         .select("name,points,rank,status")
-
         .order("points",{
             ascending:false
-        })
+        });
 
 
     if(error){
 
-        body.innerHTML =
-            `<tr>
-                <td colspan="4">
-                    تعذر تحميل الترتيب.
-                </td>
-            </tr>`;
+        setBox(
+            "leaderboardBox",
+            "لا يمكن عرض المتصدرين حاليًا بسبب صلاحيات قاعدة البيانات.",
+            "error"
+        );
 
         console.error(error);
 
         return;
+
     }
 
 
-    body.innerHTML = "";
+    if(!data || data.length === 0){
+
+        setBox(
+            "leaderboardBox",
+            "لا يوجد أعضاء حتى الآن."
+        );
+
+        return;
+
+    }
 
 
-    (data || []).forEach((member,index) => {
+    box.innerHTML = `
+
+        <div class="table-wrap">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>المركز</th>
+                        <th>العضو</th>
+                        <th>النقاط</th>
+                        <th>الرتبة</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="leaderboardRows"></tbody>
+
+            </table>
+
+        </div>
+
+    `;
+
+
+    const rows =
+        document.getElementById("leaderboardRows");
+
+
+    data.forEach((member,index) => {
 
         const tr =
             document.createElement("tr");
@@ -1805,7 +2078,7 @@ async function loadLeaderboard(){
         `;
 
 
-        body.appendChild(tr);
+        rows.appendChild(tr);
 
     });
 
@@ -1818,40 +2091,44 @@ async function loadLeaderboard(){
 
 async function loadUpdates(){
 
-    const { data, error } =
-        await supabaseClient
+    const box =
+        document.getElementById("updatesBox");
 
+
+    const {
+        data,
+        error
+    } =
+    await db
         .from("updates")
-
         .select("*")
-
         .order("created_at",{
             ascending:false
         })
-
         .limit(5);
-
-
-    const box =
-        document.getElementById("homeUpdates");
 
 
     if(error){
 
-        box.innerHTML = "";
+        setBox(
+            "updatesBox",
+            "لا توجد تحديثات حاليًا."
+        );
 
         return;
+
     }
 
 
     if(!data || data.length === 0){
 
-        box.innerHTML =
-            `<div class="alert">
-                لا توجد تحديثات حتى الآن.
-            </div>`;
+        setBox(
+            "updatesBox",
+            "لا توجد تحديثات حتى الآن."
+        );
 
         return;
+
     }
 
 
@@ -1863,15 +2140,20 @@ async function loadUpdates(){
         const div =
             document.createElement("div");
 
-        div.className = "admin-card";
+        div.className =
+            "admin-card";
 
 
         div.innerHTML = `
             <h3>
                 ${escapeHtml(update.title || "تحديث")}
             </h3>
-            <p class="muted" style="margin-top:10px">
+
+            <p class="muted"
+               style="margin-top:10px">
+
                 ${escapeHtml(update.content || "")}
+
             </p>
         `;
 
@@ -1884,30 +2166,34 @@ async function loadUpdates(){
 
 
 /* =====================================================
-   ADMIN PANEL
+   ADMIN
    ===================================================== */
 
 async function loadAdmin(){
 
-    const isAdmin =
+    const admin =
         await checkAdmin();
 
 
-    if(!isAdmin){
+    if(!admin){
 
-        document.getElementById("adminMessage").innerHTML =
-            `<div class="alert error">
-                هذه الصفحة مخصصة للإدارة فقط.
-            </div>`;
+        setBox(
+            "adminMessage",
+            "هذه الصفحة مخصصة للإدارة فقط.",
+            "error"
+        );
 
         return;
+
     }
 
 
+    document.getElementById("adminMessage")
+        .innerHTML = "";
+
+
     await loadAdminStats();
-
     await loadAdminRequests();
-
     await loadAdminSubmissions();
 
 }
@@ -1920,45 +2206,46 @@ async function loadAdmin(){
 async function loadAdminStats(){
 
     const members =
-        await supabaseClient
-
-        .from("members")
-        .select("*",{
-            count:"exact",
-            head:true
-        });
+        await db
+            .from("members")
+            .select("*",{
+                count:"exact",
+                head:true
+            });
 
 
     const requests =
-        await supabaseClient
-
-        .from("join_requests")
-        .select("*",{
-            count:"exact",
-            head:true
-        })
-
-        .eq("status","pending");
+        await db
+            .from("join_requests")
+            .select("*",{
+                count:"exact",
+                head:true
+            })
+            .eq("status","pending");
 
 
     const challenges =
-        await supabaseClient
+        await db
+            .from("challenges")
+            .select("*",{
+                count:"exact",
+                head:true
+            });
 
-        .from("challenges")
-        .select("*",{
-            count:"exact",
-            head:true
-        });
+
+    document.getElementById("adminMembers")
+        .textContent =
+        members.count || 0;
 
 
-    document.getElementById("adminMemberCount")
-        .textContent = members.count || 0;
+    document.getElementById("adminRequestsCount")
+        .textContent =
+        requests.count || 0;
 
-    document.getElementById("adminRequestCount")
-        .textContent = requests.count || 0;
 
-    document.getElementById("adminChallengeCount")
-        .textContent = challenges.count || 0;
+    document.getElementById("adminChallenges")
+        .textContent =
+        challenges.count || 0;
 
 }
 
@@ -1973,15 +2260,14 @@ async function loadAdminRequests(){
         document.getElementById("adminRequests");
 
 
-    const { data, error } =
-        await supabaseClient
-
+    const {
+        data,
+        error
+    } =
+    await db
         .from("join_requests")
-
         .select("*")
-
         .eq("status","pending")
-
         .order("created_at",{
             ascending:false
         });
@@ -1989,23 +2275,26 @@ async function loadAdminRequests(){
 
     if(error){
 
-        box.innerHTML =
-            `<div class="alert error">
-                تعذر تحميل الطلبات.
-            </div>`;
+        setBox(
+            "adminRequests",
+            "تعذر تحميل الطلبات.",
+            "error"
+        );
 
         return;
+
     }
 
 
     if(!data || data.length === 0){
 
-        box.innerHTML =
-            `<div class="alert">
-                لا توجد طلبات معلقة.
-            </div>`;
+        setBox(
+            "adminRequests",
+            "لا توجد طلبات معلقة."
+        );
 
         return;
+
     }
 
 
@@ -2017,7 +2306,8 @@ async function loadAdminRequests(){
         const div =
             document.createElement("div");
 
-        div.className = "admin-card";
+        div.className =
+            "admin-card";
 
 
         div.innerHTML = `
@@ -2037,12 +2327,13 @@ async function loadAdminRequests(){
 
             <div class="admin-actions">
 
-                <button onclick="approveRequest('${request.id}','${request.user_id}')">
+                <button class="approve"
+                        onclick="window.approveJoin('${request.id}','${request.user_id}')">
                     قبول
                 </button>
 
-                <button class="secondary"
-                        onclick="rejectRequest('${request.id}','${request.user_id}')">
+                <button class="reject"
+                        onclick="window.rejectJoin('${request.id}','${request.user_id}')">
                     رفض
                 </button>
 
@@ -2059,59 +2350,63 @@ async function loadAdminRequests(){
 
 
 /* =====================================================
-   APPROVE REQUEST
+   APPROVE JOIN
    ===================================================== */
 
-async function approveRequest(requestId,userId){
+window.approveJoin =
+async function(requestId,userId){
 
-    const isAdmin =
-        await checkAdmin();
-
-    if(!isAdmin){
+    if(!(await checkAdmin())){
 
         alert("غير مسموح.");
 
         return;
+
     }
 
 
-    const { error:requestError } =
-        await supabaseClient
-
+    const {
+        error:requestError
+    } =
+    await db
         .from("join_requests")
-
         .update({
             status:"approved"
         })
-
         .eq("id",requestId);
 
 
     if(requestError){
 
-        alert("فشل قبول الطلب.");
+        alert(
+            "تعذر قبول الطلب: " +
+            requestError.message
+        );
 
         return;
+
     }
 
 
-    const { error:memberError } =
-        await supabaseClient
-
+    const {
+        error:memberError
+    } =
+    await db
         .from("members")
-
         .update({
             status:"approved"
         })
-
         .eq("id",userId);
 
 
     if(memberError){
 
-        alert("تم قبول الطلب لكن تعذر تحديث العضو.");
+        alert(
+            "تم قبول الطلب لكن تعذر تحديث العضو."
+        );
 
         return;
+
     }
 
 
@@ -2119,23 +2414,22 @@ async function approveRequest(requestId,userId){
 
     loadAdmin();
 
-}
+};
 
 
 /* =====================================================
-   REJECT REQUEST
+   REJECT JOIN
    ===================================================== */
 
-async function rejectRequest(requestId,userId){
+window.rejectJoin =
+async function(requestId,userId){
 
-    const isAdmin =
-        await checkAdmin();
-
-    if(!isAdmin){
+    if(!(await checkAdmin())){
 
         alert("غير مسموح.");
 
         return;
+
     }
 
 
@@ -2145,52 +2439,42 @@ async function rejectRequest(requestId,userId){
         );
 
 
-    const { error:requestError } =
-        await supabaseClient
-
+    const {
+        error:requestError
+    } =
+    await db
         .from("join_requests")
-
         .update({
             status:"rejected",
             admin_note:note || ""
         })
-
         .eq("id",requestId);
 
 
     if(requestError){
 
-        alert("فشل رفض الطلب.");
+        alert(
+            "تعذر رفض الطلب."
+        );
 
         return;
+
     }
 
 
-    const { error:memberError } =
-        await supabaseClient
-
+    await db
         .from("members")
-
         .update({
             status:"rejected"
         })
-
         .eq("id",userId);
-
-
-    if(memberError){
-
-        alert("تعذر تحديث حالة العضو.");
-
-        return;
-    }
 
 
     alert("تم رفض الطلب.");
 
     loadAdmin();
 
-}
+};
 
 
 /* =====================================================
@@ -2203,15 +2487,14 @@ async function loadAdminSubmissions(){
         document.getElementById("adminSubmissions");
 
 
-    const { data, error } =
-        await supabaseClient
-
+    const {
+        data,
+        error
+    } =
+    await db
         .from("challenge_submissions")
-
         .select("*")
-
         .eq("status","pending")
-
         .order("created_at",{
             ascending:false
         });
@@ -2219,23 +2502,26 @@ async function loadAdminSubmissions(){
 
     if(error){
 
-        box.innerHTML =
-            `<div class="alert error">
-                تعذر تحميل الإنجازات.
-            </div>`;
+        setBox(
+            "adminSubmissions",
+            "تعذر تحميل إنجازات التحديات.",
+            "error"
+        );
 
         return;
+
     }
 
 
     if(!data || data.length === 0){
 
-        box.innerHTML =
-            `<div class="alert">
-                لا توجد إنجازات معلقة.
-            </div>`;
+        setBox(
+            "adminSubmissions",
+            "لا توجد إنجازات معلقة."
+        );
 
         return;
+
     }
 
 
@@ -2247,14 +2533,13 @@ async function loadAdminSubmissions(){
         const div =
             document.createElement("div");
 
-        div.className = "admin-card";
+        div.className =
+            "admin-card";
 
 
         div.innerHTML = `
 
-            <h3>
-                طلب إنجاز
-            </h3>
+            <h3>طلب إنجاز</h3>
 
             <p class="muted">
                 العضو:
@@ -2268,12 +2553,13 @@ async function loadAdminSubmissions(){
 
             <div class="admin-actions">
 
-                <button onclick="approveSubmission('${item.id}','${item.user_id}','${item.challenge_id}')">
+                <button class="approve"
+                        onclick="window.approveSubmission('${item.id}','${item.user_id}','${item.challenge_id}')">
                     اعتماد
                 </button>
 
-                <button class="secondary"
-                        onclick="rejectSubmission('${item.id}')">
+                <button class="reject"
+                        onclick="window.rejectSubmission('${item.id}')">
                     رفض
                 </button>
 
@@ -2293,32 +2579,26 @@ async function loadAdminSubmissions(){
    APPROVE SUBMISSION
    ===================================================== */
 
-async function approveSubmission(
-    submissionId,
-    userId,
-    challengeId
-){
+window.approveSubmission =
+async function(submissionId,userId,challengeId){
 
-    const isAdmin =
-        await checkAdmin();
-
-    if(!isAdmin){
+    if(!(await checkAdmin())){
 
         alert("غير مسموح.");
 
         return;
+
     }
 
 
-    const { data:challenge,error:challengeError } =
-        await supabaseClient
-
+    const {
+        data:challenge,
+        error:challengeError
+    } =
+    await db
         .from("challenges")
-
         .select("title,points")
-
         .eq("id",challengeId)
-
         .single();
 
 
@@ -2327,6 +2607,7 @@ async function approveSubmission(
         alert("تعذر العثور على التحدي.");
 
         return;
+
     }
 
 
@@ -2334,31 +2615,31 @@ async function approveSubmission(
         Number(challenge.points || 0);
 
 
-    const { error:submissionError } =
-        await supabaseClient
-
+    const {
+        error:submissionError
+    } =
+    await db
         .from("challenge_submissions")
-
         .update({
             status:"approved"
         })
-
         .eq("id",submissionId);
 
 
     if(submissionError){
 
-        alert("فشل اعتماد الإنجاز.");
+        alert("تعذر اعتماد الإنجاز.");
 
         return;
+
     }
 
 
-    const { error:pointError } =
-        await supabaseClient
-
+    const {
+        error:pointError
+    } =
+    await db
         .from("points_history")
-
         .insert({
 
             user_id:userId,
@@ -2377,42 +2658,44 @@ async function approveSubmission(
         alert("تم اعتماد الإنجاز لكن تعذر تسجيل النقاط.");
 
         return;
+
     }
 
 
-    const { data:member } =
-        await supabaseClient
-
+    const {
+        data:member
+    } =
+    await db
         .from("members")
-
         .select("points")
-
         .eq("id",userId)
-
         .single();
 
 
     const newPoints =
-        Number(member?.points || 0) + amount;
+        Number(member?.points || 0) +
+        amount;
 
 
-    const { error:updateMemberError } =
-        await supabaseClient
-
+    const {
+        error:updateError
+    } =
+    await db
         .from("members")
-
         .update({
             points:newPoints
         })
-
         .eq("id",userId);
 
 
-    if(updateMemberError){
+    if(updateError){
 
-        alert("تعذر تحديث رصيد النقاط.");
+        alert(
+            "تعذر تحديث نقاط العضو."
+        );
 
         return;
+
     }
 
 
@@ -2423,23 +2706,22 @@ async function approveSubmission(
 
     loadAdmin();
 
-}
+};
 
 
 /* =====================================================
    REJECT SUBMISSION
    ===================================================== */
 
-async function rejectSubmission(submissionId){
+window.rejectSubmission =
+async function(submissionId){
 
-    const isAdmin =
-        await checkAdmin();
-
-    if(!isAdmin){
+    if(!(await checkAdmin())){
 
         alert("غير مسموح.");
 
         return;
+
     }
 
 
@@ -2449,24 +2731,27 @@ async function rejectSubmission(submissionId){
         );
 
 
-    const { error } =
-        await supabaseClient
-
+    const {
+        error
+    } =
+    await db
         .from("challenge_submissions")
-
         .update({
-            status:"rejected",
-            admin_note:note || ""
-        })
 
+            status:"rejected",
+
+            admin_note:note || ""
+
+        })
         .eq("id",submissionId);
 
 
     if(error){
 
-        alert("فشل رفض الإنجاز.");
+        alert("تعذر رفض الإنجاز.");
 
         return;
+
     }
 
 
@@ -2474,31 +2759,34 @@ async function rejectSubmission(submissionId){
 
     loadAdmin();
 
-}
+};
 
 
 /* =====================================================
    CREATE UPDATE
    ===================================================== */
 
-async function createUpdate(){
+window.createUpdate =
+async function(){
 
-    const isAdmin =
-        await checkAdmin();
-
-    if(!isAdmin){
+    if(!(await checkAdmin())){
 
         alert("غير مسموح.");
 
         return;
+
     }
 
 
     const title =
-        document.getElementById("updateTitle").value.trim();
+        document.getElementById("updateTitle")
+            .value
+            .trim();
 
     const content =
-        document.getElementById("updateContent").value.trim();
+        document.getElementById("updateContent")
+            .value
+            .trim();
 
 
     if(!title || !content){
@@ -2506,19 +2794,20 @@ async function createUpdate(){
         alert("اكتب العنوان والمحتوى.");
 
         return;
+
     }
 
 
-    const { error } =
-        await supabaseClient
-
+    const {
+        error
+    } =
+    await db
         .from("updates")
-
         .insert({
 
-            title:title,
+            title,
 
-            content:content,
+            content,
 
             type:"announcement",
 
@@ -2531,9 +2820,8 @@ async function createUpdate(){
 
         alert("تعذر نشر التحديث.");
 
-        console.error(error);
-
         return;
+
     }
 
 
@@ -2548,35 +2836,39 @@ async function createUpdate(){
 
     loadUpdates();
 
-}
+};
 
 
 /* =====================================================
    CREATE CHALLENGE
    ===================================================== */
 
-async function createChallenge(){
+window.createChallenge =
+async function(){
 
-    const isAdmin =
-        await checkAdmin();
-
-    if(!isAdmin){
+    if(!(await checkAdmin())){
 
         alert("غير مسموح.");
 
         return;
+
     }
 
 
     const title =
-        document.getElementById("challengeTitle").value.trim();
+        document.getElementById("newChallengeTitle")
+            .value
+            .trim();
 
     const description =
-        document.getElementById("challengeDescription").value.trim();
+        document.getElementById("newChallengeDescription")
+            .value
+            .trim();
 
     const points =
         Number(
-            document.getElementById("challengePoints").value
+            document.getElementById("newChallengePoints")
+                .value
         );
 
 
@@ -2585,21 +2877,22 @@ async function createChallenge(){
         alert("أكمل بيانات التحدي.");
 
         return;
+
     }
 
 
-    const { error } =
-        await supabaseClient
-
+    const {
+        error
+    } =
+    await db
         .from("challenges")
-
         .insert({
 
-            title:title,
+            title,
 
-            description:description,
+            description,
 
-            points:points,
+            points,
 
             status:"active",
 
@@ -2612,52 +2905,35 @@ async function createChallenge(){
 
         alert("تعذر إنشاء التحدي.");
 
-        console.error(error);
-
         return;
+
     }
 
 
-    document.getElementById("challengeTitle")
+    document.getElementById("newChallengeTitle")
         .value = "";
 
-    document.getElementById("challengeDescription")
+    document.getElementById("newChallengeDescription")
         .value = "";
 
-    document.getElementById("challengePoints")
+    document.getElementById("newChallengePoints")
         .value = 10;
 
 
     alert("تم إنشاء التحدي ✅");
 
     loadChallenges();
-
     loadAdmin();
 
-}
-
-
-/* =====================================================
-   HTML ESCAPE
-   ===================================================== */
-
-function escapeHtml(value){
-
-    return String(value ?? "")
-        .replaceAll("&","&amp;")
-        .replaceAll("<","&lt;")
-        .replaceAll(">","&gt;")
-        .replaceAll('"',"&quot;")
-        .replaceAll("'","&#039;");
-}
+};
 
 
 /* =====================================================
    AUTH STATE
    ===================================================== */
 
-supabaseClient.auth.onAuthStateChange(
-    async (event, session) => {
+db.auth.onAuthStateChange(
+    async (event,session)=>{
 
         currentUser =
             session?.user || null;
@@ -2669,23 +2945,16 @@ supabaseClient.auth.onAuthStateChange(
 
 
 /* =====================================================
-   INIT
+   START
    ===================================================== */
 
-async function init(){
+await loadCurrentUser();
 
-    await loadCurrentUser();
+await loadChallenges();
 
-    await loadUpdates();
+await loadUpdates();
 
-    await loadChallenges();
-
-    await loadLeaderboard();
-
-}
-
-
-init();
+await loadLeaderboard();
 
 </script>
 
