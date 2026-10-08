@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>AHF | Ù…Ù†ØµØ© AHF Ø§Ù„Ø±ÙŠØ§Ø¶ÙŠØ©</title>
+<title>AHF | منصة AHF الرياضية</title>
 
 <style>
 *{
@@ -646,61 +646,61 @@ footer{
 
 <div class="brand">
     <div class="logo">AHF</div>
-    <div class="tagline">Athletes â€¢ Honor â€¢ Force</div>
+    <div class="tagline">Athletes • Honor • Force</div>
 </div>
 
 <nav class="nav">
 
 <button class="active"
         onclick="showPage('home',this)">
-    Ø§Ù„Ø±Ø¦ÙŠØ³ÙŠØ©
+    الرئيسية
 </button>
 
 <button onclick="showPage('training',this)">
-    Ø§Ù„ØªØ¯Ø±ÙŠØ¨
+    التدريب
 </button>
 
 <button onclick="showPage('challenges',this)">
-    Ø§Ù„ØªØ­Ø¯ÙŠØ§Øª
+    التحديات
 </button>
 
 <button onclick="showPage('points',this)">
-    Ø§Ù„Ù†Ù‚Ø§Ø·
+    النقاط
 </button>
 
 <button onclick="showPage('leaderboard',this)">
-    Ø§Ù„Ù…ØªØµØ¯Ø±ÙˆÙ†
+    المتصدرون
 </button>
 
 <button onclick="showPage('ranks',this)">
-    Ø§Ù„Ø±ØªØ¨
+    الرتب
 </button>
 
 <button onclick="showPage('profile',this)">
-    Ù…Ù„ÙÙŠ
+    ملفي
 </button>
 
 <button id="joinNav"
         onclick="showPage('join',this)">
-    Ø·Ù„Ø¨ Ø§Ù„Ø§Ù†Ø¶Ù…Ø§Ù…
+    طلب الانضمام
 </button>
 
-<!-- ÙŠØ¸Ù‡Ø± ÙÙ‚Ø· Ù„Ù„Ø¥Ø¯Ø§Ø±Ø© -->
+<!-- يظهر فقط للإدارة -->
 <button id="adminNav"
         class="hidden"
         onclick="showPage('admin',this)">
-    Ø§Ù„Ø¥Ø¯Ø§Ø±Ø©
+    الإدارة
 </button>
 
 <button id="authNav"
         onclick="showPage('auth',this)">
-    ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø¯Ø®ÙˆÙ„
+    تسجيل الدخول
 </button>
 
 <button id="logoutNav"
         class="hidden"
         onclick="logout()">
-    ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø®Ø±ÙˆØ¬
+    تسجيل الخروج
 </button>
 
 </nav>
@@ -721,18 +721,18 @@ footer{
 <div class="hero">
 
 <h1>
-Ù…Ù†ØµØ© AHF Ø§Ù„Ø±ÙŠØ§Ø¶ÙŠØ© ðŸ†
+منصة AHF الرياضية 🏆
 </h1>
 
 <p>
-Ø§Ù„ØªØ¯Ø±ÙŠØ¨ ÙˆØ§Ù„ØªØ·ÙˆØ± ÙˆØ§Ù„ØªØ­Ø¯ÙŠØ§Øª ÙˆØ§Ù„Ù†Ù‚Ø§Ø· ÙˆØ§Ù„Ø±ØªØ¨.
+التدريب والتطور والتحديات والنقاط والرتب.
 <br>
-ØªØ¯Ø±Ø¨ØŒ ØªØ·ÙˆØ±ØŒ Ù†Ø§ÙØ³ØŒ ÙˆØ§Ø±ØªÙ‚Ù.
+تدرب، تطور، نافس، وارتقِ.
 </p>
 
 <button class="primary"
         onclick="showPage('training')">
-Ø§Ø¨Ø¯Ø£ Ø§Ù„ØªØ¯Ø±ÙŠØ¨
+ابدأ التدريب
 </button>
 
 </div>
@@ -741,7 +741,7 @@ footer{
 <div class="stats">
 
 <div class="stat">
-<div class="stat-title">Ù†Ù‚Ø§Ø·ÙŠ</div>
+<div class="stat-title">نقاطي</div>
 <div id="homePoints"
      class="stat-value">
 0
@@ -749,23 +749,23 @@ footer{
 </div>
 
 <div class="stat">
-<div class="stat-title">Ø±ØªØ¨ØªÙŠ</div>
+<div class="stat-title">رتبتي</div>
 <div id="homeRank"
      class="stat-value">
-Ø¹Ø¶Ùˆ
+عضو
 </div>
 </div>
 
 <div class="stat">
-<div class="stat-title">Ø§Ù„Ø­Ø§Ù„Ø©</div>
+<div class="stat-title">الحالة</div>
 <div id="homeStatus"
      class="stat-value">
-ØºÙŠØ± Ù…Ø³Ø¬Ù„
+غير مسجل
 </div>
 </div>
 
 <div class="stat">
-<div class="stat-title">Ø§Ù„Ø¥Ù†Ø¬Ø§Ø²Ø§Øª</div>
+<div class="stat-title">الإنجازات</div>
 <div id="homeCompleted"
      class="stat-value">
 0
@@ -776,56 +776,56 @@ footer{
 
 
 <h2 class="section-title">
-ðŸ”¥ Ø£Ù‚Ø³Ø§Ù… AHF
+🔥 أقسام AHF
 </h2>
 
 <div class="grid">
 
 <div class="card">
-<div class="icon">ðŸ‹ï¸</div>
-<h3>Ø§Ù„ØªØ¯Ø±ÙŠØ¨</h3>
+<div class="icon">🏋️</div>
+<h3>التدريب</h3>
 <p>
-Ø¨Ø±Ø§Ù…Ø¬ ØªØ¯Ø±ÙŠØ¨ Ù…Ø®ØªÙ„ÙØ© Ù…Ø¹ Ø¥Ù…ÙƒØ§Ù†ÙŠØ© Ø¥Ø¶Ø§ÙØ© ÙÙŠØ¯ÙŠÙˆ Ù„ÙƒÙ„ ØªÙ…Ø±ÙŠÙ†.
+برامج تدريب مختلفة مع إمكانية إضافة فيديو لكل تمرين.
 </p>
 </div>
 
 <div class="card">
-<div class="icon">ðŸ†</div>
-<h3>Ø§Ù„ØªØ­Ø¯ÙŠØ§Øª</h3>
+<div class="icon">🏆</div>
+<h3>التحديات</h3>
 <p>
-ØªØ­Ø¯ÙŠØ§Øª ÙˆÙ†Ù‚Ø§Ø· ÙˆØ¥Ù†Ø¬Ø§Ø²Ø§Øª ÙŠØªÙ… Ø¥Ø±Ø³Ø§Ù„Ù‡Ø§ Ù„Ù„Ù…Ø±Ø§Ø¬Ø¹Ø©.
+تحديات ونقاط وإنجازات يتم إرسالها للمراجعة.
 </p>
 </div>
 
 <div class="card">
-<div class="icon">â­</div>
-<h3>Ø§Ù„Ù†Ù‚Ø§Ø·</h3>
+<div class="icon">⭐</div>
+<h3>النقاط</h3>
 <p>
-ØªØ§Ø¨Ø¹ Ù†Ù‚Ø§Ø·Ùƒ ÙˆØ³Ø¬Ù„ Ø§Ù„Ø¹Ù…Ù„ÙŠØ§Øª Ø§Ù„ØªÙŠ ØªÙ…Øª Ø¹Ù„Ù‰ Ø­Ø³Ø§Ø¨Ùƒ.
+تابع نقاطك وسجل العمليات التي تمت على حسابك.
 </p>
 </div>
 
 <div class="card">
-<div class="icon">ðŸ¥‡</div>
-<h3>Ø§Ù„Ù…ØªØµØ¯Ø±ÙˆÙ†</h3>
+<div class="icon">🥇</div>
+<h3>المتصدرون</h3>
 <p>
-Ø¹Ø±Ø¶ Ø£Ø¹Ø¶Ø§Ø¡ AHF Ø­Ø³Ø¨ Ø¹Ø¯Ø¯ Ø§Ù„Ù†Ù‚Ø§Ø·.
+عرض أعضاء AHF حسب عدد النقاط.
 </p>
 </div>
 
 <div class="card">
-<div class="icon">ðŸŽ–ï¸</div>
-<h3>Ø§Ù„Ø±ØªØ¨</h3>
+<div class="icon">🎖️</div>
+<h3>الرتب</h3>
 <p>
-Ù†Ø¸Ø§Ù… Ø±ØªØ¨ Ù…Ø¨Ù†ÙŠ Ø¹Ù„Ù‰ Ø§Ù„ØªØ·ÙˆØ± ÙˆØ§Ù„Ù†Ø´Ø§Ø· ÙˆØ§Ù„Ø¥Ù†Ø¬Ø§Ø².
+نظام رتب مبني على التطور والنشاط والإنجاز.
 </p>
 </div>
 
 <div class="card">
-<div class="icon">ðŸ“¢</div>
-<h3>Ø§Ù„ØªØ­Ø¯ÙŠØ«Ø§Øª</h3>
+<div class="icon">📢</div>
+<h3>التحديثات</h3>
 <p>
-ØªØ§Ø¨Ø¹ Ø£Ø­Ø¯Ø« Ø£Ø®Ø¨Ø§Ø± ÙˆØ¥Ø¹Ù„Ø§Ù†Ø§Øª AHF.
+تابع أحدث أخبار وإعلانات AHF.
 </p>
 </div>
 
@@ -833,12 +833,12 @@ footer{
 
 
 <h2 class="section-title">
-ðŸ“¢ Ø¢Ø®Ø± Ø§Ù„ØªØ­Ø¯ÙŠØ«Ø§Øª
+📢 آخر التحديثات
 </h2>
 
 <div id="updatesBox">
 <div class="alert">
-Ø¬Ø§Ø±Ù ØªØ­Ù…ÙŠÙ„ Ø§Ù„ØªØ­Ø¯ÙŠØ«Ø§Øª...
+جارٍ تحميل التحديثات...
 </div>
 </div>
 
@@ -853,29 +853,29 @@ footer{
          class="page">
 
 <h2 class="section-title">
-ðŸ‹ï¸ Ø¨Ø±Ø§Ù…Ø¬ Ø§Ù„ØªØ¯Ø±ÙŠØ¨
+🏋️ برامج التدريب
 </h2>
 
 <p class="muted">
-Ø§Ø®ØªØ§Ø± Ø¨Ø±Ù†Ø§Ù…Ø¬Ù‹Ø§ Ù„Ø¹Ø±Ø¶ Ø§Ù„ØªÙ…Ø§Ø±ÙŠÙ† ÙˆØ§Ù„ØªÙØ§ØµÙŠÙ„ ÙˆØ§Ù„ÙÙŠØ¯ÙŠÙˆÙ‡Ø§Øª.
+اختار برنامجًا لعرض التمارين والتفاصيل والفيديوهات.
 </p>
 
 
 <div class="training-hero">
 
 <h3>
-ðŸŽ¯ Ù†Ø¸Ø§Ù… ØªØ¯Ø±ÙŠØ¨ AHF
+🎯 نظام تدريب AHF
 </h3>
 
 <p class="muted">
-ÙŠÙ…ÙƒÙ†Ùƒ Ø¥Ø¶Ø§ÙØ© ÙÙŠØ¯ÙŠÙˆ Ù„Ø£ÙŠ ØªÙ…Ø±ÙŠÙ† Ø¹Ù† Ø·Ø±ÙŠÙ‚ ÙˆØ¶Ø¹ Ø±Ø§Ø¨Ø· Ø§Ù„ÙÙŠØ¯ÙŠÙˆ Ø¯Ø§Ø®Ù„ Ø®Ø§Ù†Ø©
+يمكنك إضافة فيديو لأي تمرين عن طريق وضع رابط الفيديو داخل خانة
 <strong>video</strong>
-ÙÙŠ ÙƒÙˆØ¯ Ø§Ù„Ø¨Ø±Ù†Ø§Ù…Ø¬.
+في كود البرنامج.
 </p>
 
 <div class="notice">
 
-<strong>Ù…Ø«Ø§Ù„:</strong>
+<strong>مثال:</strong>
 
 <br><br>
 
@@ -884,7 +884,7 @@ video:
 
 <br><br>
 
-ÙŠÙ…ÙƒÙ† Ø£ÙŠØ¶Ù‹Ø§ ÙˆØ¶Ø¹ Ø±Ø§Ø¨Ø· Ù…Ø¨Ø§Ø´Ø± Ù„Ù…Ù„Ù:
+يمكن أيضًا وضع رابط مباشر لملف:
 MP4 / WebM / OGG
 
 </div>
@@ -911,18 +911,18 @@ MP4 / WebM / OGG
          class="page">
 
 <h2 class="section-title">
-ðŸ† Ø§Ù„ØªØ­Ø¯ÙŠØ§Øª
+🏆 التحديات
 </h2>
 
 <p class="muted">
-Ø£ÙƒÙ…Ù„ Ø§Ù„ØªØ­Ø¯ÙŠ Ø«Ù… Ø£Ø±Ø³Ù„ Ø¥Ø«Ø¨Ø§Øª Ø¥Ù†Ø¬Ø§Ø²Ùƒ Ù„Ù„Ù…Ø±Ø§Ø¬Ø¹Ø©.
+أكمل التحدي ثم أرسل إثبات إنجازك للمراجعة.
 </p>
 
 <div id="challengeBox"
      style="margin-top:20px">
 
 <div class="alert">
-Ø¬Ø§Ø±Ù ØªØ­Ù…ÙŠÙ„ Ø§Ù„ØªØ­Ø¯ÙŠØ§Øª...
+جارٍ تحميل التحديات...
 </div>
 
 </div>
@@ -938,14 +938,14 @@ MP4 / WebM / OGG
          class="page">
 
 <h2 class="section-title">
-â­ Ù†Ù‚Ø§Ø·ÙŠ
+⭐ نقاطي
 </h2>
 
 <div class="stats">
 
 <div class="stat">
 <div class="stat-title">
-Ø¥Ø¬Ù…Ø§Ù„ÙŠ Ø§Ù„Ù†Ù‚Ø§Ø·
+إجمالي النقاط
 </div>
 
 <div id="pointsTotal"
@@ -958,12 +958,12 @@ MP4 / WebM / OGG
 
 <div class="stat">
 <div class="stat-title">
-Ø§Ù„Ø±ØªØ¨Ø©
+الرتبة
 </div>
 
 <div id="pointsRank"
      class="stat-value">
-Ø¹Ø¶Ùˆ
+عضو
 </div>
 
 </div>
@@ -972,13 +972,13 @@ MP4 / WebM / OGG
 
 
 <h2 class="section-title">
-ðŸ“œ Ø³Ø¬Ù„ Ø§Ù„Ù†Ù‚Ø§Ø·
+📜 سجل النقاط
 </h2>
 
 <div id="pointsBox">
 
 <div class="alert">
-Ø³Ø¬Ù‘Ù„ Ø§Ù„Ø¯Ø®ÙˆÙ„ Ù„Ø±Ø¤ÙŠØ© Ù†Ù‚Ø§Ø·Ùƒ.
+سجّل الدخول لرؤية نقاطك.
 </div>
 
 </div>
@@ -994,17 +994,17 @@ MP4 / WebM / OGG
          class="page">
 
 <h2 class="section-title">
-ðŸ¥‡ Ø§Ù„Ù…ØªØµØ¯Ø±ÙˆÙ†
+🥇 المتصدرون
 </h2>
 
 <p class="muted">
-Ø£Ø¹Ø¶Ø§Ø¡ AHF Ø§Ù„Ù…Ø¹ØªÙ…Ø¯ÙˆÙ† Ø­Ø³Ø¨ Ø§Ù„Ù†Ù‚Ø§Ø·.
+أعضاء AHF المعتمدون حسب النقاط.
 </p>
 
 <div id="leaderboardBox">
 
 <div class="alert">
-Ø¬Ø§Ø±Ù ØªØ­Ù…ÙŠÙ„ Ø§Ù„ØªØ±ØªÙŠØ¨...
+جارٍ تحميل الترتيب...
 </div>
 
 </div>
@@ -1020,48 +1020,48 @@ MP4 / WebM / OGG
          class="page">
 
 <h2 class="section-title">
-ðŸŽ–ï¸ Ø±ØªØ¨ AHF
+🎖️ رتب AHF
 </h2>
 
 <div class="grid">
 
 <div class="card">
-<div class="icon">ðŸ‘¤</div>
-<h3>Ø§Ù„Ø¹Ø¶Ùˆ</h3>
+<div class="icon">👤</div>
+<h3>العضو</h3>
 <p>
-Ø¨Ø¯Ø§ÙŠØ© Ø±Ø­Ù„Ø© Ø¹Ø¶Ùˆ AHF.
+بداية رحلة عضو AHF.
 </p>
 </div>
 
 <div class="card">
-<div class="icon">ðŸŽ–ï¸</div>
-<h3>Ø§Ù„Ø¬Ù†Ø±Ø§Ù„</h3>
+<div class="icon">🎖️</div>
+<h3>الجنرال</h3>
 <p>
-Ø±ØªØ¨Ø© Ø£Ø¹Ù„Ù‰ Ù…Ø¨Ù†ÙŠØ© Ø¹Ù„Ù‰ Ø§Ù„Ø¥Ù†Ø¬Ø§Ø² ÙˆØ§Ù„Ù†Ø´Ø§Ø·.
+رتبة أعلى مبنية على الإنجاز والنشاط.
 </p>
 </div>
 
 <div class="card">
-<div class="icon">â­</div>
-<h3>Ø§Ù„Ù…Ø³Ø§Ø¹Ø¯</h3>
+<div class="icon">⭐</div>
+<h3>المساعد</h3>
 <p>
-Ù…Ø³Ø¤ÙˆÙ„ÙŠØ© ÙˆÙ…Ø´Ø§Ø±ÙƒØ© Ø£ÙƒØ¨Ø± Ø¯Ø§Ø®Ù„ Ø§Ù„Ù…Ø¬Ù…ÙˆØ¹Ø©.
+مسؤولية ومشاركة أكبر داخل المجموعة.
 </p>
 </div>
 
 <div class="card">
-<div class="icon">ðŸ…</div>
-<h3>Ù†Ø§Ø¦Ø¨ Ø§Ù„Ù‚Ø§Ø¦Ø¯</h3>
+<div class="icon">🏅</div>
+<h3>نائب القائد</h3>
 <p>
-Ù…Ø³Ø¤ÙˆÙ„ÙŠØ© Ù‚ÙŠØ§Ø¯ÙŠØ© Ø£Ø¹Ù„Ù‰.
+مسؤولية قيادية أعلى.
 </p>
 </div>
 
 <div class="card">
-<div class="icon">ðŸ‘‘</div>
-<h3>Ø§Ù„Ù‚Ø§Ø¦Ø¯</h3>
+<div class="icon">👑</div>
+<h3>القائد</h3>
 <p>
-Ù‚ÙŠØ§Ø¯Ø© ÙˆØªÙ†Ø¸ÙŠÙ… ÙˆØªØ·ÙˆÙŠØ± AHF.
+قيادة وتنظيم وتطوير AHF.
 </p>
 </div>
 
@@ -1080,7 +1080,7 @@ MP4 / WebM / OGG
 <div class="profile">
 
 <h2 class="section-title">
-ðŸ‘¤ Ù…Ù„ÙÙŠ
+👤 ملفي
 </h2>
 
 <div class="card profile-head">
@@ -1091,17 +1091,17 @@ A
 </div>
 
 <h2 id="profileName">
-ØºÙŠØ± Ù…Ø³Ø¬Ù„
+غير مسجل
 </h2>
 
 <p id="profileEmail"
    class="muted">
-â€”
+—
 </p>
 
 <div id="profileRankBadge"
      class="rank-badge">
-Ø§Ù„Ø¹Ø¶Ùˆ
+العضو
 </div>
 
 </div>
@@ -1113,7 +1113,7 @@ A
 <div class="stat">
 
 <div class="stat-title">
-Ø§Ù„Ù†Ù‚Ø§Ø·
+النقاط
 </div>
 
 <div id="profilePoints"
@@ -1127,12 +1127,12 @@ A
 <div class="stat">
 
 <div class="stat-title">
-Ø§Ù„Ø­Ø§Ù„Ø©
+الحالة
 </div>
 
 <div id="profileStatus"
      class="stat-value">
-â€”
+—
 </div>
 
 </div>
@@ -1154,12 +1154,12 @@ A
 <div class="form-box">
 
 <h2>
-ðŸ“¨ Ø·Ù„Ø¨ Ø§Ù„Ø§Ù†Ø¶Ù…Ø§Ù… Ø¥Ù„Ù‰ AHF
+📨 طلب الانضمام إلى AHF
 </h2>
 
 <p class="muted">
-Ø£Ù†Ø´Ø¦ Ø­Ø³Ø§Ø¨Ù‹Ø§ Ø£ÙˆÙ„Ù‹Ø§ØŒ Ø«Ù… Ø£Ø±Ø³Ù„ Ø·Ù„Ø¨ Ø§Ù„Ø§Ù†Ø¶Ù…Ø§Ù….
-Ø§Ù„Ù…ÙˆØ§ÙÙ‚Ø© Ù…Ù† Ø§Ù„Ø¥Ø¯Ø§Ø±Ø© ØªØ¬Ø¹Ù„ Ø§Ù„Ø­Ø³Ø§Ø¨ Ø¹Ø¶Ùˆ AHF Ù…Ø¹ØªÙ…Ø¯Ù‹Ø§.
+أنشئ حسابًا أولًا، ثم أرسل طلب الانضمام.
+الموافقة من الإدارة تجعل الحساب عضو AHF معتمدًا.
 </p>
 
 <div id="joinMessage"></div>
@@ -1168,12 +1168,12 @@ A
 <div class="field">
 
 <label>
-Ø§Ù„Ø§Ø³Ù… Ø§Ù„ÙƒØ§Ù…Ù„
+الاسم الكامل
 </label>
 
 <input id="joinName"
        type="text"
-       placeholder="Ø§ÙƒØªØ¨ Ø§Ø³Ù…Ùƒ">
+       placeholder="اكتب اسمك">
 
 </div>
 
@@ -1181,12 +1181,12 @@ A
 <div class="field">
 
 <label>
-Ø§Ù„Ø±ÙŠØ§Ø¶Ø© / Ø§Ù„Ù†Ø´Ø§Ø·
+الرياضة / النشاط
 </label>
 
 <input id="joinSport"
        type="text"
-       placeholder="Ù…Ø«Ø§Ù„: Ø¬Ø±ÙŠØŒ Ù…Ù„Ø§ÙƒÙ…Ø©ØŒ Ù„ÙŠØ§Ù‚Ø©...">
+       placeholder="مثال: جري، ملاكمة، لياقة...">
 
 </div>
 
@@ -1194,11 +1194,11 @@ A
 <div class="field">
 
 <label>
-Ø±Ø³Ø§Ù„Ø© Ù„Ù„Ø¥Ø¯Ø§Ø±Ø©
+رسالة للإدارة
 </label>
 
 <textarea id="joinMessageText"
-          placeholder="Ø§ÙƒØªØ¨ Ø£ÙŠ Ù…Ø¹Ù„ÙˆÙ…Ø§Øª ØªØ±ÙŠØ¯ Ø¥Ø¶Ø§ÙØªÙ‡Ø§..."></textarea>
+          placeholder="اكتب أي معلومات تريد إضافتها..."></textarea>
 
 </div>
 
@@ -1206,7 +1206,7 @@ A
 <button class="primary full"
         onclick="sendJoinRequest()">
 
-Ø¥Ø±Ø³Ø§Ù„ Ø§Ù„Ø·Ù„Ø¨
+إرسال الطلب
 
 </button>
 
@@ -1225,11 +1225,11 @@ A
 <div class="form-box">
 
 <h2>
-ðŸ” Ø­Ø³Ø§Ø¨ AHF
+🔐 حساب AHF
 </h2>
 
 <p class="muted">
-Ø£Ù†Ø´Ø¦ Ø­Ø³Ø§Ø¨Ù‹Ø§ Ø£Ùˆ Ø³Ø¬Ù‘Ù„ Ø¯Ø®ÙˆÙ„Ùƒ.
+أنشئ حسابًا أو سجّل دخولك.
 </p>
 
 <div id="authMessage"></div>
@@ -1238,12 +1238,12 @@ A
 <div class="field">
 
 <label>
-Ø§Ù„Ø§Ø³Ù…
+الاسم
 </label>
 
 <input id="authName"
        type="text"
-       placeholder="Ø§Ø³Ù…Ùƒ">
+       placeholder="اسمك">
 
 </div>
 
@@ -1251,7 +1251,7 @@ A
 <div class="field">
 
 <label>
-Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ
+البريد الإلكتروني
 </label>
 
 <input id="authEmail"
@@ -1264,12 +1264,12 @@ A
 <div class="field">
 
 <label>
-ÙƒÙ„Ù…Ø© Ø§Ù„Ù…Ø±ÙˆØ±
+كلمة المرور
 </label>
 
 <input id="authPassword"
        type="password"
-       placeholder="6 Ø£Ø­Ø±Ù Ø¹Ù„Ù‰ Ø§Ù„Ø£Ù‚Ù„">
+       placeholder="6 أحرف على الأقل">
 
 </div>
 
@@ -1279,7 +1279,7 @@ A
         type="button"
         onclick="registerUser()">
 
-Ø¥Ù†Ø´Ø§Ø¡ Ø­Ø³Ø§Ø¨
+إنشاء حساب
 
 </button>
 
@@ -1289,7 +1289,7 @@ A
         type="button"
         onclick="loginUser()">
 
-ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø¯Ø®ÙˆÙ„
+تسجيل الدخول
 
 </button>
 
@@ -1306,7 +1306,7 @@ A
          class="page">
 
 <h2 class="section-title">
-ðŸ›¡ï¸ Ù„ÙˆØ­Ø© Ø§Ù„Ø¥Ø¯Ø§Ø±Ø©
+🛡️ لوحة الإدارة
 </h2>
 
 <div id="adminMessage"></div>
@@ -1316,7 +1316,7 @@ A
 
 <div class="stat">
 <div class="stat-title">
-Ø§Ù„Ø£Ø¹Ø¶Ø§Ø¡
+الأعضاء
 </div>
 
 <div id="adminMembers"
@@ -1328,7 +1328,7 @@ A
 
 <div class="stat">
 <div class="stat-title">
-Ø·Ù„Ø¨Ø§Øª Ø§Ù„Ø§Ù†Ø¶Ù…Ø§Ù…
+طلبات الانضمام
 </div>
 
 <div id="adminRequestsCount"
@@ -1340,7 +1340,7 @@ A
 
 <div class="stat">
 <div class="stat-title">
-Ø§Ù„ØªØ­Ø¯ÙŠØ§Øª
+التحديات
 </div>
 
 <div id="adminChallenges"
@@ -1352,7 +1352,7 @@ A
 
 <div class="stat">
 <div class="stat-title">
-Ø¥Ù†Ø¬Ø§Ø²Ø§Øª Ù…Ø¹Ù„Ù‚Ø©
+إنجازات معلقة
 </div>
 
 <div id="adminSubmissionsCount"
@@ -1367,20 +1367,20 @@ A
 <!-- POINT MANAGEMENT -->
 
 <h2 class="section-title">
-ðŸŽ¯ Ø¥Ø¯Ø§Ø±Ø© Ù†Ù‚Ø§Ø· Ø§Ù„Ø£Ø¹Ø¶Ø§Ø¡
+🎯 إدارة نقاط الأعضاء
 </h2>
 
 <div class="admin-card">
 
 <p class="muted">
-Ø§Ø®ØªØ± Ø¹Ø¶ÙˆÙ‹Ø§ØŒ Ø«Ù… Ø§Ø®ØªØ± Ø¥Ø¶Ø§ÙØ© Ø£Ùˆ Ø®ØµÙ… Ø§Ù„Ù†Ù‚Ø§Ø· ÙˆØ§ÙƒØªØ¨ Ø³Ø¨Ø¨ Ø§Ù„Ø¹Ù…Ù„ÙŠØ©.
+اختر عضوًا، ثم اختر إضافة أو خصم النقاط واكتب سبب العملية.
 </p>
 
 
 <div class="field">
 
 <label>
-Ø§Ù„Ø¹Ø¶Ùˆ
+العضو
 </label>
 
 <select id="pointsMemberSelect"
@@ -1388,7 +1388,7 @@ A
         onchange="updateSelectedMemberPreview()">
 
 <option value="">
--- Ø§Ø®ØªØ± Ø¹Ø¶ÙˆÙ‹Ø§ --
+-- اختر عضوًا --
 </option>
 
 </select>
@@ -1399,7 +1399,7 @@ A
 <div id="selectedMemberPreview"
      class="points-preview">
 
-Ø§Ø®ØªØ± Ø¹Ø¶ÙˆÙ‹Ø§ Ù„Ø¹Ø±Ø¶ Ù†Ù‚Ø§Ø·Ù‡ Ø§Ù„Ø­Ø§Ù„ÙŠØ©.
+اختر عضوًا لعرض نقاطه الحالية.
 
 </div>
 
@@ -1407,18 +1407,18 @@ A
 <div class="field">
 
 <label>
-Ù†ÙˆØ¹ Ø§Ù„Ø¹Ù…Ù„ÙŠØ©
+نوع العملية
 </label>
 
 <select id="pointsOperation"
         class="member-select">
 
 <option value="add">
-âž• Ø¥Ø¶Ø§ÙØ© Ù†Ù‚Ø§Ø·
+➕ إضافة نقاط
 </option>
 
 <option value="subtract">
-âž– Ø®ØµÙ… Ù†Ù‚Ø§Ø·
+➖ خصم نقاط
 </option>
 
 </select>
@@ -1429,14 +1429,14 @@ A
 <div class="field">
 
 <label>
-Ø¹Ø¯Ø¯ Ø§Ù„Ù†Ù‚Ø§Ø·
+عدد النقاط
 </label>
 
 <input id="manualPointsAmount"
        type="number"
        min="1"
        step="1"
-       placeholder="Ù…Ø«Ø§Ù„: 10">
+       placeholder="مثال: 10">
 
 </div>
 
@@ -1444,12 +1444,12 @@ A
 <div class="field">
 
 <label>
-Ø³Ø¨Ø¨ Ø§Ù„Ø¹Ù…Ù„ÙŠØ©
+سبب العملية
 </label>
 
 <input id="manualPointsReason"
        type="text"
-       placeholder="Ù…Ø«Ø§Ù„: Ù…ÙƒØ§ÙØ£Ø© Ø¹Ù„Ù‰ Ø§Ù„Ù†Ø´Ø§Ø·">
+       placeholder="مثال: مكافأة على النشاط">
 
 </div>
 
@@ -1458,7 +1458,7 @@ A
         class="primary"
         onclick="adjustMemberPoints()">
 
-ØªÙ†ÙÙŠØ° Ø§Ù„Ø¹Ù…Ù„ÙŠØ©
+تنفيذ العملية
 
 </button>
 
@@ -1468,13 +1468,13 @@ A
 <!-- MEMBERS -->
 
 <h2 class="section-title">
-ðŸ‘¥ Ù‚Ø§Ø¦Ù…Ø© Ø£Ø¹Ø¶Ø§Ø¡ AHF
+👥 قائمة أعضاء AHF
 </h2>
 
 <div id="adminMembersList">
 
 <div class="alert">
-Ø¬Ø§Ø±Ù ØªØ­Ù…ÙŠÙ„ Ø§Ù„Ø£Ø¹Ø¶Ø§Ø¡...
+جارٍ تحميل الأعضاء...
 </div>
 
 </div>
@@ -1483,7 +1483,7 @@ A
 <!-- JOIN REQUESTS -->
 
 <h2 class="section-title">
-ðŸ“¨ Ø·Ù„Ø¨Ø§Øª Ø§Ù„Ø§Ù†Ø¶Ù…Ø§Ù…
+📨 طلبات الانضمام
 </h2>
 
 <div id="adminRequests"></div>
@@ -1492,7 +1492,7 @@ A
 <!-- SUBMISSIONS -->
 
 <h2 class="section-title">
-ðŸ† Ø¥Ù†Ø¬Ø§Ø²Ø§Øª Ø§Ù„ØªØ­Ø¯ÙŠØ§Øª
+🏆 إنجازات التحديات
 </h2>
 
 <div id="adminSubmissions"></div>
@@ -1501,7 +1501,7 @@ A
 <!-- UPDATES -->
 
 <h2 class="section-title">
-ðŸ“¢ Ø¥Ø¶Ø§ÙØ© ØªØ­Ø¯ÙŠØ«
+📢 إضافة تحديث
 </h2>
 
 <div class="admin-card">
@@ -1509,7 +1509,7 @@ A
 <div class="field">
 
 <label>
-Ø§Ù„Ø¹Ù†ÙˆØ§Ù†
+العنوان
 </label>
 
 <input id="updateTitle"
@@ -1521,7 +1521,7 @@ A
 <div class="field">
 
 <label>
-Ø§Ù„Ù…Ø­ØªÙˆÙ‰
+المحتوى
 </label>
 
 <textarea id="updateContent"></textarea>
@@ -1532,7 +1532,7 @@ A
 <button class="primary"
         onclick="createUpdate()">
 
-Ù†Ø´Ø± Ø§Ù„ØªØ­Ø¯ÙŠØ«
+نشر التحديث
 
 </button>
 
@@ -1542,7 +1542,7 @@ A
 <!-- CREATE CHALLENGE -->
 
 <h2 class="section-title">
-ðŸ† Ø¥Ù†Ø´Ø§Ø¡ ØªØ­Ø¯ÙŠ
+🏆 إنشاء تحدي
 </h2>
 
 <div class="admin-card">
@@ -1550,7 +1550,7 @@ A
 <div class="field">
 
 <label>
-Ø§Ø³Ù… Ø§Ù„ØªØ­Ø¯ÙŠ
+اسم التحدي
 </label>
 
 <input id="newChallengeTitle"
@@ -1562,7 +1562,7 @@ A
 <div class="field">
 
 <label>
-Ø§Ù„ÙˆØµÙ
+الوصف
 </label>
 
 <textarea id="newChallengeDescription"></textarea>
@@ -1573,7 +1573,7 @@ A
 <div class="field">
 
 <label>
-Ø¹Ø¯Ø¯ Ø§Ù„Ù†Ù‚Ø§Ø·
+عدد النقاط
 </label>
 
 <input id="newChallengePoints"
@@ -1587,7 +1587,7 @@ A
 <button class="primary"
         onclick="createChallenge()">
 
-Ø¥Ù†Ø´Ø§Ø¡ Ø§Ù„ØªØ­Ø¯ÙŠ
+إنشاء التحدي
 
 </button>
 
@@ -1597,22 +1597,22 @@ A
 <!-- VIDEOS -->
 
 <h2 class="section-title">
-ðŸŽ¥ ÙÙŠØ¯ÙŠÙˆÙ‡Ø§Øª Ø§Ù„ØªÙ…Ø§Ø±ÙŠÙ†
+🎥 فيديوهات التمارين
 </h2>
 
 <div class="admin-card">
 
 <p class="muted">
 
-Ø§Ù„ÙÙŠØ¯ÙŠÙˆÙ‡Ø§Øª ÙŠØªÙ… ÙˆØ¶Ø¹Ù‡Ø§ Ø¯Ø§Ø®Ù„ Ù‚Ø§Ø¦Ù…Ø©
+الفيديوهات يتم وضعها داخل قائمة
 <strong>TRAINING_PROGRAMS</strong>
-ÙÙŠ Ø§Ù„ÙƒÙˆØ¯.
+في الكود.
 
 </p>
 
 <div class="notice">
 
-Ù…Ø«Ø§Ù„:
+مثال:
 
 <br><br>
 
@@ -1622,7 +1622,7 @@ video:"https://www.youtube.com/watch?v=VIDEO_ID"
 
 <br><br>
 
-ÙˆÙ„Ùˆ Ù„Ù… ØªØ¶Ø¹ Ø±Ø§Ø¨Ø·Ù‹Ø§ØŒ Ø³ÙŠØ¸Ù‡Ø± Ø§Ù„ØªÙ…Ø±ÙŠÙ† Ø¨Ø¯ÙˆÙ† ÙÙŠØ¯ÙŠÙˆ.
+ولو لم تضع رابطًا، سيظهر التمرين بدون فيديو.
 
 </div>
 
@@ -1635,11 +1635,11 @@ video:"https://www.youtube.com/watch?v=VIDEO_ID"
 
 <footer>
 
-AHF â€” Athletes â€¢ Honor â€¢ Force
+AHF — Athletes • Honor • Force
 
 <br><br>
 
-Ù…Ù†ØµØ© AHF Ø§Ù„Ø±ÙŠØ§Ø¶ÙŠØ©
+منصة AHF الرياضية
 
 </footer>
 
@@ -1674,11 +1674,11 @@ createClient(
    TRAINING PROGRAMS
 =========================================================
 
-   Ù„Ø¥Ø¶Ø§ÙØ© ÙÙŠØ¯ÙŠÙˆ:
+   لإضافة فيديو:
 
    video:"https://www.youtube.com/watch?v=VIDEO_ID"
 
-   Ø£Ùˆ:
+   أو:
 
    video:"https://example.com/video.mp4"
 
@@ -1689,56 +1689,56 @@ const TRAINING_PROGRAMS = [
 {
     id:"fitness-start",
 
-    icon:"ðŸ’ª",
+    icon:"💪",
 
-    title:"Ø¨Ø±Ù†Ø§Ù…Ø¬ Ø§Ù„Ø¨Ø¯Ø§ÙŠØ© â€” Ø§Ù„Ù‚ÙˆØ© ÙˆØ§Ù„Ù„ÙŠØ§Ù‚Ø©",
+    title:"برنامج البداية — القوة واللياقة",
 
     description:
-    "Ø¨Ø±Ù†Ø§Ù…Ø¬ ØªØ£Ø³ÙŠØ³ÙŠ Ø¨Ø³ÙŠØ· Ù„Ø¨Ù†Ø§Ø¡ Ù‚Ø§Ø¹Ø¯Ø© Ù„ÙŠØ§Ù‚Ø© Ø¹Ø§Ù…Ø© Ø¨Ø´ÙƒÙ„ ØªØ¯Ø±ÙŠØ¬ÙŠ.",
+    "برنامج تأسيسي بسيط لبناء قاعدة لياقة عامة بشكل تدريجي.",
 
-    level:"Ù…Ø¨ØªØ¯Ø¦",
+    level:"مبتدئ",
 
-    duration:"3 Ø£ÙŠØ§Ù…",
+    duration:"3 أيام",
 
     exercises:[
 
         {
-            title:"Ø¥Ø­Ù…Ø§Ø¡ ÙˆØ­Ø±ÙƒØ©",
+            title:"إحماء وحركة",
             sets:"1",
-            reps:"5â€“8 Ø¯Ù‚Ø§Ø¦Ù‚",
-            note:"Ø§Ø¨Ø¯Ø£ Ø¨Ø­Ø±ÙƒØ§Øª Ø³Ù‡Ù„Ø© ÙˆØ¨Ø³Ø±Ø¹Ø© Ù…Ø±ÙŠØ­Ø©.",
+            reps:"5–8 دقائق",
+            note:"ابدأ بحركات سهلة وبسرعة مريحة.",
             video:""
         },
 
         {
-            title:"Ø§Ù„Ù‚Ø±ÙØµØ§Ø¡ Ø¨ÙˆØ²Ù† Ø§Ù„Ø¬Ø³Ù…",
+            title:"القرفصاء بوزن الجسم",
             sets:"3",
-            reps:"8â€“12",
-            note:"Ø­Ø§ÙØ¸ Ø¹Ù„Ù‰ ØªØ­ÙƒÙ…Ùƒ ÙÙŠ Ø§Ù„Ø­Ø±ÙƒØ© ÙˆÙ„Ø§ ØªØ³Ø±Ø¹.",
+            reps:"8–12",
+            note:"حافظ على تحكمك في الحركة ولا تسرع.",
             video:""
         },
 
         {
-            title:"ØªÙ…Ø±ÙŠÙ† Ø§Ù„Ø¶ØºØ·",
+            title:"تمرين الضغط",
             sets:"3",
-            reps:"5â€“10",
-            note:"Ø§Ø³ØªØ®Ø¯Ù… Ù†Ø³Ø®Ø© Ù…Ù†Ø§Ø³Ø¨Ø© Ù„Ù…Ø³ØªÙˆØ§Ùƒ.",
+            reps:"5–10",
+            note:"استخدم نسخة مناسبة لمستواك.",
             video:""
         },
 
         {
-            title:"Ø§Ù„Ø¬Ø³Ø±",
+            title:"الجسر",
             sets:"3",
-            reps:"8â€“12",
-            note:"ØªØ­ÙƒÙ… ÙÙŠ Ø§Ù„Ø­Ø±ÙƒØ© ÙˆØ­Ø§ÙØ¸ Ø¹Ù„Ù‰ ÙˆØ¶Ø¹ÙŠØ© Ù…Ø±ÙŠØ­Ø©.",
+            reps:"8–12",
+            note:"تحكم في الحركة وحافظ على وضعية مريحة.",
             video:""
         },
 
         {
-            title:"Ù…Ø´ÙŠ Ø£Ùˆ Ø¬Ø±ÙŠ Ø®ÙÙŠÙ",
+            title:"مشي أو جري خفيف",
             sets:"1",
-            reps:"10â€“20 Ø¯Ù‚ÙŠÙ‚Ø©",
-            note:"Ø´Ø¯Ø© Ù…Ù†Ø§Ø³Ø¨Ø© Ù„Ù„Ù…Ø¨ØªØ¯Ø¦ Ø¨Ø¯ÙˆÙ† Ø¥Ø¬Ù‡Ø§Ø¯ Ø´Ø¯ÙŠØ¯.",
+            reps:"10–20 دقيقة",
+            note:"شدة مناسبة للمبتدئ بدون إجهاد شديد.",
             video:""
         }
 
@@ -1749,48 +1749,48 @@ const TRAINING_PROGRAMS = [
 {
     id:"running-start",
 
-    icon:"ðŸƒ",
+    icon:"🏃",
 
-    title:"Ø¨Ø±Ù†Ø§Ù…Ø¬ Ø§Ù„Ø¨Ø¯Ø§ÙŠØ© â€” Ø§Ù„Ø¬Ø±ÙŠ ÙˆØ§Ù„ØªØ­Ù…Ù„",
+    title:"برنامج البداية — الجري والتحمل",
 
     description:
-    "Ø¨Ø±Ù†Ø§Ù…Ø¬ ØªØ¯Ø±ÙŠØ¬ÙŠ Ù„Ù„Ø­Ø±ÙƒØ© ÙˆØ§Ù„Ø¬Ø±ÙŠ ÙˆØ¨Ù†Ø§Ø¡ Ø§Ù„ØªØ­Ù…Ù„.",
+    "برنامج تدريجي للحركة والجري وبناء التحمل.",
 
-    level:"Ù…Ø¨ØªØ¯Ø¦",
+    level:"مبتدئ",
 
-    duration:"3 Ø£ÙŠØ§Ù…",
+    duration:"3 أيام",
 
     exercises:[
 
         {
-            title:"Ù…Ø´ÙŠ Ø³Ø±ÙŠØ¹ Ù„Ù„Ø¥Ø­Ù…Ø§Ø¡",
+            title:"مشي سريع للإحماء",
             sets:"1",
-            reps:"5â€“10 Ø¯Ù‚Ø§Ø¦Ù‚",
-            note:"Ø§Ø¨Ø¯Ø£ ØªØ¯Ø±ÙŠØ¬ÙŠÙ‹Ø§.",
+            reps:"5–10 دقائق",
+            note:"ابدأ تدريجيًا.",
             video:""
         },
 
         {
-            title:"Ù…Ø´ÙŠ + Ø¬Ø±ÙŠ Ø®ÙÙŠÙ",
+            title:"مشي + جري خفيف",
             sets:"4",
-            reps:"Ø¯Ù‚ÙŠÙ‚Ø© Ø¬Ø±ÙŠ + Ø¯Ù‚ÙŠÙ‚ØªÙŠÙ† Ù…Ø´ÙŠ",
-            note:"Ù„Ø§ ØªØ¬Ø¹Ù„ Ø§Ù„Ø³Ø±Ø¹Ø© Ù‡ÙŠ Ø§Ù„Ù‡Ø¯ÙØ› Ø§Ù„Ø§Ø³ØªÙ…Ø±Ø§Ø±ÙŠØ© Ø£Ù‡Ù….",
+            reps:"دقيقة جري + دقيقتين مشي",
+            note:"لا تجعل السرعة هي الهدف؛ الاستمرارية أهم.",
             video:""
         },
 
         {
-            title:"Ø±ÙØ¹ Ø§Ù„Ø±ÙƒØ¨Ø© Ø¨Ø´ÙƒÙ„ Ø®ÙÙŠÙ",
+            title:"رفع الركبة بشكل خفيف",
             sets:"2",
-            reps:"20â€“30 Ø«Ø§Ù†ÙŠØ©",
-            note:"Ø­Ø±ÙƒØ© Ù…ØªØ­ÙƒÙ… ÙÙŠÙ‡Ø§.",
+            reps:"20–30 ثانية",
+            note:"حركة متحكم فيها.",
             video:""
         },
 
         {
-            title:"ØªÙ‡Ø¯Ø¦Ø© ÙˆÙ…Ø´ÙŠ",
+            title:"تهدئة ومشي",
             sets:"1",
-            reps:"5 Ø¯Ù‚Ø§Ø¦Ù‚",
-            note:"Ø§Ø®ØªÙ… ØªØ¯Ø±ÙŠØ¬ÙŠÙ‹Ø§.",
+            reps:"5 دقائق",
+            note:"اختم تدريجيًا.",
             video:""
         }
 
@@ -1801,48 +1801,48 @@ const TRAINING_PROGRAMS = [
 {
     id:"boxing-basics",
 
-    icon:"ðŸ¥Š",
+    icon:"🥊",
 
-    title:"Ø¨Ø±Ù†Ø§Ù…Ø¬ Ø§Ù„Ø£Ø³Ø§Ø³ÙŠØ§Øª â€” Ø§Ù„Ù…Ù„Ø§ÙƒÙ…Ø©",
+    title:"برنامج الأساسيات — الملاكمة",
 
     description:
-    "Ø£Ø³Ø§Ø³ÙŠØ§Øª Ø§Ù„Ø­Ø±ÙƒØ© ÙˆØ§Ù„ÙˆØ¶Ø¹ÙŠØ© ÙˆØ§Ù„Ù„ÙƒÙ…Ø§Øª Ø§Ù„Ø£Ø³Ø§Ø³ÙŠØ© Ø¨Ø´ÙƒÙ„ ØªØ¯Ø±ÙŠØ¨ÙŠ.",
+    "أساسيات الحركة والوضعية واللكمات الأساسية بشكل تدريبي.",
 
-    level:"Ù…Ø¨ØªØ¯Ø¦",
+    level:"مبتدئ",
 
-    duration:"2â€“3 Ø£ÙŠØ§Ù…",
+    duration:"2–3 أيام",
 
     exercises:[
 
         {
-            title:"ÙˆØ¶Ø¹ÙŠØ© Ø§Ù„ÙˆÙ‚ÙˆÙ ÙˆØ§Ù„Ø­Ø±ÙƒØ©",
+            title:"وضعية الوقوف والحركة",
             sets:"3",
-            reps:"Ø¯Ù‚ÙŠÙ‚Ø©",
-            note:"ØªØ¹Ù„Ù… Ø§Ù„ÙˆÙ‚ÙØ© ÙˆØ§Ù„Ø­Ø±ÙƒØ© Ù…Ø¹ Ù…Ø¯Ø±Ø¨ Ø¹Ù†Ø¯ Ø§Ù„ØªØ¯Ø±ÙŠØ¨ Ø§Ù„Ù‚ØªØ§Ù„ÙŠ.",
+            reps:"دقيقة",
+            note:"تعلم الوقفة والحركة مع مدرب عند التدريب القتالي.",
             video:""
         },
 
         {
-            title:"Jab ØªØ¯Ø±ÙŠØ¨ÙŠ",
+            title:"Jab تدريبي",
             sets:"3",
-            reps:"20 Ø«Ø§Ù†ÙŠØ©",
-            note:"Ù†ÙÙ‘Ø° Ø§Ù„Ø­Ø±ÙƒØ© ÙÙŠ Ø§Ù„Ù‡ÙˆØ§Ø¡ ÙˆØ¨Ø³ÙŠØ·Ø±Ø©.",
+            reps:"20 ثانية",
+            note:"نفّذ الحركة في الهواء وبسيطرة.",
             video:""
         },
 
         {
-            title:"Cross ØªØ¯Ø±ÙŠØ¨ÙŠ",
+            title:"Cross تدريبي",
             sets:"3",
-            reps:"20 Ø«Ø§Ù†ÙŠØ©",
-            note:"Ø±ÙƒØ² Ø¹Ù„Ù‰ Ø§Ù„ØªÙ‚Ù†ÙŠØ© ÙˆÙ„ÙŠØ³ Ø§Ù„Ù‚ÙˆØ©.",
+            reps:"20 ثانية",
+            note:"ركز على التقنية وليس القوة.",
             video:""
         },
 
         {
-            title:"Ø­Ø±ÙƒØ© Ù‚Ø¯Ù…ÙŠÙ† Ø¨Ø³ÙŠØ·Ø©",
+            title:"حركة قدمين بسيطة",
             sets:"3",
-            reps:"30 Ø«Ø§Ù†ÙŠØ©",
-            note:"Ø­Ø§ÙØ¸ Ø¹Ù„Ù‰ ØªÙˆØ§Ø²Ù† Ø§Ù„Ø¬Ø³Ù….",
+            reps:"30 ثانية",
+            note:"حافظ على توازن الجسم.",
             video:""
         }
 
@@ -1853,48 +1853,48 @@ const TRAINING_PROGRAMS = [
 {
     id:"mobility",
 
-    icon:"ðŸ¤¸",
+    icon:"🤸",
 
-    title:"Ø¨Ø±Ù†Ø§Ù…Ø¬ Ø§Ù„Ø­Ø±ÙƒØ© ÙˆØ§Ù„Ù…Ø±ÙˆÙ†Ø©",
+    title:"برنامج الحركة والمرونة",
 
     description:
-    "Ø¬Ù„Ø³Ø© Ø®ÙÙŠÙØ© Ù„ØªØ­Ø³ÙŠÙ† Ø§Ù„Ø­Ø±ÙƒØ© ÙˆØ§Ù„ØªØ­ÙƒÙ… Ø¨Ø§Ù„Ø¬Ø³Ù….",
+    "جلسة خفيفة لتحسين الحركة والتحكم بالجسم.",
 
-    level:"ÙƒÙ„ Ø§Ù„Ù…Ø³ØªÙˆÙŠØ§Øª",
+    level:"كل المستويات",
 
-    duration:"2â€“4 Ø£ÙŠØ§Ù…",
+    duration:"2–4 أيام",
 
     exercises:[
 
         {
-            title:"Ø­Ø±ÙƒØ© Ø§Ù„ÙƒØªÙÙŠÙ†",
+            title:"حركة الكتفين",
             sets:"2",
-            reps:"30 Ø«Ø§Ù†ÙŠØ©",
-            note:"Ø­Ø±ÙƒØ© Ù…Ø±ÙŠØ­Ø© Ø¨Ø¯ÙˆÙ† Ø£Ù„Ù….",
+            reps:"30 ثانية",
+            note:"حركة مريحة بدون ألم.",
             video:""
         },
 
         {
-            title:"Ø­Ø±ÙƒØ© Ø§Ù„Ø­ÙˆØ¶",
+            title:"حركة الحوض",
             sets:"2",
-            reps:"30 Ø«Ø§Ù†ÙŠØ©",
-            note:"Ø¨Ù…Ø¯Ù‰ Ø­Ø±ÙƒØ© Ù…Ø±ÙŠØ­.",
+            reps:"30 ثانية",
+            note:"بمدى حركة مريح.",
             video:""
         },
 
         {
-            title:"Ø­Ø±ÙƒØ© Ø§Ù„ÙƒØ§Ø­Ù„",
+            title:"حركة الكاحل",
             sets:"2",
-            reps:"30 Ø«Ø§Ù†ÙŠØ© Ù„ÙƒÙ„ Ø¬Ø§Ù†Ø¨",
-            note:"Ø¨Ø¯ÙˆÙ† Ø¶ØºØ· Ø£Ùˆ Ø£Ù„Ù….",
+            reps:"30 ثانية لكل جانب",
+            note:"بدون ضغط أو ألم.",
             video:""
         },
 
         {
-            title:"ØªÙ†ÙØ³ ÙˆØªÙ‡Ø¯Ø¦Ø©",
+            title:"تنفس وتهدئة",
             sets:"1",
-            reps:"2â€“3 Ø¯Ù‚Ø§Ø¦Ù‚",
-            note:"Ø§Ø®ØªÙ… Ø¨Ù‡Ø¯ÙˆØ¡.",
+            reps:"2–3 دقائق",
+            note:"اختم بهدوء.",
             video:""
         }
 
@@ -1951,7 +1951,7 @@ function setBox(id,message,type=""){
 function setButtonLoading(
     id,
     loading,
-    loadingText="Ø¬Ø§Ø±ÙŠ Ø§Ù„ØªÙ†ÙÙŠØ°..."
+    loadingText="جاري التنفيذ..."
 ){
 
     const button =
@@ -1975,7 +1975,7 @@ function setButtonLoading(
 
         button.textContent =
         button.dataset.originalText ||
-        "ØªÙ†ÙÙŠØ°";
+        "تنفيذ";
 
     }
 
@@ -2132,7 +2132,7 @@ async function registerUser(){
 
         setBox(
             "authMessage",
-            "Ø§ÙƒØªØ¨ Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ ÙˆÙƒÙ„Ù…Ø© Ø§Ù„Ù…Ø±ÙˆØ±.",
+            "اكتب البريد الإلكتروني وكلمة المرور.",
             "error"
         );
 
@@ -2144,7 +2144,7 @@ async function registerUser(){
 
         setBox(
             "authMessage",
-            "ÙƒÙ„Ù…Ø© Ø§Ù„Ù…Ø±ÙˆØ± ÙŠØ¬Ø¨ Ø£Ù† ØªÙƒÙˆÙ† 6 Ø£Ø­Ø±Ù Ø¹Ù„Ù‰ Ø§Ù„Ø£Ù‚Ù„.",
+            "كلمة المرور يجب أن تكون 6 أحرف على الأقل.",
             "error"
         );
 
@@ -2155,7 +2155,7 @@ async function registerUser(){
     setButtonLoading(
         "registerBtn",
         true,
-        "Ø¬Ø§Ø±ÙŠ Ø¥Ù†Ø´Ø§Ø¡ Ø§Ù„Ø­Ø³Ø§Ø¨..."
+        "جاري إنشاء الحساب..."
     );
 
 
@@ -2173,7 +2173,7 @@ async function registerUser(){
 
             options:{
                 data:{
-                    name:name || "Ø¹Ø¶Ùˆ AHF"
+                    name:name || "عضو AHF"
                 }
             }
 
@@ -2202,7 +2202,7 @@ async function registerUser(){
 
             setBox(
                 "authMessage",
-                "ØªÙ… Ø¥Ù†Ø´Ø§Ø¡ Ø§Ù„Ø­Ø³Ø§Ø¨ ÙˆØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø¯Ø®ÙˆÙ„ Ø¨Ù†Ø¬Ø§Ø­ âœ…",
+                "تم إنشاء الحساب وتسجيل الدخول بنجاح ✅",
                 "success"
             );
 
@@ -2210,7 +2210,7 @@ async function registerUser(){
 
             setBox(
                 "authMessage",
-                "ØªÙ… Ø¥Ù†Ø´Ø§Ø¡ Ø§Ù„Ø­Ø³Ø§Ø¨. Ø¥Ø°Ø§ ÙƒØ§Ù† ØªØ£ÙƒÙŠØ¯ Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ Ù…ÙØ¹Ù‘Ù„Ù‹Ø§ØŒ ÙŠØ¬Ø¨ ØªØ£ÙƒÙŠØ¯ Ø§Ù„Ø¨Ø±ÙŠØ¯ Ù‚Ø¨Ù„ ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø¯Ø®ÙˆÙ„.",
+                "تم إنشاء الحساب. إذا كان تأكيد البريد الإلكتروني مفعّلًا، يجب تأكيد البريد قبل تسجيل الدخول.",
                 "success"
             );
 
@@ -2223,7 +2223,7 @@ async function registerUser(){
 
         setBox(
             "authMessage",
-            "Ø­Ø¯Ø« Ø®Ø·Ø£ Ø£Ø«Ù†Ø§Ø¡ Ø¥Ù†Ø´Ø§Ø¡ Ø§Ù„Ø­Ø³Ø§Ø¨.",
+            "حدث خطأ أثناء إنشاء الحساب.",
             "error"
         );
 
@@ -2258,34 +2258,34 @@ function friendlyAuthError(error){
 
     if(lower.includes("rate limit")){
 
-        return "ØªÙ… ØªØ¬Ø§ÙˆØ² Ø­Ø¯ Ø§Ù„Ù…Ø­Ø§ÙˆÙ„Ø§Øª Ù…Ø¤Ù‚ØªÙ‹Ø§. Ø§Ù†ØªØ¸Ø± Ù‚Ù„ÙŠÙ„Ù‹Ø§ Ø«Ù… Ø­Ø§ÙˆÙ„ Ù…Ø±Ø© Ø£Ø®Ø±Ù‰.";
+        return "تم تجاوز حد المحاولات مؤقتًا. انتظر قليلًا ثم حاول مرة أخرى.";
 
     }
 
 
     if(lower.includes("already registered")){
 
-        return "Ù‡Ø°Ø§ Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ Ù…Ø³Ø¬Ù„ Ø¨Ø§Ù„ÙØ¹Ù„. Ø¬Ø±Ù‘Ø¨ ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø¯Ø®ÙˆÙ„.";
+        return "هذا البريد الإلكتروني مسجل بالفعل. جرّب تسجيل الدخول.";
 
     }
 
 
     if(lower.includes("invalid email")){
 
-        return "Ø§ÙƒØªØ¨ Ø¨Ø±ÙŠØ¯Ù‹Ø§ Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠÙ‹Ø§ ØµØ­ÙŠØ­Ù‹Ø§.";
+        return "اكتب بريدًا إلكترونيًا صحيحًا.";
 
     }
 
 
     if(lower.includes("password")){
 
-        return "ØªØ­Ù‚Ù‚ Ù…Ù† ÙƒÙ„Ù…Ø© Ø§Ù„Ù…Ø±ÙˆØ±.";
+        return "تحقق من كلمة المرور.";
 
     }
 
 
     return message ||
-    "ØªØ¹Ø°Ø± ØªÙ†ÙÙŠØ° Ø§Ù„Ø¹Ù…Ù„ÙŠØ©.";
+    "تعذر تنفيذ العملية.";
 
 }
 
@@ -2313,7 +2313,7 @@ async function loginUser(){
 
         setBox(
             "authMessage",
-            "Ø§ÙƒØªØ¨ Ø§Ù„Ø¨Ø±ÙŠØ¯ Ø§Ù„Ø¥Ù„ÙƒØªØ±ÙˆÙ†ÙŠ ÙˆÙƒÙ„Ù…Ø© Ø§Ù„Ù…Ø±ÙˆØ±.",
+            "اكتب البريد الإلكتروني وكلمة المرور.",
             "error"
         );
 
@@ -2324,7 +2324,7 @@ async function loginUser(){
     setButtonLoading(
         "loginBtn",
         true,
-        "Ø¬Ø§Ø±ÙŠ ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø¯Ø®ÙˆÙ„..."
+        "جاري تسجيل الدخول..."
     );
 
 
@@ -2364,7 +2364,7 @@ async function loginUser(){
 
         setBox(
             "authMessage",
-            "ØªÙ… ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø¯Ø®ÙˆÙ„ Ø¨Ù†Ø¬Ø§Ø­ âœ…",
+            "تم تسجيل الدخول بنجاح ✅",
             "success"
         );
 
@@ -2375,7 +2375,7 @@ async function loginUser(){
 
         setBox(
             "authMessage",
-            "Ø­Ø¯Ø« Ø®Ø·Ø£ Ø£Ø«Ù†Ø§Ø¡ ØªØ³Ø¬ÙŠÙ„ Ø§Ù„Ø¯Ø®ÙˆÙ„.",
+            "حدث خطأ أثناء تسجيل الدخول.",
             "error"
         );
 
@@ -2525,8 +2525,8 @@ async function checkAdmin(){
     try{
 
         /*
-          Ø§Ù„Ù…Ø­Ø§ÙˆÙ„Ø© Ø§Ù„Ø£ÙˆÙ„Ù‰:
-          Ù‚Ø±Ø§Ø¡Ø© user_roles Ù…Ø¨Ø§Ø´Ø±Ø©
+          المحاولة الأولى:
+          قراءة user_roles مباشرة
         */
 
         const {
@@ -2551,7 +2551,7 @@ async function checkAdmin(){
 
 
         /*
-          Ù…Ø­Ø§ÙˆÙ„Ø© Ø«Ø§Ù†ÙŠØ© Ø¹Ù† Ø·Ø±ÙŠÙ‚ RPC
+          محاولة ثانية عن طريق RPC
         */
 
         const rpcResult =
@@ -2572,7 +2572,7 @@ async function checkAdmin(){
 
 
         /*
-          Ù…Ø­Ø§ÙˆÙ„Ø© Ø«Ø§Ù„Ø«Ø© Ø¨Ø§Ø³Ù… Ø§Ù„Ø¯Ø§Ù„Ø© Ø§Ù„Ø¨Ø¯ÙŠÙ„Ø©
+          محاولة ثالثة باسم الدالة البديلة
         */
 
         const rpcResult2 =
@@ -2628,12 +2628,12 @@ function updateProfileUI(){
 
 
     const rank =
-    currentMember?.rank ?? "Ø¹Ø¶Ùˆ";
+    currentMember?.rank ?? "عضو";
 
 
     const status =
     currentMember?.status ??
-    "ØºÙŠØ± Ù…Ø³Ø¬Ù„";
+    "غير مسجل";
 
 
     document
@@ -2653,7 +2653,7 @@ function updateProfileUI(){
     .textContent =
     currentUser
     ? status
-    : "ØºÙŠØ± Ù…Ø³Ø¬Ù„";
+    : "غير مسجل";
 
 
     document
@@ -2662,14 +2662,14 @@ function updateProfileUI(){
     currentMember?.name ||
     currentUser?.user_metadata?.name ||
     currentUser?.email ||
-    "ØºÙŠØ± Ù…Ø³Ø¬Ù„";
+    "غير مسجل";
 
 
     document
     .getElementById("profileEmail")
     .textContent =
     currentUser?.email ||
-    "â€”";
+    "—";
 
 
     document
@@ -2802,7 +2802,7 @@ async function loadUpdates(){
 
         box.innerHTML =
         `<div class="alert">
-            Ù„Ø§ ØªÙˆØ¬Ø¯ ØªØ­Ø¯ÙŠØ«Ø§Øª Ø­Ø§Ù„ÙŠÙ‹Ø§.
+            لا توجد تحديثات حاليًا.
         </div>`;
 
         return;
@@ -2813,7 +2813,7 @@ async function loadUpdates(){
 
         box.innerHTML =
         `<div class="alert">
-            Ù„Ø§ ØªÙˆØ¬Ø¯ ØªØ­Ø¯ÙŠØ«Ø§Øª Ø­Ø§Ù„ÙŠÙ‹Ø§.
+            لا توجد تحديثات حاليًا.
         </div>`;
 
         return;
@@ -2866,7 +2866,7 @@ async function sendJoinRequest(){
     if(!currentUser){
 
         alert(
-            "Ø³Ø¬Ù‘Ù„ Ø§Ù„Ø¯Ø®ÙˆÙ„ Ø£ÙˆÙ„Ù‹Ø§."
+            "سجّل الدخول أولًا."
         );
 
         showPage("auth");
@@ -2900,7 +2900,7 @@ async function sendJoinRequest(){
 
         setBox(
             "joinMessage",
-            "Ø§ÙƒØªØ¨ Ø§Ø³Ù…Ùƒ.",
+            "اكتب اسمك.",
             "error"
         );
 
@@ -2949,7 +2949,7 @@ async function sendJoinRequest(){
 
         setBox(
             "joinMessage",
-            "ØªÙ… Ø¥Ø±Ø³Ø§Ù„ Ø·Ù„Ø¨ Ø§Ù„Ø§Ù†Ø¶Ù…Ø§Ù… Ø¥Ù„Ù‰ Ø§Ù„Ø¥Ø¯Ø§Ø±Ø© Ù„Ù„Ù…Ø±Ø§Ø¬Ø¹Ø© âœ…",
+            "تم إرسال طلب الانضمام إلى الإدارة للمراجعة ✅",
             "success"
         );
 
@@ -2975,7 +2975,7 @@ async function sendJoinRequest(){
 
         setBox(
             "joinMessage",
-            "Ø­Ø¯Ø« Ø®Ø·Ø£ Ø£Ø«Ù†Ø§Ø¡ Ø¥Ø±Ø³Ø§Ù„ Ø§Ù„Ø·Ù„Ø¨.",
+            "حدث خطأ أثناء إرسال الطلب.",
             "error"
         );
 
@@ -3017,7 +3017,7 @@ async function loadChallenges(){
 
         setBox(
             "challengeBox",
-            "ØªØ¹Ø°Ø± ØªØ­Ù…ÙŠÙ„ Ø§Ù„ØªØ­Ø¯ÙŠØ§Øª.",
+            "تعذر تحميل التحديات.",
             "error"
         );
 
@@ -3029,7 +3029,7 @@ async function loadChallenges(){
 
         setBox(
             "challengeBox",
-            "Ù„Ø§ ØªÙˆØ¬Ø¯ ØªØ­Ø¯ÙŠØ§Øª Ù†Ø´Ø·Ø© Ø­Ø§Ù„ÙŠÙ‹Ø§."
+            "لا توجد تحديات نشطة حاليًا."
         );
 
         return;
@@ -3059,7 +3059,7 @@ async function loadChallenges(){
 
                 <span class="points">
                     ${Number(challenge.points || 0)}
-                    Ù†Ù‚Ø·Ø©
+                    نقطة
                 </span>
 
             </div>
@@ -3071,7 +3071,7 @@ async function loadChallenges(){
             <button
                 onclick="submitChallenge('${challenge.id}')">
 
-                Ø£Ø±Ø³Ù„Øª Ø¥Ù†Ø¬Ø§Ø²ÙŠ
+                أرسلت إنجازي
 
             </button>
 
@@ -3097,7 +3097,7 @@ async function submitChallenge(challengeId){
     if(!currentUser){
 
         alert(
-            "Ø³Ø¬Ù‘Ù„ Ø§Ù„Ø¯Ø®ÙˆÙ„ Ø£ÙˆÙ„Ù‹Ø§."
+            "سجّل الدخول أولًا."
         );
 
         showPage("auth");
@@ -3108,7 +3108,7 @@ async function submitChallenge(challengeId){
 
     const proof =
     prompt(
-        "Ø§ÙƒØªØ¨ Ø¥Ø«Ø¨Ø§Øª Ø¥Ù†Ø¬Ø§Ø² Ø§Ù„ØªØ­Ø¯ÙŠ:"
+        "اكتب إثبات إنجاز التحدي:"
     );
 
 
@@ -3146,7 +3146,7 @@ async function submitChallenge(challengeId){
         if(error){
 
             alert(
-                "ØªØ¹Ø°Ø± Ø¥Ø±Ø³Ø§Ù„ Ø§Ù„Ø¥Ù†Ø¬Ø§Ø²:\n" +
+                "تعذر إرسال الإنجاز:\n" +
                 error.message
             );
 
@@ -3155,7 +3155,7 @@ async function submitChallenge(challengeId){
 
 
         alert(
-            "ØªÙ… Ø¥Ø±Ø³Ø§Ù„ Ø§Ù„Ø¥Ù†Ø¬Ø§Ø² Ù„Ù„Ù…Ø±Ø§Ø¬Ø¹Ø© âœ…"
+            "تم إرسال الإنجاز للمراجعة ✅"
         );
 
 
@@ -3164,7 +3164,7 @@ async function submitChallenge(challengeId){
         console.error(error);
 
         alert(
-            "Ø­Ø¯Ø« Ø®Ø·Ø£ Ø£Ø«Ù†Ø§Ø¡ Ø¥Ø±Ø³Ø§Ù„ Ø§Ù„Ø¥Ù†Ø¬Ø§Ø²."
+            "حدث خطأ أثناء إرسال الإنجاز."
         );
 
     }
@@ -3189,7 +3189,7 @@ async function loadPoints(){
 
         box.innerHTML =
         `<div class="alert">
-            Ø³Ø¬Ù‘Ù„ Ø§Ù„Ø¯Ø®ÙˆÙ„ Ù„Ø±Ø¤ÙŠØ© Ù†Ù‚Ø§Ø·Ùƒ.
+            سجّل الدخول لرؤية نقاطك.
         </div>`;
 
         return;
@@ -3220,7 +3220,7 @@ async function loadPoints(){
 
         setBox(
             "pointsBox",
-            "ØªØ¹Ø°Ø± ØªØ­Ù…ÙŠÙ„ Ø³Ø¬Ù„ Ø§Ù„Ù†Ù‚Ø§Ø·.",
+            "تعذر تحميل سجل النقاط.",
             "error"
         );
 
@@ -3232,7 +3232,7 @@ async function loadPoints(){
 
         setBox(
             "pointsBox",
-            "Ù„Ø§ ÙŠÙˆØ¬Ø¯ Ø³Ø¬Ù„ Ù†Ù‚Ø§Ø· Ø­ØªÙ‰ Ø§Ù„Ø¢Ù†."
+            "لا يوجد سجل نقاط حتى الآن."
         );
 
         return;
@@ -3249,13 +3249,13 @@ async function loadPoints(){
 
         <tr>
 
-            <th>Ø§Ù„ØªØºÙŠÙŠØ±</th>
+            <th>التغيير</th>
 
-            <th>Ø§Ù„Ø³Ø¨Ø¨</th>
+            <th>السبب</th>
 
-            <th>Ø§Ù„Ø­Ø§Ù„Ø©</th>
+            <th>الحالة</th>
 
-            <th>Ø§Ù„ØªØ§Ø±ÙŠØ®</th>
+            <th>التاريخ</th>
 
         </tr>
 
@@ -3294,14 +3294,14 @@ async function loadPoints(){
 
                 <td>
                     ${escapeHtml(
-                        item.reason || "â€”"
+                        item.reason || "—"
                     )}
                 </td>
 
                 <td>
                     ${item.approved
-                        ? "Ù…Ø¹ØªÙ…Ø¯"
-                        : "Ù…Ø¹Ù„Ù‚"}
+                        ? "معتمد"
+                        : "معلق"}
                 </td>
 
                 <td>
@@ -3372,7 +3372,7 @@ async function loadLeaderboard(){
 
         setBox(
             "leaderboardBox",
-            "ØªØ¹Ø°Ø± ØªØ­Ù…ÙŠÙ„ Ø§Ù„Ù…ØªØµØ¯Ø±ÙŠÙ†.",
+            "تعذر تحميل المتصدرين.",
             "error"
         );
 
@@ -3384,7 +3384,7 @@ async function loadLeaderboard(){
 
         setBox(
             "leaderboardBox",
-            "Ù„Ø§ ÙŠÙˆØ¬Ø¯ Ø£Ø¹Ø¶Ø§Ø¡ Ù…Ø¹ØªÙ…Ø¯ÙˆÙ† Ø­ØªÙ‰ Ø§Ù„Ø¢Ù†."
+            "لا يوجد أعضاء معتمدون حتى الآن."
         );
 
         return;
@@ -3401,13 +3401,13 @@ async function loadLeaderboard(){
 
         <tr>
 
-            <th>Ø§Ù„Ù…Ø±ÙƒØ²</th>
+            <th>المركز</th>
 
-            <th>Ø§Ù„Ø¹Ø¶Ùˆ</th>
+            <th>العضو</th>
 
-            <th>Ø§Ù„Ù†Ù‚Ø§Ø·</th>
+            <th>النقاط</th>
 
-            <th>Ø§Ù„Ø±ØªØ¨Ø©</th>
+            <th>الرتبة</th>
 
         </tr>
 
@@ -3430,7 +3430,7 @@ async function loadLeaderboard(){
 
                 <td>
                     ${escapeHtml(
-                        member.name || "Ø¹Ø¶Ùˆ"
+                        member.name || "عضو"
                     )}
                 </td>
 
@@ -3442,7 +3442,7 @@ async function loadLeaderboard(){
 
                 <td>
                     ${escapeHtml(
-                        member.rank || "Ø¹Ø¶Ùˆ"
+                        member.rank || "عضو"
                     )}
                 </td>
 
@@ -3533,7 +3533,7 @@ function renderTrainingPrograms(){
 
                 <span class="chip">
                     ${program.exercises.length}
-                    ØªÙ…Ø§Ø±ÙŠÙ†
+                    تمارين
                 </span>
 
             </div>
@@ -3597,14 +3597,14 @@ function openTrainingProgram(programId){
             <div class="program-meta">
 
                 <span class="chip">
-                    Ø§Ù„Ù…Ø³ØªÙˆÙ‰:
+                    المستوى:
                     ${escapeHtml(
                         program.level
                     )}
                 </span>
 
                 <span class="chip">
-                    Ø§Ù„Ù…Ø¯Ø©:
+                    المدة:
                     ${escapeHtml(
                         program.duration
                     )}
@@ -3644,7 +3644,7 @@ function openTrainingProgram(programId){
                                     ${escapeHtml(
                                         exercise.sets
                                     )}
-                                    Ù…Ø¬Ù…ÙˆØ¹Ø§Øª â€”
+                                    مجموعات —
                                     ${escapeHtml(
                                         exercise.reps
                                     )}
@@ -3659,7 +3659,7 @@ function openTrainingProgram(programId){
                     <div class="exercise-details">
 
                         <strong>
-                            Ù…Ù„Ø§Ø­Ø¸Ø©:
+                            ملاحظة:
                         </strong>
 
                         ${escapeHtml(
@@ -3684,9 +3684,9 @@ function openTrainingProgram(programId){
 
         <div class="notice">
 
-            âš ï¸ Ù†ÙÙ‘Ø° Ø§Ù„ØªÙ…Ø§Ø±ÙŠÙ† Ø¨Ø·Ø±ÙŠÙ‚Ø© Ù…Ù†Ø§Ø³Ø¨Ø© Ù„Ù…Ø³ØªÙˆØ§Ùƒ.
-            ÙˆØ¥Ø°Ø§ Ø´Ø¹Ø±Øª Ø¨Ø£Ù„Ù… Ø£Ùˆ Ø¯ÙˆØ®Ø© Ø£Ùˆ ØªØ¹Ø¨ ØºÙŠØ± Ø·Ø¨ÙŠØ¹ÙŠØŒ
-            ØªÙˆÙ‚Ù ÙˆØ§Ø·Ù„Ø¨ Ø§Ù„Ù…Ø³Ø§Ø¹Ø¯Ø© Ø§Ù„Ù…Ù†Ø§Ø³Ø¨Ø©.
+            ⚠️ نفّذ التمارين بطريقة مناسبة لمستواك.
+            وإذا شعرت بألم أو دوخة أو تعب غير طبيعي،
+            توقف واطلب المساعدة المناسبة.
 
         </div>
 
@@ -3719,7 +3719,7 @@ function renderVideo(url){
 
                 <div class="video-placeholder">
 
-                    ðŸŽ¥ Ù„Ø§ ÙŠÙˆØ¬Ø¯ ÙÙŠØ¯ÙŠÙˆ Ù„Ù‡Ø°Ø§ Ø§Ù„ØªÙ…Ø±ÙŠÙ† Ø­Ø§Ù„ÙŠÙ‹Ø§.
+                    🎥 لا يوجد فيديو لهذا التمرين حاليًا.
 
                 </div>
 
@@ -3744,7 +3744,7 @@ function renderVideo(url){
 
                     src="https://www.youtube.com/embed/${youtubeId}"
 
-                    title="ÙÙŠØ¯ÙŠÙˆ Ø§Ù„ØªÙ…Ø±ÙŠÙ†"
+                    title="فيديو التمرين"
 
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 
@@ -3774,7 +3774,7 @@ function renderVideo(url){
                 <source
                     src="${safeUrl}">
 
-                Ø§Ù„Ù…ØªØµÙØ­ Ù„Ø§ ÙŠØ¯Ø¹Ù… ØªØ´ØºÙŠÙ„ Ù‡Ø°Ø§ Ø§Ù„ÙÙŠØ¯ÙŠÙˆ.
+                المتصفح لا يدعم تشغيل هذا الفيديو.
 
             </video>
 
@@ -3847,7 +3847,7 @@ async function loadAdmin(){
 
         setBox(
             "adminMessage",
-            "Ù‡Ø°Ù‡ Ø§Ù„ØµÙØ­Ø© Ù…Ø®ØµØµØ© Ù„Ù„Ø¥Ø¯Ø§Ø±Ø© ÙÙ‚Ø·.",
+            "هذه الصفحة مخصصة للإدارة فقط.",
             "error"
         );
 
@@ -3984,8 +3984,8 @@ async function loadAdminMembers(){
     if(result.error){
 
         /*
-          fallback Ù…Ø¨Ø§Ø´Ø±
-          Ø¥Ø°Ø§ ÙƒØ§Ù† RLS ÙŠØ³Ù…Ø­ Ù„Ù„Ø¥Ø¯Ø§Ø±Ø©
+          fallback مباشر
+          إذا كان RLS يسمح للإدارة
         */
 
         result =
@@ -4017,7 +4017,7 @@ async function loadAdminMembers(){
 
         setBox(
             "adminMembersList",
-            "ØªØ¹Ø°Ø± ØªØ­Ù…ÙŠÙ„ Ù‚Ø§Ø¦Ù…Ø© Ø§Ù„Ø£Ø¹Ø¶Ø§Ø¡.",
+            "تعذر تحميل قائمة الأعضاء.",
             "error"
         );
 
@@ -4037,7 +4037,7 @@ async function loadAdminMembers(){
 
     select.innerHTML =
     `<option value="">
-        -- Ø§Ø®ØªØ± Ø¹Ø¶ÙˆÙ‹Ø§ --
+        -- اختر عضوًا --
     </option>`;
 
 
@@ -4055,7 +4055,7 @@ async function loadAdminMembers(){
 
 
             option.textContent =
-            `${member.name || "Ø¹Ø¶Ùˆ"} â€” ${Number(member.points || 0)} Ù†Ù‚Ø·Ø©`;
+            `${member.name || "عضو"} — ${Number(member.points || 0)} نقطة`;
 
 
             select.appendChild(
@@ -4070,7 +4070,7 @@ async function loadAdminMembers(){
 
         setBox(
             "adminMembersList",
-            "Ù„Ø§ ÙŠÙˆØ¬Ø¯ Ø£Ø¹Ø¶Ø§Ø¡."
+            "لا يوجد أعضاء."
         );
 
         return;
@@ -4097,29 +4097,29 @@ async function loadAdminMembers(){
 
                 <strong>
                     ${escapeHtml(
-                        member.name || "Ø¹Ø¶Ùˆ"
+                        member.name || "عضو"
                     )}
                 </strong>
 
                 <p class="muted">
 
-                    Ø§Ù„Ù†Ù‚Ø§Ø·:
+                    النقاط:
                     ${Number(
                         member.points || 0
                     )}
 
                     <br>
 
-                    Ø§Ù„Ø±ØªØ¨Ø©:
+                    الرتبة:
                     ${escapeHtml(
-                        member.rank || "Ø¹Ø¶Ùˆ"
+                        member.rank || "عضو"
                     )}
 
                     <br>
 
-                    Ø§Ù„Ø­Ø§Ù„Ø©:
+                    الحالة:
                     ${escapeHtml(
-                        member.status || "â€”"
+                        member.status || "—"
                     )}
 
                 </p>
@@ -4164,7 +4164,7 @@ function updateSelectedMemberPreview(){
     if(!member){
 
         box.innerHTML =
-        "Ø§Ø®ØªØ± Ø¹Ø¶ÙˆÙ‹Ø§ Ù„Ø¹Ø±Ø¶ Ù†Ù‚Ø§Ø·Ù‡ Ø§Ù„Ø­Ø§Ù„ÙŠØ©.";
+        "اختر عضوًا لعرض نقاطه الحالية.";
 
         return;
     }
@@ -4174,26 +4174,26 @@ function updateSelectedMemberPreview(){
 
         <strong>
             ${escapeHtml(
-                member.name || "Ø¹Ø¶Ùˆ"
+                member.name || "عضو"
             )}
         </strong>
 
         <br>
 
-        Ø§Ù„Ù†Ù‚Ø§Ø· Ø§Ù„Ø­Ø§Ù„ÙŠØ©:
+        النقاط الحالية:
         <strong>
             ${Number(
                 member.points || 0
             )}
         </strong>
 
-        Ù†Ù‚Ø·Ø©
+        نقطة
 
         <br>
 
-        Ø§Ù„Ø±ØªØ¨Ø©:
+        الرتبة:
         ${escapeHtml(
-            member.rank || "Ø¹Ø¶Ùˆ"
+            member.rank || "عضو"
         )}
 
     `;
@@ -4213,7 +4213,7 @@ async function adjustMemberPoints(){
     if(!(await checkAdmin())){
 
         alert(
-            "ØºÙŠØ± Ù…Ø³Ù…ÙˆØ­."
+            "غير مسموح."
         );
 
         return;
@@ -4258,7 +4258,7 @@ async function adjustMemberPoints(){
     if(!memberId){
 
         alert(
-            "Ø§Ø®ØªØ± Ø¹Ø¶ÙˆÙ‹Ø§ Ø£ÙˆÙ„Ù‹Ø§."
+            "اختر عضوًا أولًا."
         );
 
         return;
@@ -4271,7 +4271,7 @@ async function adjustMemberPoints(){
     ){
 
         alert(
-            "Ø§ÙƒØªØ¨ Ø¹Ø¯Ø¯ Ù†Ù‚Ø§Ø· ØµØ­ÙŠØ­Ù‹Ø§ Ø£ÙƒØ¨Ø± Ù…Ù† ØµÙØ±."
+            "اكتب عدد نقاط صحيحًا أكبر من صفر."
         );
 
         return;
@@ -4281,7 +4281,7 @@ async function adjustMemberPoints(){
     if(!reason){
 
         alert(
-            "Ø§ÙƒØªØ¨ Ø³Ø¨Ø¨ Ø§Ù„Ø¹Ù…Ù„ÙŠØ©."
+            "اكتب سبب العملية."
         );
 
         return;
@@ -4303,7 +4303,7 @@ async function adjustMemberPoints(){
     if(!member){
 
         alert(
-            "ØªØ¹Ø°Ø± Ø§Ù„Ø¹Ø«ÙˆØ± Ø¹Ù„Ù‰ Ø§Ù„Ø¹Ø¶Ùˆ."
+            "تعذر العثور على العضو."
         );
 
         return;
@@ -4316,7 +4316,7 @@ async function adjustMemberPoints(){
     ){
 
         alert(
-            "Ù„Ø§ ÙŠÙ…ÙƒÙ† Ø®ØµÙ… Ù†Ù‚Ø§Ø· Ø£ÙƒØ«Ø± Ù…Ù† Ø±ØµÙŠØ¯ Ø§Ù„Ø¹Ø¶Ùˆ."
+            "لا يمكن خصم نقاط أكثر من رصيد العضو."
         );
 
         return;
@@ -4325,8 +4325,8 @@ async function adjustMemberPoints(){
 
     const confirmText =
     change > 0
-    ? `Ø¥Ø¶Ø§ÙØ© ${amount} Ù†Ù‚Ø·Ø© Ù„Ù„Ø¹Ø¶Ùˆ ${member.name}ØŸ`
-    : `Ø®ØµÙ… ${amount} Ù†Ù‚Ø·Ø© Ù…Ù† Ø§Ù„Ø¹Ø¶Ùˆ ${member.name}ØŸ`;
+    ? `إضافة ${amount} نقطة للعضو ${member.name}؟`
+    : `خصم ${amount} نقطة من العضو ${member.name}؟`;
 
 
     if(!confirm(confirmText))
@@ -4336,7 +4336,7 @@ async function adjustMemberPoints(){
     setButtonLoading(
         "adjustPointsBtn",
         true,
-        "Ø¬Ø§Ø±ÙŠ Ø§Ù„ØªÙ†ÙÙŠØ°..."
+        "جاري التنفيذ..."
     );
 
 
@@ -4367,7 +4367,7 @@ async function adjustMemberPoints(){
 
             alert(
                 error.message ||
-                "ØªØ¹Ø°Ø± ØªÙ†ÙÙŠØ° Ø§Ù„Ø¹Ù…Ù„ÙŠØ©."
+                "تعذر تنفيذ العملية."
             );
 
             return;
@@ -4376,16 +4376,16 @@ async function adjustMemberPoints(){
 
         alert(
 
-            `ØªÙ…Øª Ø§Ù„Ø¹Ù…Ù„ÙŠØ© Ø¨Ù†Ø¬Ø§Ø­ âœ…
+            `تمت العملية بنجاح ✅
 
-Ø§Ù„Ø¹Ø¶Ùˆ:
+العضو:
 ${data?.member_name || member.name}
 
-Ø§Ù„ØªØºÙŠÙŠØ±:
-${change > 0 ? "+" : ""}${change} Ù†Ù‚Ø·Ø©
+التغيير:
+${change > 0 ? "+" : ""}${change} نقطة
 
-Ø§Ù„Ø±ØµÙŠØ¯ Ø§Ù„Ø¬Ø¯ÙŠØ¯:
-${data?.new_points ?? "â€”"} Ù†Ù‚Ø·Ø©`
+الرصيد الجديد:
+${data?.new_points ?? "—"} نقطة`
 
         );
 
@@ -4420,7 +4420,7 @@ ${data?.new_points ?? "â€”"} Ù†Ù‚Ø·Ø©`
         console.error(error);
 
         alert(
-            "Ø­Ø¯Ø« Ø®Ø·Ø£ Ø£Ø«Ù†Ø§Ø¡ ØªÙ†ÙÙŠØ° Ø§Ù„Ø¹Ù…Ù„ÙŠØ©."
+            "حدث خطأ أثناء تنفيذ العملية."
         );
 
     }finally{
@@ -4473,7 +4473,7 @@ async function loadAdminRequests(){
 
         setBox(
             "adminRequests",
-            "ØªØ¹Ø°Ø± ØªØ­Ù…ÙŠÙ„ Ø§Ù„Ø·Ù„Ø¨Ø§Øª.",
+            "تعذر تحميل الطلبات.",
             "error"
         );
 
@@ -4485,7 +4485,7 @@ async function loadAdminRequests(){
 
         setBox(
             "adminRequests",
-            "Ù„Ø§ ØªÙˆØ¬Ø¯ Ø·Ù„Ø¨Ø§Øª Ù…Ø¹Ù„Ù‚Ø©."
+            "لا توجد طلبات معلقة."
         );
 
         return;
@@ -4512,15 +4512,15 @@ async function loadAdminRequests(){
             <h3>
                 ${escapeHtml(
                     request.full_name ||
-                    "Ø¹Ø¶Ùˆ"
+                    "عضو"
                 )}
             </h3>
 
             <p class="muted">
 
-                Ø§Ù„Ø±ÙŠØ§Ø¶Ø©:
+                الرياضة:
                 ${escapeHtml(
-                    request.sport || "â€”"
+                    request.sport || "—"
                 )}
 
             </p>
@@ -4542,7 +4542,7 @@ async function loadAdminRequests(){
                         '${request.user_id}'
                     )">
 
-                    Ù‚Ø¨ÙˆÙ„
+                    قبول
 
                 </button>
 
@@ -4554,7 +4554,7 @@ async function loadAdminRequests(){
                         '${request.user_id}'
                     )">
 
-                    Ø±ÙØ¶
+                    رفض
 
                 </button>
 
@@ -4582,7 +4582,7 @@ async function approveJoin(
     if(!(await checkAdmin())){
 
         alert(
-            "ØºÙŠØ± Ù…Ø³Ù…ÙˆØ­."
+            "غير مسموح."
         );
 
         return;
@@ -4606,7 +4606,7 @@ async function approveJoin(
     if(error){
 
         alert(
-            "ØªØ¹Ø°Ø± Ù‚Ø¨ÙˆÙ„ Ø§Ù„Ø·Ù„Ø¨: " +
+            "تعذر قبول الطلب: " +
             error.message
         );
 
@@ -4631,7 +4631,7 @@ async function approveJoin(
     if(memberError){
 
         alert(
-            "ØªÙ… Ù‚Ø¨ÙˆÙ„ Ø§Ù„Ø·Ù„Ø¨ Ù„ÙƒÙ† ØªØ¹Ø°Ø± ØªØ­Ø¯ÙŠØ« Ø­Ø§Ù„Ø© Ø§Ù„Ø¹Ø¶Ùˆ."
+            "تم قبول الطلب لكن تعذر تحديث حالة العضو."
         );
 
         return;
@@ -4639,7 +4639,7 @@ async function approveJoin(
 
 
     alert(
-        "ØªÙ… Ù‚Ø¨ÙˆÙ„ Ø§Ù„Ø·Ù„Ø¨ âœ…"
+        "تم قبول الطلب ✅"
     );
 
 
@@ -4663,7 +4663,7 @@ async function rejectJoin(
     if(!(await checkAdmin())){
 
         alert(
-            "ØºÙŠØ± Ù…Ø³Ù…ÙˆØ­."
+            "غير مسموح."
         );
 
         return;
@@ -4672,7 +4672,7 @@ async function rejectJoin(
 
     const note =
     prompt(
-        "Ø³Ø¨Ø¨ Ø§Ù„Ø±ÙØ¶ (Ø§Ø®ØªÙŠØ§Ø±ÙŠ):"
+        "سبب الرفض (اختياري):"
     );
 
 
@@ -4698,7 +4698,7 @@ async function rejectJoin(
     if(error){
 
         alert(
-            "ØªØ¹Ø°Ø± Ø±ÙØ¶ Ø§Ù„Ø·Ù„Ø¨: " +
+            "تعذر رفض الطلب: " +
             error.message
         );
 
@@ -4718,7 +4718,7 @@ async function rejectJoin(
 
 
     alert(
-        "ØªÙ… Ø±ÙØ¶ Ø§Ù„Ø·Ù„Ø¨."
+        "تم رفض الطلب."
     );
 
 
@@ -4765,7 +4765,7 @@ async function loadAdminSubmissions(){
 
         setBox(
             "adminSubmissions",
-            "ØªØ¹Ø°Ø± ØªØ­Ù…ÙŠÙ„ Ø¥Ù†Ø¬Ø§Ø²Ø§Øª Ø§Ù„ØªØ­Ø¯ÙŠØ§Øª.",
+            "تعذر تحميل إنجازات التحديات.",
             "error"
         );
 
@@ -4777,7 +4777,7 @@ async function loadAdminSubmissions(){
 
         setBox(
             "adminSubmissions",
-            "Ù„Ø§ ØªÙˆØ¬Ø¯ Ø¥Ù†Ø¬Ø§Ø²Ø§Øª Ù…Ø¹Ù„Ù‚Ø©."
+            "لا توجد إنجازات معلقة."
         );
 
         return;
@@ -4802,7 +4802,7 @@ async function loadAdminSubmissions(){
 
 
         let challengeTitle =
-        "ØªØ­Ø¯ÙŠ";
+        "تحدي";
 
 
         let memberName =
@@ -4867,7 +4867,7 @@ async function loadAdminSubmissions(){
 
             <p class="muted">
 
-                Ø§Ù„Ø¹Ø¶Ùˆ:
+                العضو:
                 ${escapeHtml(
                     memberName
                 )}
@@ -4876,9 +4876,9 @@ async function loadAdminSubmissions(){
 
             <p class="muted">
 
-                Ø§Ù„Ø¥Ø«Ø¨Ø§Øª:
+                الإثبات:
                 ${escapeHtml(
-                    item.proof || "â€”"
+                    item.proof || "—"
                 )}
 
             </p>
@@ -4892,7 +4892,7 @@ async function loadAdminSubmissions(){
                         '${item.id}'
                     )">
 
-                    Ø§Ø¹ØªÙ…Ø§Ø¯
+                    اعتماد
 
                 </button>
 
@@ -4903,7 +4903,7 @@ async function loadAdminSubmissions(){
                         '${item.id}'
                     )">
 
-                    Ø±ÙØ¶
+                    رفض
 
                 </button>
 
@@ -4930,7 +4930,7 @@ async function approveSubmission(
     if(!(await checkAdmin())){
 
         alert(
-            "ØºÙŠØ± Ù…Ø³Ù…ÙˆØ­."
+            "غير مسموح."
         );
 
         return;
@@ -4938,8 +4938,8 @@ async function approveSubmission(
 
 
     /*
-      Ø§Ù„Ø£ÙØ¶Ù„ Ø£Ù† ØªÙƒÙˆÙ† Ø§Ù„Ø¹Ù…Ù„ÙŠØ© Ø¯Ø§Ø®Ù„ RPC
-      Ø­ØªÙ‰ Ù„Ø§ ÙŠØªÙ… Ù…Ù†Ø­ Ø§Ù„Ù†Ù‚Ø§Ø· Ù…Ø±ØªÙŠÙ†.
+      الأفضل أن تكون العملية داخل RPC
+      حتى لا يتم منح النقاط مرتين.
     */
 
     const {
@@ -4961,7 +4961,7 @@ async function approveSubmission(
 
         alert(
             error.message ||
-            "ØªØ¹Ø°Ø± Ø§Ø¹ØªÙ…Ø§Ø¯ Ø§Ù„Ø¥Ù†Ø¬Ø§Ø²."
+            "تعذر اعتماد الإنجاز."
         );
 
         return;
@@ -4970,9 +4970,9 @@ async function approveSubmission(
 
     alert(
 
-        `ØªÙ… Ø§Ø¹ØªÙ…Ø§Ø¯ Ø§Ù„Ø¥Ù†Ø¬Ø§Ø² ÙˆØ¥Ø¶Ø§ÙØ© ${
+        `تم اعتماد الإنجاز وإضافة ${
             data?.points || 0
-        } Ù†Ù‚Ø·Ø© âœ…`
+        } نقطة ✅`
 
     );
 
@@ -4996,7 +4996,7 @@ async function rejectSubmission(
     if(!(await checkAdmin())){
 
         alert(
-            "ØºÙŠØ± Ù…Ø³Ù…ÙˆØ­."
+            "غير مسموح."
         );
 
         return;
@@ -5005,7 +5005,7 @@ async function rejectSubmission(
 
     const note =
     prompt(
-        "Ø³Ø¨Ø¨ Ø§Ù„Ø±ÙØ¶ (Ø§Ø®ØªÙŠØ§Ø±ÙŠ):"
+        "سبب الرفض (اختياري):"
     );
 
 
@@ -5035,7 +5035,7 @@ async function rejectSubmission(
     if(error){
 
         alert(
-            "ØªØ¹Ø°Ø± Ø±ÙØ¶ Ø§Ù„Ø¥Ù†Ø¬Ø§Ø²: " +
+            "تعذر رفض الإنجاز: " +
             error.message
         );
 
@@ -5044,7 +5044,7 @@ async function rejectSubmission(
 
 
     alert(
-        "ØªÙ… Ø±ÙØ¶ Ø§Ù„Ø¥Ù†Ø¬Ø§Ø²."
+        "تم رفض الإنجاز."
     );
 
 
@@ -5065,7 +5065,7 @@ async function createUpdate(){
     if(!(await checkAdmin())){
 
         alert(
-            "ØºÙŠØ± Ù…Ø³Ù…ÙˆØ­."
+            "غير مسموح."
         );
 
         return;
@@ -5093,7 +5093,7 @@ async function createUpdate(){
     if(!title || !content){
 
         alert(
-            "Ø§ÙƒØªØ¨ Ø§Ù„Ø¹Ù†ÙˆØ§Ù† ÙˆØ§Ù„Ù…Ø­ØªÙˆÙ‰."
+            "اكتب العنوان والمحتوى."
         );
 
         return;
@@ -5122,7 +5122,7 @@ async function createUpdate(){
     if(error){
 
         alert(
-            "ØªØ¹Ø°Ø± Ù†Ø´Ø± Ø§Ù„ØªØ­Ø¯ÙŠØ«: " +
+            "تعذر نشر التحديث: " +
             error.message
         );
 
@@ -5145,7 +5145,7 @@ async function createUpdate(){
 
 
     alert(
-        "ØªÙ… Ù†Ø´Ø± Ø§Ù„ØªØ­Ø¯ÙŠØ« âœ…"
+        "تم نشر التحديث ✅"
     );
 
 
@@ -5166,7 +5166,7 @@ async function createChallenge(){
     if(!(await checkAdmin())){
 
         alert(
-            "ØºÙŠØ± Ù…Ø³Ù…ÙˆØ­."
+            "غير مسموح."
         );
 
         return;
@@ -5209,7 +5209,7 @@ async function createChallenge(){
     ){
 
         alert(
-            "Ø£ÙƒÙ…Ù„ Ø¨ÙŠØ§Ù†Ø§Øª Ø§Ù„ØªØ­Ø¯ÙŠ Ø¨Ø´ÙƒÙ„ ØµØ­ÙŠØ­."
+            "أكمل بيانات التحدي بشكل صحيح."
         );
 
         return;
@@ -5240,7 +5240,7 @@ async function createChallenge(){
     if(error){
 
         alert(
-            "ØªØ¹Ø°Ø± Ø¥Ù†Ø´Ø§Ø¡ Ø§Ù„ØªØ­Ø¯ÙŠ: " +
+            "تعذر إنشاء التحدي: " +
             error.message
         );
 
@@ -5270,7 +5270,7 @@ async function createChallenge(){
 
 
     alert(
-        "ØªÙ… Ø¥Ù†Ø´Ø§Ø¡ Ø§Ù„ØªØ­Ø¯ÙŠ âœ…"
+        "تم إنشاء التحدي ✅"
     );
 
 
@@ -5291,7 +5291,7 @@ createChallenge;
 function formatDate(value){
 
     if(!value)
-        return "â€”";
+        return "—";
 
 
     try{
